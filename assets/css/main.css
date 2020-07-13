@@ -6,6 +6,11 @@ excluded_in_search: true
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i";
 @fa-font-path: "../webfonts";
 
+.center {
+    margin: auto;
+    width: 100%;
+}
+
 .gh-source {
     display: block;
     padding-right: 1.2rem;
@@ -160,7 +165,7 @@ hgroup,
 main,
 nav,
 section {
-    display: block
+    display: block;
 }
 
 body {
@@ -613,7 +618,7 @@ mark,
 .img-fluid,
 .td-content img {
     max-width: 100%;
-    height: auto
+    height: auto;
 }
 
 .img-thumbnail {
