@@ -29,9 +29,9 @@ baseurl: "/test-site" # the subpath of your site, e.g. /blog
 url: "https://vidarhun.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/vsoch/docsy-jekyll"
-github_user: "vsoch"
-github_repo: "docsy-jekyll"
+repo: "https://github.com/VidarHUN/test-site"
+github_user: "VidarHUN"
+github_repo: "test-site"
 
 # Optional
 twitter: vsoch
