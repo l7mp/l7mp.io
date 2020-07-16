@@ -1,0 +1,37 @@
+- title: Documentation
+  url: docs
+  links:
+    - title: "L7mp proxy"
+      url: "docs/basic_l7mpProxy"
+      children:
+        - title: "Concepts"
+          url: "docs/basic_concepts"
+        - title: "Reference"
+          url: "docs/basic_reference"
+        - title: "Tasks"
+          url: "docs/basic_tasks"
+    - title: "L7mp service mesh"
+      url: "docs/k8s_l7mpProxy"
+      children:
+        - title: "Concepts"
+          url: "docs/k8s_concepts"
+        - title: "Reference"
+          url: "docs/k8s_reference"
+        - title: "Tasks"
+          url: "docs/k8s_tasks"
+
+    - title: "Getting Started"
+      url: "docs/getting-started"
+      children:
+        - title: Features
+          url: "docs/getting-started#getting-started"
+        - title: Development
+          url: "docs/getting-started#development"
+        - title: Customization
+          url: "docs/getting-started#customization"
+    - title: "About"
+      url: "about"
+    - title: "News"
+      url: "news"
+    - title: "Test"
+      url: 'docs/test'

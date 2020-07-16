@@ -1,55 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-{% include head.html %}
-{% include google-analytics.html %}
+<!doctype html>
+<html lang="en">
 
-<body class="td-section">
-  {% include header.html %}
-  <div class="container-fluid td-outer">
-    <div class="td-main">
-      <div class="row flex-xl-nowrap">
-        {% if page.url contains "/docs/" %}
-        <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
-          {% include sidebar.html %}
-        </div> {% else %}
-        <div class="col-12 col-md-3 col-xl-2 d-print-none"></div> 
-        {% endif %}
-        <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
-          <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
-            <ol class="breadcrumb spb-1">
-              {% assign crumbs = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
-              {% for crumb in crumbs offset: 1 %}{% if crumb != "index" %}{% if forloop.last %}
-              <li class="breadcrumb-item active" aria-current="page">
-                <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-              </li>{% else %}
-              {% if page.url != "/docs/" %}
-              <li class="breadcrumb-item">
-                <a
-                  href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
-              </li>{% endif %}{% endif %}
-              {% endif %}{% endfor %}
-            </ol>
-          </nav>
-          <div class="td-content">
-            {{ content }}
-            {% if section.links %}<div class="section-index">
-              <hr class="panel-line">{% for child in section.links %}
-              <div class="entry">
-                <h5>
-                  <a
-                    href="{% if child.url %}{{ site.baseurl }}{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">{{ child.title }}</a>
-                </h5>
-                <p>{{ child.description }}</p>
-              </div>{% endfor %}
-            </div>{% endif %}
-            <!-- {% include feedback.html %} -->
-          </div>
-        </main>
-      </div>
-    </div>
-    {% include footer.html %}
-  </div>
-  {% include scripts.html %}
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.0.1">
+  <title>{{site.org}}</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+  <!-- Bootstrap core CSS -->
+  <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="../assets/carousel.css" rel="stylesheet">
+  <link href="../assets/album.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    {% include header.html %}
+  </header>
+
+  <main role="main">
+
+    {% include carousel.html %}
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    {% include cards.html %}
+  </main>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+  <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+  <!-- FOOTER -->
+  {% include footer.html %}
 </body>
 
 </html>

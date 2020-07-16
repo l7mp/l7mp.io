@@ -1,0 +1,130 @@
+.content {
+    position: absolute;
+    padding-top: 3rem;
+}
+
+/* FOOTER */
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+}
+
+/*
+ * Sidebar
+ */
+ 
+ .td-sidebar__inner {
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0
+}
+
+@media(min-width:768px) {
+    @supports((position: -webkit-sticky) or (position: sticky)) {
+        .td-sidebar__inner {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 4rem;
+            z-index: 10;
+            height: -webkit-calc(100vh - 6rem);
+            height: calc(100vh - 6rem)
+        }
+    }
+}
+
+@media(min-width:1200px) {
+    .td-sidebar__inner {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 320px;
+        -ms-flex: 0 1 320px;
+        flex: 0 1 320px
+    }
+}
+
+.td-sidebar__inner .td-search-box {
+    width: 100%
+}
+
+.td-sidebar-nav {
+    padding-right: .5rem;
+    margin-right: -15px;
+    margin-left: -15px
+}
+
+@media(min-width:768px) {
+    @supports((position: -webkit-sticky) or (position: sticky)) {
+        .td-sidebar-nav {
+            max-height: -webkit-calc(100vh - 10rem);
+            max-height: calc(100vh - 10rem);
+            overflow-y: auto
+        }
+    }
+}
+
+@media(min-width:768px) {
+    .td-sidebar-nav {
+        display: block!important
+    }
+}
+
+.td-sidebar-nav__section {
+    padding-left: 0
+}
+
+.td-sidebar-nav__section li {
+    list-style: none
+}
+
+.td-sidebar-nav__section ul {
+    padding: 0;
+    margin: 0
+}
+
+@media(min-width:768px) {
+    .td-sidebar-nav__section>ul {
+        padding-left: .5rem
+    }
+}
+
+.td-sidebar-nav__section-title {
+    display: block;
+    font-weight: 500
+}
+
+.td-sidebar-nav__section-title .active {
+    font-weight: 700
+}
+
+.td-sidebar-nav__section-title a {
+    color: #222
+}
+
+.td-sidebar-nav .td-sidebar-link {
+    display: block;
+    padding-bottom: .375rem
+}
+
+.td-sidebar-nav .td-sidebar-link__page {
+    color: #495057;
+    font-weight: 300
+}
+
+.td-sidebar-nav a:hover {
+    color: #72a1e5;
+    text-decoration: none
+}
+
+.td-sidebar-nav a.active {
+    font-weight: 700
+}
+
+.td-sidebar-nav .dropdown a {
+    color: #495057
+}
+
+.td-sidebar-nav .dropdown .nav-link {
+    padding: 0 0 1rem
+}

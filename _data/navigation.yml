@@ -2,3 +2,9 @@
   url: about
 - title: Documentation
   url: docs
+- title: News
+  url: news
+- title: FAQ
+  url: faq
+- title: GitHub
+  external_url: https://github.com/l7mp/l7mp.io
