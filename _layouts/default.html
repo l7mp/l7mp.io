@@ -31,32 +31,33 @@
     }
   </style>
   <!-- Custom styles for this template -->
-  <link href="./assets/carousel.css" rel="stylesheet">
-  <link href="./assets/album.css" rel="stylesheet">
+  <link href="./assets/default.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    {% include header.html %}
-  </header>
+  <div id="container">
+    <header>{% include header.html %}</header>
+    <div id="body">
+      <main role="main">
 
-  <main role="main">
+        {% include carousel.html %}
+    
+        <!-- Marketing messaging and featurettes
+      ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+        {% include cards.html %}
+      </main>
+    </div>
+    <!-- FOOTER -->
+  {% include footer.html %}
+  </div>
 
-    {% include carousel.html %}
-
-    <!-- Marketing messaging and featurettes
-  ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    {% include cards.html %}
-  </main>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="./assets/dist/js/bootstrap.bundle.js"></script>
-  <!-- FOOTER -->
-  {% include footer.html %}
 </body>
 
 </html>

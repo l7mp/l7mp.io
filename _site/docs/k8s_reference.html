@@ -31,13 +31,13 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../assets/sidebar.css" rel="stylesheet">
+    <link href="../assets/documents.css" rel="stylesheet">
     <!-- <link href="../assets/main.css" rel="stylesheet"> -->
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div id="container">
+        <header><nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <a class="navbar-brand" href="/l7mp.io/">
         <span class="navbar-logo"></span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612 612" focusable="false" role="img" height="40px" width="40px">
   <title>Bootstrap</title>
@@ -80,12 +80,11 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
-</nav>
-    </header>
-
-    <div class="container-fluid content">
-        <div class="row">
-            <div class="col-md-3 col-lg-2 content">
+</nav></header>
+        <div id="body">
+            <div class="container-fluid content">
+                <div class="row">
+                    <div class="col-md-3 col-lg-2 content">
   <div id="td-sidebar-menu" class="td-sidebar__inner">  
     <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
   <ul class="td-sidebar-nav__section pr-md-3">
@@ -124,28 +123,28 @@
     </nav>
   </div>
 </div>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-start">
-                    <article class="content" style="padding-bottom:6rem;">
-                        <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
-                            <ol class="breadcrumb spb-1" style="background: #FFF;">
-                              
-                              
-                              
-                              <li class="breadcrumb-item">
-                                <a
-                                  href="http://localhost:4000/l7mp.io/docs/">Documentation</a>
-                              </li>
-                              
-                              <li class="breadcrumb-item active" aria-current="page">
-                                <a href="http://localhost:4000/l7mp.io/docs/k8s_reference">Reference</a>
-                              </li>
-                              
-                            </ol>
-                          </nav>
-                        
+                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                        <div class="d-flex justify-content-start">
+                            <article class="content" style="padding-bottom:6rem;">
+                                <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+                                    <ol class="breadcrumb spb-1" style="background: #FFF;">
+                                      
+                                      
+                                      
+                                      <li class="breadcrumb-item">
+                                        <a
+                                          href="http://localhost:4000/l7mp.io/docs/">Documentation</a>
+                                      </li>
+                                      
+                                      <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="http://localhost:4000/l7mp.io/docs/k8s_reference">Reference</a>
+                                      </li>
+                                      
+                                    </ol>
+                                  </nav>
+                                
 
-                        <script
+                                <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
@@ -181,7 +180,7 @@ $(document).ready(function() {
     });
 </script>
 
-                        <!-- <script>
+                                <!-- <script>
     var headers = ["h1", "h2", "h3", "h4"]
     var colors = ["red", "orange", "green", "blue"]
     
@@ -194,16 +193,24 @@ $(document).ready(function() {
     })
     </script>
      -->
-                        <script>
+                                <script>
     $('h1').first().append('<div><span style="font-size:12px" class="badge badge-primary"><a style="cursor:pointer; color:white" href="http://localhost:4000/l7mp.io/tags#reference ">reference</a></span></div>')</script>
     
-                    </article>
+                            </article>
+                        </div>
+                    </main>
                 </div>
-            </main>
+            </div>
         </div>
+        <!-- <footer class="bg-dark site-footer">
+    <div class="footer-container justify-content-center">
+      <small>Copyright &copy; <a href="/l7mp.io">l7mp.io</a></small>
     </div>
-
-
+  </footer> -->
+  <div id="footer" class="bg-dark text-white-50">
+    <small>Copyright &copy; <a href="/l7mp.io">l7mp.io</a></small>
+  </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -212,11 +219,6 @@ $(document).ready(function() {
     <script src="../assets/dist/js/bootstrap.bundle.js"></script>
     <script src="../assets/sidebar.js"></script>
        <!-- FOOTER -->
-    <footer class="py-4 bg-dark text-white-50 navbar fixed-bottom">
-    <div class="container text-center">
-      <small>Copyright &copy; <a href="/l7mp.io">l7mp.io</a></small>
-    </div>
-  </footer>
 </body>
 
 </html>

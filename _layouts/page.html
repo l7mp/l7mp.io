@@ -35,35 +35,37 @@
 </head>
 
 <body>
-    <header>
-        {% include header.html %}
-    </header>
 
-    <main role="main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-
+    <div id="container">
+        <header>{% include header.html %}</header>
+        <div id="body">
+            <main role="main">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+        
+                        </div>
+                        <div class="d-flex justify-content-start bg-light col-8">
+                            <article class="content">
+                                {{ content }}
+                            </article>
+                        </div>
+                        <div class="col">
+        
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex justify-content-start bg-light col-8">
-                    <article class="content">
-                        {{ content }}
-                    </article>
-                </div>
-                <div class="col">
-
-                </div>
-            </div>
+            </main>
         </div>
-    </main>
+        {% include footer.html %}
+     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
     <script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <!-- FOOTER -->
-    {% include footer.html %}
 </body>
 
 </html>
