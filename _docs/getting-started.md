@@ -6,8 +6,4 @@ tags:
 description: Getting started with Docsy Jekyll
 ---
 
-# Getting Started
-
-## Features
-
-Something
+# Under construction

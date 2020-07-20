@@ -84,7 +84,7 @@
     <div id="body">
       <main role="main">
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -140,7 +140,22 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
+</div> -->
+<div class="row container-fluid">
+    <div class="jumbotron text-right col-md-4">
+        <img src="./assets/gcp/BigQuery.svg"></img>
+    </div>
+    <section class="jumbotron text-center col-md-4">
+        <div class="container">
+          <h1 class="jumbotron-heading">Control</h1>
+          <p class="lead text-muted">Enjoy the convenience of a modern and expressive Kubernetes API to manage an entire cluster of applications, gateways and service proxies</p>
+        </div>
+    </section>
+    <div class="jumbotron text-left col-md-4">
+        <img src="./assets/gcp/CloudPubSub.svg"></img>
+    </div>
 </div>
+
     
         <!-- Marketing messaging and featurettes
       ================================================== -->
@@ -154,17 +169,33 @@
 
             <div class="row">
                 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
                     <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/DedicatedInterconnect.svg"
+                                    srcset="./assets/gcp/DedicatedInterconnect.svg 500w, ./assets/gcp/DedicatedInterconnect.svg 800w, ./assets/gcp/DedicatedInterconnect.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/VirtualPrivateCloud.svg"
+                                    srcset="./assets/gcp/VirtualPrivateCloud.svg 500w, ./assets/gcp/VirtualPrivateCloud.svg 800w, ./assets/gcp/VirtualPrivateCloud.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                        </div>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                             role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Placeholder</title>
+                            <title>Connect</title>
                             <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                                dy=".3em">Connect</text>
+                        </svg> -->
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Connect</h5>
+                            <p class="card-text">Interconnect services, databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn btn-secondary">Go to</button>
                             </div>
@@ -172,17 +203,33 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
                     <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/CloudLoadBalancing.svg"
+                                    srcset="./assets/gcp/CloudLoadBalancing.svg 500w, ./assets/gcp/CloudLoadBalancing.svg 800w, ./assets/gcp/CloudLoadBalancing.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/Logging.svg"
+                                    srcset="./assets/gcp/Logging.svg 500w, ./assets/gcp/Logging.svg 800w, ./assets/gcp/Logging.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                        </div>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                             role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Placeholder</title>
+                            <title>Finetune</title>
                             <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                                dy=".3em">Finetune</text>
+                        </svg> -->
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Finetune</h5>
+                            <p class="card-text">Load-balance traffic across any number of backends, apply access control rules, automatically retry and timeout failed connections</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn btn-secondary">Go to</button>
                             </div>
@@ -190,17 +237,33 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
                     <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        <div class="row justify-content-center">
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/Monitoring.svg"
+                                    srcset="./assets/gcp/Monitoring.svg 500w, ./assets/gcp/Monitoring.svg 800w, ./assets/gcp/Monitoring.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/Trace.svg"
+                                    srcset="./assets/gcp/Trace.svg 500w, ./assets/gcp/Trace.svg 800w, ./assets/gcp/Trace.svg 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            
+                        </div>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                             role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Placeholder</title>
+                            <title>Observe</title>
                             <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                                dy=".3em">Observe</text>
+                        </svg> -->
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 class="card-title">Observe</h5>
+                            <p class="card-text">Observe traffic as it flows through the network, monitor application statistics, log and kill individual streams with a single command</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn btn-secondary">Go to</button>
                             </div>

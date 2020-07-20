@@ -6,16 +6,26 @@
 
             <div class="row">
                 {% for card in site.data.cards %}
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
                     <div class="card mb-4 shadow-sm">
-                        <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        <div class="row justify-content-center">
+                            {% for image in card.images %}
+                            <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                                <img src="./assets/gcp/{{image}}"
+                                    srcset="./assets/gcp/{{image}} 500w, ./assets/gcp/{{image}} 800w, ./assets/gcp/{{image}} 1024w"
+                                    sizes="(min-width: 1024px) 1024px, 100vw"></img>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                             role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Placeholder</title>
+                            <title>{{card.title}}</title>
                             <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Thumbnail</text>
-                        </svg>
+                                dy=".3em">{{card.title}}</text>
+                        </svg> -->
                         <div class="card-body">
+                            <h5 class="card-title">{{card.title}}</h5>
                             <p class="card-text">{{card.body}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <button type="button" class="btn btn-secondary">{{card.button}}</button>

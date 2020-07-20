@@ -1,6 +1,21 @@
-- button: Go to
-  body: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-- button: Go to
-  body: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-- button: Go to
-  body: This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+- title: Connect
+  images:
+    - DedicatedInterconnect.svg
+    - VirtualPrivateCloud.svg
+  button: Go to
+  body: Interconnect services, 
+        databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations
+- title: Finetune
+  images:
+    - CloudLoadBalancing.svg
+    - Logging.svg
+  button: Go to
+  body: Load-balance traffic across 
+        any number of backends, apply access control rules, automatically retry and timeout failed connections
+- title: Observe
+  images: 
+    - Monitoring.svg
+    - Trace.svg
+  button: Go to
+  body: Observe traffic as it flows 
+        through the network, monitor application statistics, log and kill individual streams with a single command
