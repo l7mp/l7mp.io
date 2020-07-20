@@ -31,47 +31,47 @@
         }
     </style>
     <!-- Custom styles for this template -->
-    <link href="../assets/sidebar.css" rel="stylesheet">
-    <!-- <link href="../assets/main.css" rel="stylesheet"> -->
+    <link href="../assets/documents.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        {% include header.html %}
-    </header>
-
-    <div class="container-fluid content">
-        <div class="row">
-            {% include sidebar.html %}
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-start">
-                    <article class="content" style="padding-bottom:6rem;">
-                        <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
-                            <ol class="breadcrumb spb-1" style="background: #FFF;">
-                              {% assign crumbs = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
-                              {% for crumb in crumbs offset: 1 %}{% if crumb != "index" %}{% if forloop.last %}
-                              <li class="breadcrumb-item active" aria-current="page">
-                                <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
-                              </li>{% else %}
-                              {% if page.url != "/docs/" %}
-                              <li class="breadcrumb-item">
-                                <a
-                                  href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
-                              </li>{% endif %}{% endif %}
-                              {% endif %}{% endfor %}
-                            </ol>
-                          </nav>
-                        {{ content }}
-                        {% include toc.html %}
-                        <!-- {% include permalinks.html %} -->
-                        {% include tags.html %}
-                    </article>
+    <div id="container">
+        <header>{% include header.html %}</header>
+        <div id="body">
+            <div class="container-fluid content">
+                <div class="row">
+                    {% include sidebar.html %}
+                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                        <div class="d-flex justify-content-start">
+                            <article class="content" style="padding-bottom:6rem;">
+                                <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+                                    <ol class="breadcrumb spb-1" style="background: #FFF;">
+                                      {% assign crumbs = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
+                                      {% for crumb in crumbs offset: 1 %}{% if crumb != "index" %}{% if forloop.last %}
+                                      <li class="breadcrumb-item active" aria-current="page">
+                                        <a href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a>
+                                      </li>{% else %}
+                                      {% if page.url != "/docs/" %}
+                                      <li class="breadcrumb-item">
+                                        <a
+                                          href="{{ site.url }}{{ site.baseurl }}{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{% if crumb == "docs" %}Documentation{% else %}{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}{% endif %}</a>
+                                      </li>{% endif %}{% endif %}
+                                      {% endif %}{% endfor %}
+                                    </ol>
+                                  </nav>
+                                {{ content }}
+                                {% include toc.html %}
+                                <!-- {% include permalinks.html %} -->
+                                {% include tags.html %}
+                            </article>
+                        </div>
+                    </main>
                 </div>
-            </main>
+            </div>
         </div>
+        {% include footer.html %}
     </div>
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -80,7 +80,6 @@
     <script src="../assets/dist/js/bootstrap.bundle.js"></script>
     <script src="../assets/sidebar.js"></script>
        <!-- FOOTER -->
-    {% include footer.html %}
 </body>
 
 </html>
