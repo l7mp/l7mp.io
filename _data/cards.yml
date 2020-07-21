@@ -1,21 +1,15 @@
 - title: Connect
-  images:
-    - DedicatedInterconnect.svg
-    - VirtualPrivateCloud.svg
+  image: connect.svg
   button: Go to
   body: Interconnect services, 
         databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations
 - title: Finetune
-  images:
-    - CloudLoadBalancing.svg
-    - Logging.svg
+  image: finetune.svg
   button: Go to
   body: Load-balance traffic across 
         any number of backends, apply access control rules, automatically retry and timeout failed connections
 - title: Observe
-  images: 
-    - Monitoring.svg
-    - Trace.svg
+  image: observe.svg
   button: Go to
   body: Observe traffic as it flows 
         through the network, monitor application statistics, log and kill individual streams with a single command

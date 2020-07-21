@@ -1,18 +1,19 @@
-- button: Sign up today
+- button: Learn more
   url: "#"
   align: text-left
-  header: Example headline.
-  paragraph: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+  header: Control
+  paragraph: Enjoy the convenience of a modern and expressive Kubernetes 
+            API to manage an entire cluster of applications, gateways and service proxies
   active: "active"
 - button: Learn more
   url: "#"
   align: ""
-  header: Another example headline.
-  paragraph: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+  header: UDP and SCTP
+  paragraph: Make UDP and SCTP first class citizens in the srervice mesh
   active: ""
-- button: Browse gallery
+- button: Learn more
   url: "#"
   align: text-right
-  header: One more for good measure.
-  paragraph: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+  header: Service mesh
+  paragraph: Integrate legacy apps and services into a  modern service mesh
   active: ""

@@ -1,14 +1,13 @@
-<div class="container-fluid marketing" style="width:75%">
+<div class="container-fluid marketing">
 
     <!-- Three columns of text below the carousel -->
     <div class="album py-5">
-        <div class="">
-
+        <div class="container" style="min-width: 75%;">
             <div class="row">
                 {% for card in site.data.cards %}
-                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
-                    <div class="card mb-4 shadow-sm">
-                        <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm h-100"> 
+                        <!-- <div class="row justify-content-center">
                             {% for image in card.images %}
                             <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
                                 <img src="./assets/gcp/{{image}}"
@@ -16,7 +15,8 @@
                                     sizes="(min-width: 1024px) 1024px, 100vw"></img>
                             </div>
                             {% endfor %}
-                        </div>
+                        </div> -->
+                        <img src="./assets/gcp/{{card.image}}"></img>
                         <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
                             xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
                             role="img" aria-label="Placeholder: Thumbnail">
@@ -37,4 +37,4 @@
             </div>
         </div>
     </div>
-</div><!-- /.container -->
+</div>
