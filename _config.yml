@@ -55,9 +55,6 @@ org: l7mp.io
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# Build settings
-markdown: kramdown
-
 # If you add tags to pages, define this variable to link them to some external search
 # If you want to link to tags locally on the site, leave this commented out
 # tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
