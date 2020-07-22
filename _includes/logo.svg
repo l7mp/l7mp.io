@@ -7,8 +7,8 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="l7mp_logo_2.0.svg"
-   inkscape:version="1.0 (6e3e5246a0, 2020-05-07)"
+   sodipodi:docname="logo.svg"
+   inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
    id="svg8"
    version="1.1"
    viewBox="0 0 55.073771 29.936983"
@@ -44,17 +44,17 @@
      fit-margin-left="0"
      fit-margin-top="0"
      inkscape:window-maximized="1"
-     inkscape:window-y="21"
-     inkscape:window-x="1920"
-     inkscape:window-height="1394"
-     inkscape:window-width="2560"
+     inkscape:window-y="27"
+     inkscape:window-x="46"
+     inkscape:window-height="1376"
+     inkscape:window-width="2514"
      showgrid="false"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="22.664448"
-     inkscape:cx="139.76186"
-     inkscape:zoom="3.959798"
+     inkscape:cy="15.167722"
+     inkscape:cx="22.198823"
+     inkscape:zoom="22.627417"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -69,7 +69,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -97,25 +97,19 @@
        style="fill:#1e90ff;fill-opacity:1;stroke:none;stroke-width:0.0312627;stroke-opacity:1"
        inkscape:export-xdpi="96"
        inkscape:export-ydpi="96" />
-    <text
+    <g
+       aria-label="L
+"
        transform="scale(0.98130794,1.0190481)"
-       id="text50"
-       y="135.42213"
-       x="17.281918"
-       style="font-style:normal;font-weight:normal;font-size:8.08104px;line-height:0;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.202027"
-       xml:space="preserve"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
-         id="tspan80"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.937px;line-height:0.95;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.202027"
-         y="135.42213"
-         x="17.281918"
-         sodipodi:role="line">L</tspan><tspan
-         id="tspan100"
-         style="font-size:26.937px;line-height:0.95;fill:#ffffff;fill-opacity:1;stroke-width:0.202027"
-         y="142.53308"
-         x="17.281918"
-         sodipodi:role="line" /></text>
+       style="font-style:normal;font-weight:normal;font-size:8.08104038px;line-height:0;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.20202699"
+       id="text50">
+      <path
+         d="m 27.581128,133.61736 -0.413331,1.80477 h -5.65677 c -0.879942,0 -1.580304,-0.23345 -2.101086,-0.70036 -0.520782,-0.48487 -0.745257,-1.18523 -0.673425,-2.10108 l 3.710918,-15.24635 h -1.238737 l 0.40369,-1.80477 h 4.57929 l -3.845603,17.05112 c -0.05387,0.66445 0.251413,0.99667 0.915858,0.99667 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.93700027px;line-height:0.94999999;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.20202699"
+         id="path837"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccscccccccsc" />
+    </g>
     <text
        id="text33"
        y="40.511105"
@@ -127,36 +121,30 @@
          x="54.470467"
          id="tspan31"
          sodipodi:role="line" /></text>
-    <text
-       inkscape:export-ydpi="96"
-       inkscape:export-xdpi="96"
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:7.93px;line-height:0;font-family:sans-serif;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.198251"
-       x="24.861904"
-       y="127.69967"
-       id="text50-1"><tspan
-         sodipodi:role="line"
-         x="24.861904"
-         y="127.69967"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4334px;line-height:0.95;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.198251"
-         id="tspan80-7">7</tspan><tspan
-         sodipodi:role="line"
-         x="24.861904"
-         y="134.67769"
-         style="font-size:26.4334px;line-height:0.95;fill:#ffffff;fill-opacity:1;stroke-width:0.198251"
-         id="tspan100-8" /></text>
-    <text
-       id="text114"
-       y="137.62708"
-       x="34.316326"
-       style="font-style:normal;font-weight:normal;font-size:7.93px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:#1e90ff;stroke-width:0.749293;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"
-       inkscape:export-xdpi="96"
-       inkscape:export-ydpi="96"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4335px;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#ffffff;fill-opacity:1;stroke:#1e90ff;stroke-width:0.749293;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         y="137.62708"
-         x="34.316326"
-         id="tspan112"
-         sodipodi:role="line">MP</tspan></text>
+    <g
+       aria-label="7
+"
+       style="font-style:normal;font-weight:normal;font-size:7.92999983px;line-height:0;font-family:sans-serif;display:inline;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.19825099"
+       id="text50-1"
+       transform="translate(-0.90632716)">
+      <path
+         d="m 36.043232,114.2715 -4.027742,18.08045 h -3.568509 l 3.393341,-16.30941 h -6.030795 l 0.374047,-1.77104 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.4333992px;line-height:0.94999999;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;fill:#ffffff;fill-opacity:1;stroke-width:0.19825099"
+         id="path834"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccc" />
+    </g>
+    <path
+       sodipodi:nodetypes="ccccscccsccccsccccccscc"
+       inkscape:connector-curvature="0"
+       id="path829"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.43350029px;line-height:1.25;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;fill:#ffffff;fill-opacity:1;stroke:#1e90ff;stroke-width:0.74929303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 53.917864,122.32208 -3.40109,12.55591 c -0.05287,0.63441 0.443487,0.96042 1.025024,0.97804 l -0.39062,1.77105 h -1.453843 c -0.863494,0 -1.550765,-0.22909 -2.061813,-0.68728 -0.511047,-0.45818 -0.731326,-1.14545 -0.660837,-2.06181 l 3.427523,-12.76738 c 0.123357,-1.37454 -0.326013,-2.06181 -1.348108,-2.06181 h -1.533143 l -3.903327,17.57828 h -3.542089 l 3.718292,-15.51647 c 0.123357,-1.37454 -0.343635,-2.06181 -1.400975,-2.06181 h -1.533143 l -3.876893,17.57828 h -3.542089 l 3.903326,-17.71045 h -1.257401 l 0.385096,-1.77104 h 12.740947 c 1.392164,0 2.528804,0.34363 3.409921,1.0309 0.969229,0.75776 1.400976,1.80629 1.295242,3.14559 z" />
+    <path
+       sodipodi:nodetypes="cccsccccccsccccsccsccc"
+       inkscape:connector-curvature="0"
+       id="path831"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:26.43350029px;line-height:1.25;font-family:HamburgerHeaven;-inkscape-font-specification:'HamburgerHeaven, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;fill:#ffffff;fill-opacity:1;stroke:#1e90ff;stroke-width:0.74929303;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 66.221549,122.24278 -0.264335,3.17202 c -0.08811,1.12783 -0.572726,2.08824 -1.453843,2.88125 -0.863494,0.79301 -1.859156,1.18951 -2.986985,1.18951 h -3.594355 l -1.770028,8.14152 h -3.542089 l 3.857673,-17.71045 h -1.22978 l 0.357475,-1.77104 h 6.899143 c 1.127829,0 2.053002,0.40531 2.775518,1.21594 0.722516,0.793 1.039718,1.75342 0.951606,2.88125 z m -3.462789,-0.50224 c 0.05287,-0.49343 -0.08811,-0.91636 -0.422936,-1.26881 -0.317202,-0.37007 -0.731327,-0.5551 -1.242374,-0.5551 h -1.110207 l -1.637446,7.82432 h 2.060382 c 0.493425,0 0.933984,-0.17622 1.321675,-0.52867 0.387691,-0.37007 0.60797,-0.80182 0.660837,-1.29525 z" />
   </g>
 </svg>
