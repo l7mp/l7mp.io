@@ -40,7 +40,13 @@
     <header>{% include header.html %}</header>
     <div id="body">
       <main role="main">
-
+        <section class="banner-notification">
+          <div class="container" style="display: flex; justify-content: space-around">
+            <div><img width="150" src="./assets/brand/logo.svg"></div>
+            <div>This site is currently under construction, but we are working on it.</div> 
+            <div><img width="100" src="./assets/images/under-construction.png"></div>
+          </div>
+        </section>
         {% include carousel.html %}
     
         <!-- Marketing messaging and featurettes
@@ -59,6 +65,10 @@
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="./assets/dist/js/bootstrap.bundle.js"></script>
+  <script>
+    var navHeight = $(".navbar").height() + 16;
+    $("section").css('margin-top', navHeight);
+  </script>
 </body>
 
 </html>

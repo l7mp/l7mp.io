@@ -5,10 +5,16 @@
 html,
 body {
    margin:0;
-   padding:0;
    height:100%;
    color: #5a5a5a;
+   /* padding-top: 39.077042px; */
 }
+
+/* @media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+} */
 
 #container {
   min-height:100%;
@@ -38,6 +44,7 @@ body {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  text-shadow: 2px 2px 8px #000;
 }
 
 /* Declare heights because of positioning of img element */
@@ -138,6 +145,15 @@ body {
 }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+/* BANNER */
+
+.banner-notification {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5rem 0;
+  transition: all .5s ease;
+}
 
 /* FOOTER */
 
