@@ -4,7 +4,7 @@
   paragraph: Enjoy the convenience of a modern and expressive Kubernetes 
             API to manage an entire cluster of applications, gateways and service proxies
   button: Learn more
-  url: "#"
+  url: "docs/control"
   active: "active"
 - header: UDP and SCTP
   background: udp.jpg
@@ -12,11 +12,11 @@
   paragraph: Make UDP and SCTP first class citizens in the srervice mesh
   active: ""
   button: Learn more
-  url: "#"
+  url: "docs/udp_sctp"
 - header: Service mesh
   background: service-mesh.jpg
   align: text-right
   paragraph: Integrate legacy apps and services into a  modern service mesh
   active: ""
   button: Learn more
-  url: "#"
+  url: "docs/service_mesh"

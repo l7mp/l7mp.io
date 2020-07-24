@@ -253,7 +253,7 @@
                 <div class="carousel-caption text-left">
                     <h1>Control</h1>
                     <p>Enjoy the convenience of a modern and expressive Kubernetes API to manage an entire cluster of applications, gateways and service proxies</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="docs/control" role="button">Learn more</a></p>
                 </div>
             </div>
         </div>
@@ -264,7 +264,7 @@
                 <div class="carousel-caption ">
                     <h1>UDP and SCTP</h1>
                     <p>Make UDP and SCTP first class citizens in the srervice mesh</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="docs/udp_sctp" role="button">Learn more</a></p>
                 </div>
             </div>
         </div>
@@ -275,7 +275,7 @@
                 <div class="carousel-caption text-right">
                     <h1>Service mesh</h1>
                     <p>Integrate legacy apps and services into a  modern service mesh</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <p><a class="btn btn-lg btn-primary" href="docs/service_mesh" role="button">Learn more</a></p>
                 </div>
             </div>
         </div>
@@ -316,76 +316,48 @@
     <div class="album py-5">
         <div class="container" style="min-width: 75%;">
             <div class="row">
-                
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm h-100"> 
-                        <!-- <div class="row justify-content-center">
-                            
-                        </div> -->
-                        <img src="./assets/gcp/connect.svg"></img>
-                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Connect</title>
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Connect</text>
-                        </svg> -->
-                        <div class="card-body">
-                            <h5 class="card-title">Connect</h5>
-                            <p class="card-text">Interconnect services, databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-secondary">Go to</button>
+                <div class="card-deck mb-3 text-center">
+                    
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100"> 
+                            <img src="./assets/gcp/connect.svg"></img>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Connect</h5>
+                                <p class="card-text">Interconnect services, databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations</p>
+                                <!-- <div class="d-flex justify-content-between align-items-center"> -->
+                                    <button type="button" onclick="window.location.href='docs/connect';" class="align-self-end mt-auto btn btn-lg btn-block btn-primary">Learn more</button>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm h-100"> 
-                        <!-- <div class="row justify-content-center">
-                            
-                        </div> -->
-                        <img src="./assets/gcp/finetune.svg"></img>
-                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Finetune</title>
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Finetune</text>
-                        </svg> -->
-                        <div class="card-body">
-                            <h5 class="card-title">Finetune</h5>
-                            <p class="card-text">Load-balance traffic across any number of backends, apply access control rules, automatically retry and timeout failed connections</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-secondary">Go to</button>
+                    
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100"> 
+                            <img src="./assets/gcp/finetune.svg"></img>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Finetune</h5>
+                                <p class="card-text">Load-balance traffic across any number of backends, apply access control rules, automatically retry and timeout failed connections</p>
+                                <!-- <div class="d-flex justify-content-between align-items-center"> -->
+                                    <button type="button" onclick="window.location.href='docs/finetune';" class="align-self-end mt-auto btn btn-lg btn-block btn-primary">Learn more</button>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm h-100"> 
-                        <!-- <div class="row justify-content-center">
-                            
-                        </div> -->
-                        <img src="./assets/gcp/observe.svg"></img>
-                        <!-- <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                            xmlns="../assets/gcp/BigQuery.svg" preserveAspectRatio="xMidYMid slice" focusable="false"
-                            role="img" aria-label="Placeholder: Thumbnail">
-                            <title>Observe</title>
-                            <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                dy=".3em">Observe</text>
-                        </svg> -->
-                        <div class="card-body">
-                            <h5 class="card-title">Observe</h5>
-                            <p class="card-text">Observe traffic as it flows through the network, monitor application statistics, log and kill individual streams with a single command</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <button type="button" class="btn btn-secondary">Go to</button>
+                    
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow h-100"> 
+                            <img src="./assets/gcp/observe.svg"></img>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Observe</h5>
+                                <p class="card-text">Observe traffic as it flows through the network, monitor application statistics, log and kill individual streams with a single command</p>
+                                <!-- <div class="d-flex justify-content-between align-items-center"> -->
+                                    <button type="button" onclick="window.location.href='docs/observe';" class="align-self-end mt-auto btn btn-lg btn-block btn-primary">Learn more</button>
+                                <!-- </div> -->
                             </div>
                         </div>
                     </div>
+                    
                 </div>
-                
             </div>
         </div>
     </div>

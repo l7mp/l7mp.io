@@ -39,12 +39,12 @@
     <div id="container">
         <header>{% include header.html %}</header>
         <div id="body">
-            <div class="container-fluid content">
+            <div class="container-fluid">
                 <div class="row">
                     {% include sidebar.html %}
-                    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                    <main role="main" class="col-md-6 col-lg-8 px-md-4">
                         <div class="d-flex justify-content-start">
-                            <article class="content" style="padding-bottom:6rem;">
+                            <article style="padding-bottom:6rem;">
                                 <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
                                     <ol class="breadcrumb spb-1" style="background: #FFF;">
                                       {% assign crumbs = page.url | append: "/"  | replace: '//', '/' | split: '/' %}
@@ -61,12 +61,14 @@
                                     </ol>
                                   </nav>
                                 {{ content }}
-                                {% include toc.html %}
-                                <!-- {% include permalinks.html %} -->
-                                {% include tags.html %}
                             </article>
                         </div>
                     </main>
+                    <div class="col-md-3 col-lg-2">
+                        <div class="sticky">
+                            <ul id="TOCPAGE" style="list-style-type:none;"></ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,6 +81,11 @@
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
     <script src="../assets/dist/js/bootstrap.bundle.js"></script>
     <script src="../assets/sidebar.js"></script>
+    <script>
+        var navHeight = $(".navbar").height() + 16;
+        $("#body").css('margin-top', navHeight);
+    </script>
+    {% include toc.html %}
        <!-- FOOTER -->
 </body>
 

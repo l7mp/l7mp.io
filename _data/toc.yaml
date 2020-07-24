@@ -19,6 +19,37 @@
           url: "docs/k8s_reference"
         - title: "Tasks"
           url: "docs/k8s_tasks"
+    - title: "Control"
+      url: ""
+      children: 
+        - title: "Control"
+          url: "docs/control"
+    - title: "UDP & SCTP"
+      url: ""
+      children: 
+        - title: "UDP & SCTP"
+          url: "docs/udp_sctp"
+    - title: "Service Mesh"
+      url: ""
+      children: 
+        - title: "Service Mesh"
+          url: "docs/service_mesh"
+    - title: "Connect"
+      url: ""
+      children: 
+        - title: "Connect"
+          url: "docs/connect"
+    - title: "Finetune"
+      url: ""
+      children: 
+        - title: "Finetune"
+          url: "docs/finetune"
+    - title: "Observe"
+      url: ""
+      children: 
+        - title: "Observe"
+          url: "docs/observe"
+
 
     - title: "Getting Started"
       url: "docs/getting-started"
@@ -29,7 +60,3 @@
           url: "docs/getting-started#development"
         - title: Customization
           url: "docs/getting-started#customization"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"

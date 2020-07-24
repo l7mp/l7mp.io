@@ -164,3 +164,12 @@ body {
   width: 100%;
   text-align: center;
 }
+
+div.sticky {
+	position: fixed;
+  border-left-style: groove;
+}
+
+ul {
+  padding-left: 20px;
+}

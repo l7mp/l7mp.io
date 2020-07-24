@@ -3,6 +3,8 @@ title: News
 permalink: /news/
 ---
 
+<img src="../assets/images/under-construction.png" alt="Under construction" width="150">
+
 # News
 
 <p>Subscribe with <a href="{{ site.baseurl }}/feed.xml">RSS</a> to keep up with the latest news.
