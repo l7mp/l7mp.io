@@ -6,6 +6,8 @@ permalink: /docs/
 
 # Documentation
 
+<img src="../assets/images/under-construction.png" alt="Under construction" width="150">
+
 Welcome to the {{ site.title }} Documentation pages! Here you can quickly jump to a 
 particular page.
 

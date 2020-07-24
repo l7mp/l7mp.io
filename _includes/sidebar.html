@@ -1,22 +1,73 @@
-<div class="col-md-3 col-lg-2 content">
-  <div id="td-sidebar-menu" class="td-sidebar__inner">  
+<!-- <div class="col-md-3 col-lg-2">
+  <div id="td-sidebar-menu" class="td-sidebar__inner">
     <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
-  {% for section in site.data.toc %}<ul class="td-sidebar-nav__section pr-md-3">
-    {% capture sectionUrl %}{{ section.url | replace: "/", "" }}{% endcapture %}
-    {% capture pageUrl %}{{ page.url | replace: "/", "" }}{% endcapture %}
-    <li class="td-sidebar-nav__section-title">
-      <a  href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">{{ section.title }}</a>
-    </li>{% if section.links %}<ul>
-      <li class="collapse show" id="{{ section.title | slugify }}">
-          <ul class="td-sidebar-nav__section pr-md-3">{% for entry in section.links %}
-            <li class="td-sidebar-nav__section-title">
-              <a href="{% if entry.url %}{{ site.baseurl }}/{{ entry.url }}{% else %}{{ entry.external_url }}{% endif %}" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">{{ entry.title }}</a>
-            </li>
-            {% if page.url contains entry.url or pageUrl == sectionUrl %}
-            <ul><li class="collapse show" id="{{ child.title | slugify }}">{% if entry.children %}
-                {% for child in entry.children %}<a class="td-sidebar-link td-sidebar-link__page " id="m-{{ section.title | slugify }}-{{ entry.title | slugify }}-{{ child.title | slugify }}" href="{% if child.url %}{{ site.baseurl }}/{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">{{ child.title }}</a>{% endfor %}
-                {% endif %}</li></ul>{% endif %}{% endfor %}
-      </ul>{% endif %}{% endfor %}
+      {% for section in site.data.toc %}
+        <ul class="td-sidebar-nav__section pr-md-3">
+        {% capture sectionUrl %}{{ section.url | replace: "/", "" }}{% endcapture %}
+        {% capture pageUrl %}{{ page.url | replace: "/", "" }}{% endcapture %}
+        <li class="td-sidebar-nav__section-title">
+          <a href="{% if section.url %}{{ site.baseurl }}/{{ section.url }}{% else %}{{ section.external_url }}{% endif %}"
+            class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">{{ section.title }}</a>
+        </li>{% if section.links %}<ul>
+          <li class="collapse show" id="{{ section.title | slugify }}">
+            <ul class="td-sidebar-nav__section pr-md-3">{% for entry in section.links %}
+              <li class="td-sidebar-nav__section-title">
+                <a href="{% if entry.url %}{{ site.baseurl }}/{{ entry.url }}{% else %}{{ entry.external_url }}{% endif %}"
+                  class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">{{ entry.title }}</a>
+              </li>
+              {% if page.url contains entry.url or pageUrl == sectionUrl %}
+              <ul>
+                <li class="collapse show" id="{{ child.title | slugify }}">{% if entry.children %}
+                  {% for child in entry.children %}<a class="td-sidebar-link td-sidebar-link__page "
+                    id="m-{{ section.title | slugify }}-{{ entry.title | slugify }}-{{ child.title | slugify }}"
+                    href="{% if child.url %}{{ site.baseurl }}/{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">{{ child.title }}</a>{% endfor %}
+                  {% endif %}</li>
+              </ul>{% endif %}{% endfor %}
+            </ul>{% endif %}{% endfor %}
     </nav>
   </div>
-</div>
+</div> -->
+
+
+
+  <div id="accordion" class="col-md-3 col-lg-2">
+    {% for section in site.data.toc %}
+      {% capture sectionUrl %}{{ section.url | replace: "/", "" }}{% endcapture %}
+      {% capture pageUrl %}{{ page.url | replace: "/", "" }}{% endcapture %}
+      {% if section.links %}
+        {% for entry in section.links %}
+          <div class="card">
+            
+            <div class="card-header" id="heading{{forloop.index}}">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{forloop.index}}"
+                  aria-expanded="false" aria-controls="collapse{{forloop.index}}">
+                  {{ entry.title }}
+                </button>
+              </h5>
+            </div>
+            
+            <!-- <h5>{{page.url}}</h5>
+            <h5>{{entry.url}}</h5>
+            <h5>{{pageUrl}}</h5>
+            <h5>{{section.url}}</h5> -->
+            {% if page.url contains entry.url or pageUrl contains sectionUrl %}
+              {% if entry.children %}
+              
+              <div id="collapse{{forloop.index}}" class="collapse" aria-labelledby="heading{{forloop.index}}" data-parent="#accordion">
+                <div class="card-body">
+                  <ul id="items" style="list-style-type:none;">
+                    {% for child in entry.children %}
+                      <li><a href="{% if child.url %}{{ site.baseurl }}/{{ child.url }}{% else %}{{ child.external_url }}{% endif %}">{{ child.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
+              
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>

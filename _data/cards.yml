@@ -1,15 +1,18 @@
 - title: Connect
   image: connect.svg
-  button: Go to
-  body: Interconnect services, 
-        databases, storage, legacy apps and APIs and transparently convert between protocol encapsulations
+  button: Learn more
+  body: Interconnect services, databases, storage, legacy apps 
+        and APIs and transparently convert between protocol encapsulations
+  url: "docs/connect"
 - title: Finetune
   image: finetune.svg
-  button: Go to
-  body: Load-balance traffic across 
-        any number of backends, apply access control rules, automatically retry and timeout failed connections
+  button: Learn more
+  body: Load-balance traffic across any number of backends, apply 
+        access control rules, automatically retry and timeout failed connections
+  url: "docs/finetune"
 - title: Observe
   image: observe.svg
-  button: Go to
-  body: Observe traffic as it flows 
-        through the network, monitor application statistics, log and kill individual streams with a single command
+  button: Learn more
+  body: Observe traffic as it flows through the network, monitor 
+        application statistics, log and kill individual streams with a single command
+  url: "docs/observe"

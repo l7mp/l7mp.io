@@ -147,7 +147,30 @@ body {
 .td-sidebar-nav .dropdown a {
     color: #495057
 }
-
+ 
 .td-sidebar-nav .dropdown .nav-link {
     padding: 0 0 1rem
+}
+
+.card-header {
+    padding-top: 0; 
+    padding-bottom: 0;
+}
+
+.btn-link {
+    color: #306bcc;
+}
+
+#items {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+div.sticky {
+	position: fixed;
+  border-left-style: groove;
+}
+
+ul {
+  padding-left: 20px;
 }

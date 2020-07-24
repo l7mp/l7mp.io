@@ -3,6 +3,7 @@ title: About
 permalink: /about/
 ---
 
+<img src="../assets/images/under-construction.png" alt="Under construction" width="150">
 # About
 
 This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy jekyll theme, based

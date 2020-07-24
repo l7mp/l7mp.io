@@ -6,4 +6,4 @@ tags:
 description: Getting started with Docsy Jekyll
 ---
 
-# Under construction
+<img src="../assets/images/under-construction.png" alt="Under construction" width="150">

@@ -5,4 +5,4 @@ tags:
 description: Basic concept of L7mp
 --- 
 
-# Under construction
+<img src="../assets/images/under-construction.png" alt="Under construction" width="150">
