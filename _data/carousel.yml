@@ -1,5 +1,5 @@
 - header: Control
-  background: control-bg.jpg
+  background: control-bg.png
   align: text-left
   paragraph: Enjoy the convenience of a modern and expressive Kubernetes 
             API to manage an entire cluster of applications, gateways and service proxies
