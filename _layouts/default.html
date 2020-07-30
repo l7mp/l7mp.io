@@ -41,10 +41,14 @@
     <div id="body">
       <main role="main">
         <section class="banner-notification">
-          <div class="container" style="display: flex; justify-content: space-around">
-            <div><img width="150" src="./assets/brand/logo.svg"></div>
-            <div>This site is currently under construction, but we are working on it.</div> 
-            <div><img width="100" src="./assets/images/under-construction.png"></div>
+          <div class="container-fluid" style="display: flex; justify-content: space-around">
+            <div class="row">
+              <div class="text-center d-none d-sm-block col-sm-4"><img width="150" src="./assets/brand/logo.svg"></div>
+              <div class="visible text-center col-4 col-sm4">
+                <p>This site is currently under construction, but we are working on it.</p>
+              </div> 
+              <div class="text-center d-none d-sm-block col-sm-4"><img width="100" src="./assets/images/under-construction.png"></div>
+            </div>
           </div>
         </section>
         {% include carousel.html %}
@@ -52,7 +56,22 @@
         <!-- Marketing messaging and featurettes
       ================================================== -->
         <!-- Wrap the rest of the page in another container to center all the content. -->
-    
+
+        <!-- Control  -->
+          
+        <section class="banner-notification">
+          <div class="container-fluid" style="display: flex; justify-content: space-around">
+            <div class="row">
+              <div class="text-center d-none d-sm-block col-sm-4"><img width="150" src="./assets/gcp/BigQuery.svg"></div>
+              <div class="visible text-center col-4 col-sm4">
+                <h2>Control</h2>
+                <p>Enjoy the convenience of a modern and expressive Kubernetes API to manage an entire cluster of applications, gateways and service proxies</p>
+              </div> 
+              <div class="text-center d-none d-sm-block col-sm-4"><img width="150" src="./assets/gcp/CloudPubSub.svg"></div>
+            </div>
+          </div>
+        </section>
+
         {% include cards.html %}
       </main>
     </div>
@@ -68,6 +87,21 @@
   <script>
     var navHeight = $(".navbar").height() + 16;
     $("section").css('margin-top', navHeight);
+  </script>
+  <script>
+    $(window).on('resize', function() {
+      $(".visible").each(function (index) {
+        if ($( window ).width() < 576){
+          $(this).removeClass("col-4");
+          $(this).removeClass("col-sm4");
+          $(this).addClass("col-12");
+        } else if ($(".visible").hasClass("col-12")) {
+          $(this).removeClass("col-12");
+          $(this).addClass("col-4");
+          $(this).addClass("col-sm4");
+        };
+      });
+    });
   </script>
 </body>
 
