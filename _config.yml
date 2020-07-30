@@ -80,6 +80,10 @@ defaults:
     values:
       layout: "page"
   - scope:
+      path: "openapi"
+    values:
+      layout: "openapi"
+  - scope:
       path: ""
       type: "docs"
     values:
