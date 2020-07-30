@@ -6,7 +6,10 @@
   <div id="footer" class="bg-dark text-white-50 container-fluid">
     <div class="row">
       <div class="col-md-4">
-        <small>About us:</small>
+        <small>Authors:</small> </br>
+        {% for author in site.data.authors %}
+          <small>{{author.name}}: {{author.email}}</small></br> 
+        {% endfor %}
       </div>
       <div class="col-md-4">
         <small>Copyright &copy; <a href="{{ site.baseurl }}">{{site.org}}</a></small>
