@@ -1,15 +1,14 @@
-- header: Control
+- header: Kubernetes
   background: control-bg.jpg
   align: text-left
-  paragraph: Enjoy the convenience of a modern and expressive Kubernetes 
-            API to manage an entire cluster of applications, gateways and service proxies
+  paragraph: Easily expose any Kubernetes-hosted service to the Internet regardless of the network protocol
   button: Learn more
   url: "docs/control"
   active: "active"
 - header: UDP and SCTP
   background: udp.jpg
   align: ""
-  paragraph: Make UDP and SCTP first class citizens in the srervice mesh
+  paragraph: Make UDP and SCTP first class citizens in the service mesh
   active: ""
   button: Learn more
   url: "docs/udp_sctp"
