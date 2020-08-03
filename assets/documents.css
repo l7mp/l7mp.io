@@ -14,17 +14,6 @@ body {
   min-height:100%;
   position:relative;
 }
-#body {
-  padding:10px;
-  padding-bottom:70px;   /* Height of the footer */
-}
-#footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height: auto;   /* Height of the footer */
-  text-align: center;
-}
 
 /* ARTICLE */
 

@@ -32,6 +32,7 @@
   </style>
   <!-- Custom styles for this template -->
   <link href="./assets/default.css" rel="stylesheet">
+  <link href="./assets/main.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- FAVICO -->
@@ -465,11 +466,14 @@
     crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="./assets/dist/js/bootstrap.bundle.js"></script>
+  <script src="./assets/main.js"></script>
   <script>
-    var navHeight = $(".navbar").height() + 16;
-    $("section").css('margin-top', navHeight);
-  </script>
-  <script>
+    console.log($(window).width());
+    if ($( window ).width() < 576){
+      $(".visible").removeClass("col-4");
+      $(".visible").removeClass("col-sm4");
+      $(".visible").addClass("col-12");
+    }
     $(window).on('resize', function() {
       $(".visible").each(function (index) {
         if ($( window ).width() < 576){
