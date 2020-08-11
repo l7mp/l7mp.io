@@ -1,62 +1,34 @@
 - title: Documentation
   url: docs
   links:
-    - title: "L7mp proxy"
-      url: "docs/basic_l7mpProxy"
-      children:
-        - title: "Concepts"
-          url: "docs/basic_concepts"
-        - title: "Reference"
-          url: "docs/basic_reference"
-        - title: "Tasks"
-          url: "docs/basic_tasks"
-    - title: "L7mp service mesh"
-      url: "docs/k8s_l7mpProxy"
-      children:
-        - title: "Concepts"
-          url: "docs/k8s_concepts"
-        - title: "Reference"
-          url: "docs/k8s_reference"
-        - title: "Tasks"
-          url: "docs/k8s_tasks"
-    - title: "Control"
-      url: ""
-      children: 
-        - title: "Control"
-          url: "docs/control"
-    - title: "UDP & SCTP"
-      url: ""
-      children: 
-        - title: "UDP & SCTP"
-          url: "docs/udp_sctp"
-    - title: "Service Mesh"
-      url: ""
-      children: 
-        - title: "Service Mesh"
-          url: "docs/service_mesh"
-    - title: "Connect"
-      url: ""
-      children: 
-        - title: "Connect"
-          url: "docs/connect"
-    - title: "Finetune"
-      url: ""
-      children: 
-        - title: "Finetune"
-          url: "docs/finetune"
-    - title: "Observe"
-      url: ""
-      children: 
-        - title: "Observe"
-          url: "docs/observe"
-
-
-    - title: "Getting Started"
-      url: "docs/getting-started"
+    - title: Overview
+      url: "docs/overview"
       children:
         - title: Features
-          url: "docs/getting-started#getting-started"
+          url: "docs/overview#features"
+        - title: The data plane
+          url: "docs/overview#dataplane"
+        - title: The control plane
+          url: "docs/overview#controlplane"
         - title: Development
-          url: "docs/getting-started#development"
-        - title: Customization
-          url: "docs/getting-started#customization"
+          url: "docs/overview#development"
+    - title: Getting Started
+      url: "docs/getting-started"
+    - title: "The l7mp proxy"
+      url: "docs/basic_l7mpProxy"
+      children:
+        - title: Concepts
+          url: "docs/basic_concepts"
+        - title: Reference
+          url: "docs/basic_reference"
+        - title: Tasks
+          url: "docs/basic_tasks"
+    - title: "The l7mp service mesh"
+      url: "docs/k8s_l7mpProxy"
+      children:
+        - title: Concepts
+          url: "docs/k8s_concepts"
+        - title: Reference
+          url: "docs/k8s_reference"
+        - title: Tasks
+          url: "docs/k8s_tasks"

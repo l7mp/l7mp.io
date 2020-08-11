@@ -1,21 +1,25 @@
 - header: Kubernetes
   background: control-bg.jpg
   align: text-left
-  paragraph: Easily expose any Kubernetes-hosted service to the Internet regardless of the network protocol
+  paragraph: Easily expose any Kubernetes-hosted service to the Internet regardless of the network
+  protocol - Make UDP and SCTP a first class citizen in your service mesh
   button: Learn more
-  url: "docs/control"
+  url: "docs/overview#controlplane"
   active: "active"
-- header: UDP and SCTP
-  background: udp.jpg
-  align: ""
-  paragraph: Make UDP and SCTP first class citizens in the service mesh
-  active: ""
-  button: Learn more
-  url: "docs/udp_sctp"
-- header: Service mesh
+- header: Easy L4-L7 networking
   background: service-mesh.jpg
-  align: text-right
-  paragraph: Integrate legacy apps and services into a  modern service mesh
+  align: ""
+  paragraph: Integrate legacy apps and services into a protocol-agnostic service mesh - Maintain
+  your routing and load-balancing policies enjoying the convenience of a simple Kubernetes API
   active: ""
   button: Learn more
-  url: "docs/service_mesh"
+  url: "docs/overview#dataplane"
+- header: Monitoring and Security
+  background: udp.jpg
+  align: text-right
+  paragraph: Observe traffic as it flows through the service mesh and manage active connections at
+  the granularity of individual data-plane streams - Encrypt/decrypt sessions independently from
+  the protocol encapsulation
+  active: ""
+  button: Learn more
+  url: "docs/overview#features"
