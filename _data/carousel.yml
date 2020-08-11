@@ -1,4 +1,4 @@
-- header: Kubernetes
+- header: Protocol-agnostic Kubernetes networking
   background: control-bg.jpg
   align: text-left
   paragraph: >
@@ -6,7 +6,7 @@
   button: Learn more
   url: "docs/overview#controlplane"
   active: "active"
-- header: Easy L4-L7 networking
+- header: Easy L4-L7 traffic management policies
   background: service-mesh.jpg
   align: ""
   paragraph: >
