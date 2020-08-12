@@ -2,38 +2,40 @@
   url: docs
   links:
     - title: Overview
-      url: "docs/overview"
+      url: "docs/l7mp_overview"
       children:
+        - title: What is l7mp?
+          url: "docs/l7mp_overview#what-is-l7mp"
         - title: Features
-          url: "docs/overview#features"
+          url: "docs/l7mp_overview#features"
         - title: The data plane
-          url: "docs/overview#dataplane"
+          url: "docs/l7mp_overview#data-plane"
         - title: The control plane
-          url: "docs/overview#controlplane"
+          url: "docs/l7mp_overview#control-plane"
         - title: Contributing
-          url: "docs/overview#contributing"
+          url: "docs/l7mp_overview#contributing"
     - title: Getting Started
-      url: "docs/getting-started"
+      url: "docs/l7mp_getting_started"
       children:
         - title: Using the l7mp proxy in standalone mode
-          url: "docs/getting-started#l7mp-proxy-usage"
+          url: "docs/l7mp_getting_started#using-the-l7mp-proxy-in-standalone-mode"
         - title: Using the l7mp service mesh
-          url: "docs/getting-started#l7mp-service-mesh-usage"
+          url: "docs/l7mp_getting_started#using-the-l7mp-service-mesh"
     - title: "The l7mp proxy"
-      url: "docs/basic_l7mpProxy"
+      url: "docs/l7mp_proxy"
       children:
         - title: Concepts
-          url: "docs/basic_concepts"
+          url: "docs/l7mp_proxy#concepts"
         - title: Reference
-          url: "docs/basic_reference"
+          url: "docs/l7mp_proxy#reference"
         - title: Tasks
-          url: "docs/basic_tasks"
+          url: "docs/l7mp_proxy#tasks"
     - title: "The l7mp service mesh"
-      url: "docs/k8s_l7mpProxy"
+      url: "docs/l7mp_service_mesh"
       children:
         - title: Concepts
-          url: "docs/k8s_concepts"
+          url: "docs/l7mp_service_mesh#concepts"
         - title: Reference
-          url: "docs/k8s_reference"
+          url: "docs/l7mp_service_mesh#reference"
         - title: Tasks
-          url: "docs/k8s_tasks"
+          url: "docs/l7mp_service_mesh#tasks"
