@@ -1,10 +1,10 @@
 ---
-title: The l7mp proxy
+title: "The l7mp proxy"
 tags: 
  - jekyll
  - github
-description: The l7mp proxy: Basic concepts
---- 
+description: "The l7mp proxy: Basic concepts"
+---
 
 # Concepts
 

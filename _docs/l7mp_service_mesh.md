@@ -1,9 +1,9 @@
 ---
-title: The l7mp service mesh
+title: "The l7mp service mesh"
 tags: 
  - jekyll
  - github
-description: The l7mp service mesh: Basic concepts
+description: "The l7mp service mesh: Basic concepts"
 ---
 
 # Concepts
