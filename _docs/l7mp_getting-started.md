@@ -1,8 +1,9 @@
 ---
-title: Getting Started
+title: Getting started
 tags: 
  - jekyll
  - github
+order: 2
 description: Getting started with l7mp
 ---
 

@@ -14,7 +14,7 @@
           url: "docs/l7mp_overview#control-plane"
         - title: Contributing
           url: "docs/l7mp_overview#contributing"
-    - title: Getting Started
+    - title: Getting started
       url: "docs/l7mp_getting_started"
       children:
         - title: Using the l7mp proxy in standalone mode
