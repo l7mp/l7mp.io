@@ -7,10 +7,11 @@ order: 4
 description: "The l7mp service mesh: Basic concepts"
 ---
 
-# Concepts
+<img src="../assets/images/under-construction.png" alt="Under construction" width="50">
 
-# Reference
+## Concepts
 
-# Tasks
+## Reference
 
-<img src="../assets/images/under-construction.png" alt="Under construction" width="150">
+## Tasks
+
