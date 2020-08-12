@@ -7,9 +7,11 @@
         - title: What is l7mp?
           url: "docs/l7mp_overview#what-is-l7mp"
         - title: "Data plane: The l7mp proxy"
-          url: "docs/l7mp_overview#data-plane-the-l7mp-proxy"
-        - title: "Control plane: The l7mp service mesh operator"
-          url: "docs/l7mp_overview#control-plane-the-l7mp-service-mesh-operator"
+          url: "docs/l7mp_overview#the-l7mp-data-plane"
+        - title: "Control plane: The l7mp service mesh"
+          url: "docs/l7mp_overview#the-l7mp-control-plane"
+        - title: Deployment models
+          url: "docs/l7mp_getting_started#deployment-models"
         - title: Features
           url: "docs/l7mp_overview#features"
         - title: Contributing
