@@ -10,10 +10,15 @@
           url: "docs/overview#dataplane"
         - title: The control plane
           url: "docs/overview#controlplane"
-        - title: Development
-          url: "docs/overview#development"
+        - title: Contributing
+          url: "docs/overview#contributing"
     - title: Getting Started
       url: "docs/getting-started"
+      children:
+        - title: Using the l7mp proxy in standalone mode
+          url: "docs/getting-started#l7mp-proxy-usage"
+        - title: Using the l7mp service mesh
+          url: "docs/getting-started#l7mp-service-mesh-usage"
     - title: "The l7mp proxy"
       url: "docs/basic_l7mpProxy"
       children:
