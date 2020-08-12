@@ -6,12 +6,12 @@
       children:
         - title: What is l7mp?
           url: "docs/l7mp_overview#what-is-l7mp"
+        - title: "Data plane: The l7mp proxy"
+          url: "docs/l7mp_overview#data-plane-the-l7mp-proxy"
+        - title: "Control plane: The l7mp service mesh operator"
+          url: "docs/l7mp_overview#control-plane-the-l7mp-service-mesh-operator"
         - title: Features
           url: "docs/l7mp_overview#features"
-        - title: The data plane
-          url: "docs/l7mp_overview#data-plane"
-        - title: The control plane
-          url: "docs/l7mp_overview#control-plane"
         - title: Contributing
           url: "docs/l7mp_overview#contributing"
     - title: Getting started
