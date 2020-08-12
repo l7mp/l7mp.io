@@ -4,7 +4,7 @@
   paragraph: >
     Easily expose any Kubernetes-hosted service to the Internet regardless of the network protocol - Make UDP and SCTP a first class citizen in your service mesh
   button: Learn more
-  url: "docs/overview#controlplane"
+  url: "docs/l7mp_overview#the-l7mp-data-plane"
   active: "active"
 - header: Easy L4-L7 traffic management policies
   background: service-mesh.jpg
@@ -13,12 +13,12 @@
     Integrate legacy apps and services into a protocol-agnostic service mesh - Maintain your routing and load-balancing policies enjoying the convenience of a simple Kubernetes API
   active: ""
   button: Learn more
-  url: "docs/overview#dataplane"
-- header: Monitoring and Security
+  url: "docs/l7mp_overview#the-l7mp-control-plane"
+- header: Monitoring and Security for legacy apps
   background: udp.jpg
   align: text-right
   paragraph: >
     Observe traffic as it flows through the service mesh and manage active connections at the granularity of individual data-plane streams - Encrypt/decrypt sessions independently from the protocol encapsulation
   active: ""
   button: Learn more
-  url: "docs/overview#features"
+  url: "docs/l7mp_overview#features"
