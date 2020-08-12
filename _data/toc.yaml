@@ -11,7 +11,7 @@
         - title: "Control plane: The l7mp service mesh"
           url: "docs/l7mp_overview#the-l7mp-control-plane"
         - title: Deployment models
-          url: "docs/l7mp_getting_started#deployment-models"
+          url: "docs/l7mp_overview#deployment-models"
         - title: Features
           url: "docs/l7mp_overview#features"
         - title: Contributing
