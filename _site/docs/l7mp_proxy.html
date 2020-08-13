@@ -239,7 +239,7 @@
             
             <li class="nav-item active">
                 
-                    <a class="nav-link" href="https://github.com/l7mp/l7mp.io"><span>GitHub</span></a>
+                    <a class="nav-link" href="https://github.com/l7mp/l7mp"><span>GitHub</span></a>
                 
             </li>
             
@@ -265,7 +265,7 @@
             <h5 class="mb-0">
               <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1"
                 aria-expanded="false" aria-controls="collapse1">
-                L7mp proxy
+                Overview
               </button>
             </h5>
           </div>
@@ -275,11 +275,17 @@
                 <div class="card-body">
                   <ul id="items" style="list-style-type:none;">
                     
-                      <li><a href="/docs/basic_concepts">Concepts</a></li>
+                      <li><a href="/docs/l7mp_overview#what-is-l7mp">What is l7mp?</a></li>
                     
-                      <li><a href="/docs/basic_reference">Reference</a></li>
+                      <li><a href="/docs/l7mp_overview#the-l7mp-data-plane">Data plane: The l7mp proxy</a></li>
                     
-                      <li><a href="/docs/basic_tasks">Tasks</a></li>
+                      <li><a href="/docs/l7mp_overview#the-l7mp-control-plane">Control plane: The l7mp service mesh</a></li>
+                    
+                      <li><a href="/docs/l7mp_overview#deployment-models">Deployment models</a></li>
+                    
+                      <li><a href="/docs/l7mp_overview#features">Features</a></li>
+                    
+                      <li><a href="/docs/l7mp_overview#contributing">Contributing</a></li>
                     
                   </ul>
                 </div>
@@ -294,7 +300,7 @@
             <h5 class="mb-0">
               <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2"
                 aria-expanded="false" aria-controls="collapse2">
-                L7mp service mesh
+                Getting started
               </button>
             </h5>
           </div>
@@ -304,11 +310,9 @@
                 <div class="card-body">
                   <ul id="items" style="list-style-type:none;">
                     
-                      <li><a href="/docs/k8s_concepts">Concepts</a></li>
+                      <li><a href="/docs/l7mp_getting_started#using-the-l7mp-proxy-in-standalone-mode">Using the l7mp proxy in standalone mode</a></li>
                     
-                      <li><a href="/docs/k8s_reference">Reference</a></li>
-                    
-                      <li><a href="/docs/k8s_tasks">Tasks</a></li>
+                      <li><a href="/docs/l7mp_getting_started#using-the-l7mp-service-mesh">Using the l7mp service mesh</a></li>
                     
                   </ul>
                 </div>
@@ -323,7 +327,7 @@
             <h5 class="mb-0">
               <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3"
                 aria-expanded="false" aria-controls="collapse3">
-                Control
+                The l7mp proxy
               </button>
             </h5>
           </div>
@@ -333,7 +337,11 @@
                 <div class="card-body">
                   <ul id="items" style="list-style-type:none;">
                     
-                      <li><a href="/docs/control">Control</a></li>
+                      <li><a href="/docs/l7mp_proxy#concepts">Concepts</a></li>
+                    
+                      <li><a href="/docs/l7mp_proxy#reference">Reference</a></li>
+                    
+                      <li><a href="/docs/l7mp_proxy#tasks">Tasks</a></li>
                     
                   </ul>
                 </div>
@@ -348,7 +356,7 @@
             <h5 class="mb-0">
               <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4"
                 aria-expanded="false" aria-controls="collapse4">
-                UDP & SCTP
+                The l7mp service mesh
               </button>
             </h5>
           </div>
@@ -358,136 +366,11 @@
                 <div class="card-body">
                   <ul id="items" style="list-style-type:none;">
                     
-                      <li><a href="/docs/udp_sctp">UDP & SCTP</a></li>
+                      <li><a href="/docs/l7mp_service_mesh#concepts">Concepts</a></li>
                     
-                  </ul>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading5">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse5"
-                aria-expanded="false" aria-controls="collapse5">
-                Service Mesh
-              </button>
-            </h5>
-          </div>
-          
-                
-              <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
-                <div class="card-body">
-                  <ul id="items" style="list-style-type:none;">
+                      <li><a href="/docs/l7mp_service_mesh#reference">Reference</a></li>
                     
-                      <li><a href="/docs/service_mesh">Service Mesh</a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading6">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse6"
-                aria-expanded="false" aria-controls="collapse6">
-                Connect
-              </button>
-            </h5>
-          </div>
-          
-                
-              <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
-                <div class="card-body">
-                  <ul id="items" style="list-style-type:none;">
-                    
-                      <li><a href="/docs/connect">Connect</a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading7">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse7"
-                aria-expanded="false" aria-controls="collapse7">
-                Finetune
-              </button>
-            </h5>
-          </div>
-          
-                
-              <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
-                <div class="card-body">
-                  <ul id="items" style="list-style-type:none;">
-                    
-                      <li><a href="/docs/finetune">Finetune</a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading8">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse8"
-                aria-expanded="false" aria-controls="collapse8">
-                Observe
-              </button>
-            </h5>
-          </div>
-          
-                
-              <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
-                <div class="card-body">
-                  <ul id="items" style="list-style-type:none;">
-                    
-                      <li><a href="/docs/observe">Observe</a></li>
-                    
-                  </ul>
-                </div>
-              </div>
-            
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading9">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse9"
-                aria-expanded="false" aria-controls="collapse9">
-                Getting Started
-              </button>
-            </h5>
-          </div>
-          
-                
-              <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
-                <div class="card-body">
-                  <ul id="items" style="list-style-type:none;">
-                    
-                      <li><a href="/docs/getting-started#getting-started">Features</a></li>
-                    
-                      <li><a href="/docs/getting-started#development">Development</a></li>
-                    
-                      <li><a href="/docs/getting-started#customization">Customization</a></li>
+                      <li><a href="/docs/l7mp_service_mesh#tasks">Tasks</a></li>
                     
                   </ul>
                 </div>
@@ -513,12 +396,23 @@
                                       </li>
                                       
                                       <li class="breadcrumb-item active" aria-current="page">
-                                        <a href="http://localhost:4000/docs/example-page">A Nested Page</a>
+                                        <a href="http://localhost:4000/docs/l7mp_proxy">The l7mp proxy</a>
                                       </li>
                                       
                                     </ol>
                                   </nav>
-                                <p><img src="../assets/images/under-construction.png" alt="Under construction" width="150" /></p>
+                                <h2 id="concepts">Concepts</h2>
+
+<p><img src="../assets/images/under-construction.png" alt="Under construction" width="50" /></p>
+
+<h2 id="reference">Reference</h2>
+
+<p>See the <a href="../openapi/">l7mp OpenAPI specs</a> for an overview.</p>
+
+<h2 id="tasks">Tasks</h2>
+
+<p><img src="../assets/images/under-construction.png" alt="Under construction" width="50" /></p>
+
 
                             </article>
                         </div>

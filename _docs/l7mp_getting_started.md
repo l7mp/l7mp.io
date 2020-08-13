@@ -13,24 +13,22 @@ description: Getting started with l7mp
 
 Use the below to install the l7mp proxy from the official l7mp distribution at [npm.js](https://npmjs.org).
 
-```sh
+``` sh
 npm install l7mp --save
 npm test
 ```
 
 At least Node.js v14 is required.
 
-
 ### Docker installation
 
 Pull the official image by `docker pull l7mp/l7mp:latest` or use the enclosed Dockerfile to deploy the l7mp proxy. 
-
 
 ### Deploy into Kubernetes
 
 Use the below configuration to deploy l7mp as an ingress gateway in your Kubernetes cluster.
 
-```yaml
+``` yaml
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
@@ -87,36 +85,33 @@ data:
                   spec: { protocol: L7mpController }
 ```
 
-
 ### Run
 
 The below usage examples assume that the l7mp proxy is deployed in standalone mode and it is available on the `localhost`.
 
 Run l7mp locally with a [sample](config/l7mp-minimal.yaml) static configuration.
 
-```sh
+``` sh
 node l7mp-proxy.js -c config/l7mp-minimal.yaml -l warn -s
 ```
 
 Configuration is accepted either in YAML format (if the extension is `.yaml`) or JSON (otherwise). Command line arguments override static configuration parameters.
 
-
 ### Query configuration
 
 The sample configuration will fire up a HTTP listener on port 1234 and route it to the l7mp controller that serves the l7mp REST API. This API can be used to query or configure the proxy on the fly; e.g., the below will dump the full configuration in JSON format:
 
-```sh
+``` sh
 curl http://localhost:1234/api/v1/config
 ```
 
 For a list of all REST API endpoints, see the [l7mp OpenAPI specs](https://l7mp.io/openapi).
 
-
 ### Manage sessions
 
 On top of the static configuration, the response contains a list of `sessions`, enumerating the set of active (connected) streams inside l7mp. You can list the live sessions explicitly as follows:
 
-```sh
+``` sh
 curl http://localhost:1234/api/v1/sessions
 ```
 
@@ -124,16 +119,15 @@ You should see only a single HTTP session: this session was created by the l7mp 
 
 You can also delete any session (suppose its name is `session-name`) via the below REST API call.
 
-```sh
+``` sh
 curl -iX DELETE http://localhost:1234/api/v1/sessions/<session-name>
 ```
-
 
 ### Add a new cluster
 
 Add a new WebSocket *cluster* named `ws-cluster` that will connect to an upstream WebSocket service with a single *endpoint* at `localhost:16000`.
 
-```sh
+``` sh
 curl -iX POST --header 'Content-Type:text/x-yaml' --data-binary @- <<EOF  http://localhost:1234/api/v1/clusters
 cluster:
   name: ws-cluster
@@ -161,12 +155,11 @@ cluster:
 EOF
 ```
 
-
 ### Add a new listener and a route
 
 Now add a new UDP *listener* called `udp-listener` at port 15000 that will accept connections from an IP address but only with source port 15001, and *route* the received connections to the above cluster (which, recall, we named as `ws-cluster`).
 
-```sh
+``` sh
 curl -iX POST --header 'Content-Type:text/x-yaml' --data-binary @- <<EOF  http://localhost:1234/api/v1/listeners
 listener:
   name: udp-listener
@@ -183,7 +176,7 @@ EOF
 
 There is an important quirk here. The `route` spec in the above REST API call specifies a new cluster (the one with the protocol `Logger`), but this specification is embedded into the route definition. Here, `Logger` is a special *transform* cluster that will instruct l7mp to log all traffic arriving from the stream's source (the UDP listener) to the destination (the WebSocket cluster) to the standard output. Of course, we could have added this cluster in a separate REST API call as well:
 
-```sh
+``` sh
 curl -iX POST --header 'Content-Type:text/x-yaml' --data-binary @- <<EOF  http://localhost:1234/api/v1/clusters
 cluster:
   name: logger-cluster
@@ -210,7 +203,6 @@ EOF
 
 This flexibility of l7mp to accept explicit and implicit (embedded) configurations is available in essentially all REST API calls, and it greatly simplifies the use of the API.
 
-
 ### Routing
 
 On session creation, l7mp will demultiplex the bidirectional stream received at the listener into two uni-directional streams: the *ingress stream* (in the direction from the source/listener to the destination/cluster) will be routed through the `Logger` transform cluster. Theoretically, a transform cluster is free to apply any modification it wants to the traffic passing through it, it can be local (built into the l7mp datapath, like `Logger`) or remote (e.g., another WebSocket cluster), the only requirement is that the cluster endpoint listen at the specified address on the specified port and send the modified traffic back to l7mp. For now, the `Logger` cluster just dumps the content of the stream without transforming it in any ways, but you get the point. The returned stream is then piped to the cluster `ws-cluster`. In the *egress direction* (from the destination/cluster back to the source/listener), no transformation occurs as the egress chain spec is missing.
@@ -222,47 +214,44 @@ The above should yield the routes:
     ingress: udp-listener -> logger-cluster -> ws-cluster
     egress:  ws-cluster -> udp-listener
 
-
 ### Retries and timeouts
 
 Route specifications may contain a `retry` spec, in order to describe what to do when one of the connected endpoints fail. By the above spec, l7mp will automatically retry the connection at most 3 times both on connection setup errors and disconnect events on already established connections, waiting each time 2000 ms for the stream to be successfully re-established.
-
 
 ### Test the connection
 
 To complete the connection, fire up a `socat(1)` sender (don't forget to bind the sender to 15001, otherwise l7mp, which connects back to this port, will not accept the connection):
 
-```sh
+``` sh
 socat - udp:localhost:15000,sourceport=15001
 ```
 
 Then [start](https://github.com/vi/websocat) a `websocat` receiver:
 
-```sh
+``` sh
 websocat -Eb ws-l:127.0.0.1:16000 -
 ```
 
 What you type in the sender should now appear at the receiver verbatim, and the l7mp proxy should report everything that passes from the sender to the receiver on the standard output. Note that in the reverse direction, i.e., from the receiver to the sender, nothing will be logged, since the `Logger` was added to the *ingress route* only but not to the *egress route*.
 
-
 ### Clean up
 
 Provided that the new session is named `session-name` (l7mp automatically assigns a unique name to each session, you can check this by issuing a GET request to the API endpoint `/api/v1/sessions`), you can delete this session as follows:
 
-```sh
+``` sh
 curl -iX DELETE http://localhost:1234/api/v1/sessions/<session-name>
 ```
 
 In addition, use the below to remove the `udp-listener` and `ws-cluster`:
 
-```sh
+``` sh
 curl -iX DELETE http://localhost:1234/api/v1/listeners/udp-listener
 curl -iX DELETE http://localhost:1234/api/v1/clusters/ws-cluster
 ```
 
-Note however that this will delete *only* the named listener and the cluster even though, as mentioned above, these objects may contain several *embedded* objects; e.g., `udp-listener` contains and implicit *rulelist* (a match-action table) with a single match-all *rule*, plus a *route* and an embedded *cluster* spec ("Logger"), and these will not be removed by the above call. 
+Note however that this will delete *only* the named listener and the cluster even though, as mentioned above, these objects may contain several *embedded* objects; e.g., `udp-listener` contains and implicit *rulelist* (a match-action table) with a single match-all *rule*, plus a *route* and an embedded *cluster* spec ("Logger"), and these will not be removed by the above call.
 
-You can use the below `recursive` version of the delete operations to delete all the embedded sub-objects of an object, but bear in mind that this will remove *everything* that was implciitly defined by `udp-listener` and `ws-cluster` and this includes *all* the sessions emitted by the listener and *all* the sessions routed via the cluster. 
+You can use the below `recursive` version of the delete operations to delete all the embedded sub-objects of an object, but bear in mind that this will remove *everything* that was implciitly defined by `udp-listener` and `ws-cluster` and this includes *all* the sessions emitted by the listener and *all* the sessions routed via the cluster.
 
 ```sh
 curl -iX DELETE http://localhost:1234/api/v1/listeners/udp-listener?recursive=true
@@ -270,7 +259,6 @@ curl -iX DELETE http://localhost:1234/api/v1/clusters/ws-cluster?recursive=true
 ```
 
 You can avoid this by not using embedded defs or, if this is too inconvenient, explicitly naming all embedded objects and then using the specific APIs (the RuleList API, Rule API, etc.) to clean up each object selectively.
-
 
 ### Status
 
@@ -295,7 +283,6 @@ Below is a summary of the protocols supported by l7mp and the current status of 
 |           | Logger           | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
 |           | JSONENcap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
 |           | JSONDecap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-
 
 The standard protocols, like TCP, HTTP/1.1 and HTTP/2 (although only listener/server side at the moment), WebSocket, and Unix Domain Socket (of the byte-stream type, see below) are fully supported, and for plain UDP there are two modes available: in the "UDP singleton mode" l7mp acts as a "connected" UDP server that is statically tied/connected to a downstream remote IP/port pair, while in "UDP server mode" l7mp emits a new "connected" UDP session for each packet received with a new IP 5-tuple. In addition, JSONSocket is a very simple "UDP equivalent of WebSocket" that allows to enrich a plain UDP stream with arbitrary JSON encoded metadata; see the spec [here](doc/jsonsocket-spec.org). Finally, SCTP is a reliable message transport protocol widely used in telco applications and AF\_PACKET would allow to send and receive raw L2/Ethernet or L3/IP packets on a stream; currently adding proper support for these protocols is a TODO.
 
