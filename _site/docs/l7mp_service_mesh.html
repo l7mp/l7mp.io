@@ -417,11 +417,6 @@
                             </article>
                         </div>
                     </main>
-                    <div class="col-md-3 col-lg-2">
-                        <div class="sticky">
-                            <ul id="TOCPAGE" style="list-style-type:none;"></ul>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -463,45 +458,6 @@
     <script src="../assets/dist/js/bootstrap.bundle.js"></script>
     <script src="../assets/sidebar.js"></script>
     <script src="../assets/main.js"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
-<script>
-$(document).ready(function() {
-    var toc = $('#TOCPAGE');
-
-    // Select each header
-    sections = $('h1');
-    console.log(sections);
-        $.each(sections, function(idx, v) {
-            section = $(v);
-            var div_id = $(section).attr('id');
-            var div_text = section.text().split('¶')[0];
-            var parent = $("#" + div_id)
-            var content = '<li id="link_' + div_id + '"><a href="#' + div_id + '" title="' + div_text +'">' + div_text +'</a></li>';
-            $(toc).append(content);
-
-            // Add section code to subnavigation
-            var children = $('<ul style="list-style-type:none;"></ul>')
-            var contenders = $("#" + div_id).nextUntil("h1");
-            $.each(contenders, function(idx, contender){
-               if($(contender).is('h2') || $(contender).is('h3')) {
-                   console.log(contender);
-                   var contender_id = $(contender).attr('id');
-                   var contender_text = $(contender).text().split('¶')[0];
-                   var content = '<li><a href="#' + contender_id + '" title="' + contender_text +'">' + contender_text +'</a></li>';
-                   children.append(content);
-                   console.log(children);
-                }
-             })
-             $("#link_" + div_id).append(children);
-        });
-    });
-</script>
-
-       <!-- FOOTER -->
 </body>
 
 </html>
