@@ -10,11 +10,30 @@
     <title>{{site.org}}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/main.css" rel="stylesheet">
+    {% if page.url != "/about/" and page.url != "/docs/" and page.url != "/faq/" and page.url != "/news/" %}
+        <!-- Bootstrap core CSS -->
+        <link href="../../assets/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="../../assets/main.css" rel="stylesheet">
 
+        <!-- Custom styles for this template -->
+        <link href="../../assets/page.css" rel="stylesheet">
+        
+        <!-- FAVICO -->
+        <link rel="icon" href="../../assets/brand/logo.svg">
+    {% else %}
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="../assets/main.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="../assets/page.css" rel="stylesheet">
+        
+        <!-- FAVICO -->
+        <link rel="icon" href="../assets/brand/logo.svg">
+    {% endif %}
+    
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -31,30 +50,41 @@
             }
         }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="../assets/page.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- FAVICO -->
-  <link rel="icon" href="../assets/brand/logo.svg">
 </head>
 
 <body>
     <div id="container">
         <header>{% include header.html %}</header>
         <div id="body">
-            <div class="container-fluid">
-                <div class="row">
-                    {% include sidebar.html %}
-                    <main role="main" class="col-md-6 col-lg-8 px-md-4">
-                        <div class="d-flex justify-content-start">
-                            <article style="padding-bottom:6rem;">
+            <div class="container-fluid d-flex justify-content-center">
+                <main role="main" class="col-md-6 col-lg-8 px-md-4">
+                    <div>
+                        <article style="padding-bottom:6rem;">
+                            {% if page.url == "/news/" %}
+                                {% for post in site.posts %}
+                                {% assign currentdate = post.date | date: "%Y" %}
+                                {% if currentdate != date %}
+                                    {% unless forloop.first %}</ul>{% endunless %}
+                                    <h1 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h1>
+                                    <ul>
+                                    {% assign date = currentdate %}
+                                {% endif %}
+                                    <li>
+                                        <hr>
+                                        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                                        <small>{{post.date | date:"%B, %d."}}</small>
+                                    </li>
+                                {% if forloop.last %}</ul>{% endif %}
+                                {% endfor %}
+                            {% else %}
                                 {{ content }}
-                            </article>
-                        </div>
-                    </main>
-                </div>
+                            {% endif %}
+                        </article>
+                    </div>
+                </main>
             </div>
         </div>
+        {% include footer.html %}
      </div>
     
 
@@ -62,8 +92,13 @@
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-    <script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <script src="../assets/main.js"></script>
+    {% if page.url != "/about/" and page.url != "/docs/" and page.url != "/faq/" and page.url != "/news/" %}
+        <script src="../../assets/dist/js/bootstrap.bundle.js"></script>
+        <script src="../../assets/main.js"></script>
+    {% else %}
+        <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+        <script src="../assets/main.js"></script>
+    {% endif %}
 </body>
 
 </html>

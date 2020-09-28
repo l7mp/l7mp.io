@@ -244,10 +244,23 @@
             </li>
             
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2 bg-transparent text-white" type="text" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/l7mp/l7mp">
+                    <div style="display: inline-block;">
+                        <i class="fab fa fa-github-alt fa-2x"></i>
+                    </div>
+                    <div style="display: inline-block;">
+                        <small style="display: block;">l7mp/l7mp</small>
+                        <small style="display: block;" id="git_details"></small>
+                    </div>
+                </a> 
+            </li>
+        </ul>
     </div>
 </nav></header>
         <div id="body">
@@ -872,7 +885,7 @@ curl <span class="nt">-iX</span> DELETE http://localhost:1234/api/v1/clusters/ws
       </div>
       <div class="col-md-4">
         <small>Contact us</small> <br>
-        <a href="#" class="fa fa-3x fa-github"></a>
+        <a href="https://github.com/l7mp/l7mp" class="fa fa-3x fa-github"></a>
         <a href="#" class="fa fa-3x fa-twitter"></a>
       </div>
     </div>

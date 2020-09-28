@@ -10,11 +10,20 @@
     <title>l7mp.io</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="../assets/main.css" rel="stylesheet">
+    
+        <!-- Bootstrap core CSS -->
+        <link href="../assets/dist/css/bootstrap.css" rel="stylesheet">
+        <link href="../assets/main.css" rel="stylesheet">
 
+        <!-- Custom styles for this template -->
+        <link href="../assets/page.css" rel="stylesheet">
+        
+        <!-- FAVICO -->
+        <link rel="icon" href="../assets/brand/logo.svg">
+    
+    
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -31,11 +40,6 @@
             }
         }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="../assets/page.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- FAVICO -->
-  <link rel="icon" href="../assets/brand/logo.svg">
 </head>
 
 <body>
@@ -243,124 +247,104 @@
             </li>
             
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <ul class="navbar-nav ml-auto">
+            <form class="form-inline mt-2 mt-md-0">
+                <input class="form-control mr-sm-2 bg-transparent text-white" type="text" placeholder="Search" aria-label="Search">
+                <!-- <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button> -->
+            </form>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/l7mp/l7mp">
+                    <div style="display: inline-block;">
+                        <i class="fab fa fa-github-alt fa-2x"></i>
+                    </div>
+                    <div style="display: inline-block;">
+                        <small style="display: block;">l7mp/l7mp</small>
+                        <small style="display: block;" id="git_details"></small>
+                    </div>
+                </a> 
+            </li>
+        </ul>
     </div>
 </nav></header>
         <div id="body">
-            <div class="container-fluid">
-                <div class="row">
-                    <div id="accordion" class="col-md-3 col-lg-2">
-  
-    
-    
-    
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading1">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse1"
-                aria-expanded="false" aria-controls="collapse1">
-                Overview
-              </button>
-            </h5>
-          </div>
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading2">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse2"
-                aria-expanded="false" aria-controls="collapse2">
-                Getting started
-              </button>
-            </h5>
-          </div>
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading3">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse3"
-                aria-expanded="false" aria-controls="collapse3">
-                The l7mp proxy
-              </button>
-            </h5>
-          </div>
-          
-        </div>
-      
-        <div class="card">
-          
-          <div class="card-header" id="heading4">
-            <h5 class="mb-0">
-              <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse4"
-                aria-expanded="false" aria-controls="collapse4">
-                The l7mp service mesh
-              </button>
-            </h5>
-          </div>
-          
-        </div>
-      
-    
-  
-</div>
-                    <main role="main" class="col-md-6 col-lg-8 px-md-4">
-                        <div class="d-flex justify-content-start">
-                            <article style="padding-bottom:6rem;">
-                                <p><img src="../assets/images/under-construction.png" alt="Under construction" width="150" /></p>
-
-<h1 id="news">News</h1>
-
-<p>Subscribe with <a href="/feed.xml">RSS</a> to keep up with the latest news.
-For site changes, see the <a href="https://github.com///blob/master/CHANGELOG.md">changelog</a> kept with the code base.</p>
-
-<p><br /></p>
-
-<div class="post-preview">
-   <h2><a href="/2020/welcome-to-jekyll/">Welcome to Jekyll!</a></h2>
-   <span class="post-date">July 14, 2020</span><br />
-   
-   <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<pre><code class="language-Ruby">def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=&gt; prints 'Hi, Tom' to STDOUT.
-</code></pre>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
-
-
-   
-   </div>
-<hr />
-
-<p>Want to see more? See the <a href="/archive/">News Archive</a>.</p>
-
-                            </article>
-                        </div>
-                    </main>
-                </div>
+            <div class="container-fluid d-flex justify-content-center">
+                <main role="main" class="col-md-6 col-lg-8 px-md-4">
+                    <div>
+                        <article style="padding-bottom:6rem;">
+                            
+                                
+                                
+                                
+                                    
+                                    <h1 id="y2020">2020</h1>
+                                    <ul>
+                                    
+                                
+                                    <li>
+                                        <hr>
+                                        <h3><a href="/2020/test-1/">Test 1</a></h3>
+                                        <small>September, 20.</small>
+                                    </li>
+                                
+                                
+                                
+                                
+                                    <li>
+                                        <hr>
+                                        <h3><a href="/2020/welcome-to-jekyll/">Welcome to Jekyll!</a></h3>
+                                        <small>July, 14.</small>
+                                    </li>
+                                
+                                
+                                
+                                
+                                    </ul>
+                                    <h1 id="y2019">2019</h1>
+                                    <ul>
+                                    
+                                
+                                    <li>
+                                        <hr>
+                                        <h3><a href="/2019/santa/">Santa</a></h3>
+                                        <small>December, 06.</small>
+                                    </li>
+                                </ul>
+                                
+                            
+                        </article>
+                    </div>
+                </main>
             </div>
         </div>
+        <!-- <footer class="bg-dark site-footer">
+    <div class="footer-container justify-content-center">
+      <small>Copyright &copy; <a href="">l7mp.io</a></small>
+    </div>
+  </footer> -->
+  <div id="footer" class="bg-dark text-white-50 container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <small>Authors:</small> </br>
+        
+          <small>Gábor Rétvári: rg0now@gmail.com</small></br> 
+        
+          <small>Felicián Németh: nemethf@github</small></br> 
+        
+          <small>Richárd Váradi: ricsi19981007@gmail.com</small></br> 
+        
+          <small>Kornél Dávid: konel1020@gmail.com</small></br> 
+        
+      </div>
+      <div class="col-md-4">
+        <small>Copyright &copy; <a href="">l7mp.io</a></small>
+      </div>
+      <div class="col-md-4">
+        <small>Contact us</small> <br>
+        <a href="https://github.com/l7mp/l7mp" class="fa fa-3x fa-github"></a>
+        <a href="#" class="fa fa-3x fa-twitter"></a>
+      </div>
+    </div>
+  </div>
      </div>
     
 
@@ -368,8 +352,10 @@ print_hi('Tom')
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
-    <script src="../assets/dist/js/bootstrap.bundle.js"></script>
-    <script src="../assets/main.js"></script>
+    
+        <script src="../assets/dist/js/bootstrap.bundle.js"></script>
+        <script src="../assets/main.js"></script>
+    
 </body>
 
 </html>

@@ -18,3 +18,15 @@ $("table").each(function() {
     // tableDiv.append(JSON.stringify($(this)));
     // tableDiv.appendChild($(this));
 });
+
+$(document).ready(function() {
+    var url = "https://api.github.com/repos/l7mp/l7mp";
+    fetch(url).then(function(e) {
+      return e.json()
+    }).then(function(r) {
+       console.log(r)
+       stars = r.stargazers_count
+       forks = r.forks_count
+       $('#git_details').text(stars + " stars " + forks + " forks")
+    });
+  });
