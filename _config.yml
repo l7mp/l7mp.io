@@ -29,8 +29,8 @@ url: "http://l7mp.io" # the base hostname & protocol for your site, e.g. http://
 twitter_username: jekyllrb
 org: l7mp.io
 
-github_user: "l7mp"
-github_repo: "l7mp"
+github_user: l7mp
+github_repo: l7mp
 repo: https://github.com/l7mp/l7mp
 
 # Build settings
