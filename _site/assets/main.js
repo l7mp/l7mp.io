@@ -24,9 +24,11 @@ $(document).ready(function() {
     fetch(url).then(function(e) {
       return e.json()
     }).then(function(r) {
-       console.log(r)
        stars = r.stargazers_count
        forks = r.forks_count
        $('#git_details').text(stars + " stars " + forks + " forks")
     });
   });
+
+
+$("#search-box-head").reset()
