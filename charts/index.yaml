@@ -2,9 +2,13 @@ apiVersion: v1
 entries:
   l7mp-ingress:
   - apiVersion: v2
-    created: "2020-10-19T12:00:24.414399183Z"
+    created: "2020-10-19T12:31:48.777262145Z"
+    dependencies:
+    - name: l7mp-operator
+      repository: https://l7mp.io/charts
+      version: 0.1.2
     description: Ingress gateways for the l7mp service mesh
-    digest: c6524886ad118ea3de108f12c872b79725c1f52b502c38a43d7bab41fecd9e62
+    digest: ebecd26100d9eb8aee445aee5d214fcb5d504235b75f095e1e802e8154c69d20
     home: https://l7mp.io
     icon: https://l7mp.io/assets/brand/logo.svg
     maintainers:
@@ -19,7 +23,23 @@ entries:
     version: 0.1.2
   l7mp-operator:
   - apiVersion: v2
-    created: "2020-10-19T12:00:24.416265275Z"
+    created: "2020-10-19T12:31:48.781044302Z"
+    description: Operator handling CRDs of the l7mp service mesh
+    digest: 8c8367ae2ed8d88c679d9afbe29e4bbe54d85764736a44d1c80b1b37006975f5
+    home: https://l7mp.io
+    icon: https://l7mp.io/assets/brand/logo.svg
+    maintainers:
+    - email: nemethf@tmit.bme.hu
+      name: Felicián Németh
+    name: l7mp-operator
+    sources:
+    - https://github.com/l7mp/l7mp
+    type: application
+    urls:
+    - l7mp-operator-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    created: "2020-10-19T12:31:48.77908735Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 0e55569e16ba640fc03c6137aaaf1ea023066d2bd2d0b992f318f757b14c8350
     home: https://l7mp.io
@@ -37,12 +57,12 @@ entries:
   op-l7mp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-10-06T13:48:05.908538182Z"
+    created: "2020-10-19T12:31:48.782969203Z"
     description: Operator handling CRDs of the l7mp service mesh
-    digest: fd8ec982d32b01a2cc0fc547de50c0e9e511e3962ad1d0568c233df69909d003
+    digest: 259ed832c2e571b61f97534cd1dd69a00ea23ac974588037136041ddd1a758cc
     name: op-l7mp
     type: application
     urls:
-    - op-l7mp-0.1.1.tgz
-    version: 0.1.1
-generated: "2020-10-19T12:00:24.413243247Z"
+    - op-l7mp-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-10-19T12:31:48.773082934Z"
