@@ -2,7 +2,27 @@ apiVersion: v1
 entries:
   l7mp-ingress:
   - apiVersion: v2
-    created: "2020-11-02T17:56:11.660660501Z"
+    created: "2020-11-11T10:00:12.100053937Z"
+    dependencies:
+    - name: l7mp-operator
+      repository: https://l7mp.io/charts
+      version: 0.1.4
+    description: Ingress gateways for the l7mp service mesh
+    digest: 4c49dcf3f80c8af70939ee6e97fefcff55aa3865fcbfee5b81203cf0d06f07ae
+    home: https://l7mp.io
+    icon: https://l7mp.io/assets/brand/logo.svg
+    maintainers:
+    - email: nemethf@tmit.bme.hu
+      name: Felicián Németh
+    name: l7mp-ingress
+    sources:
+    - https://github.com/l7mp/l7mp
+    type: application
+    urls:
+    - l7mp-ingress-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    created: "2020-11-11T10:00:12.097860121Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -22,7 +42,7 @@ entries:
     - l7mp-ingress-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
-    created: "2020-11-02T17:56:11.658209806Z"
+    created: "2020-11-11T10:00:12.09579518Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -43,7 +63,23 @@ entries:
     version: 0.1.2
   l7mp-operator:
   - apiVersion: v2
-    created: "2020-11-02T17:56:11.671409202Z"
+    created: "2020-11-11T10:00:12.109803523Z"
+    description: Operator handling CRDs of the l7mp service mesh
+    digest: efee16a42a571fc274db3d9d1d0b02de7d547249021568bd85bc4af5ea883cb5
+    home: https://l7mp.io
+    icon: https://l7mp.io/assets/brand/logo.svg
+    maintainers:
+    - email: nemethf@tmit.bme.hu
+      name: Felicián Németh
+    name: l7mp-operator
+    sources:
+    - https://github.com/l7mp/l7mp
+    type: application
+    urls:
+    - l7mp-operator-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    created: "2020-11-11T10:00:12.107177524Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: a6a8813527e52a79c73bd41c20e189b515f082169d51b67399fe8fe96c245142
     home: https://l7mp.io
@@ -59,7 +95,7 @@ entries:
     - l7mp-operator-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
-    created: "2020-11-02T17:56:11.669142561Z"
+    created: "2020-11-11T10:00:12.104879464Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 8c8367ae2ed8d88c679d9afbe29e4bbe54d85764736a44d1c80b1b37006975f5
     home: https://l7mp.io
@@ -75,7 +111,7 @@ entries:
     - l7mp-operator-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
-    created: "2020-11-02T17:56:11.666419069Z"
+    created: "2020-11-11T10:00:12.102026527Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 0e55569e16ba640fc03c6137aaaf1ea023066d2bd2d0b992f318f757b14c8350
     home: https://l7mp.io
@@ -93,7 +129,7 @@ entries:
   op-l7mp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-02T17:56:11.673708383Z"
+    created: "2020-11-11T10:00:12.111629353Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 259ed832c2e571b61f97534cd1dd69a00ea23ac974588037136041ddd1a758cc
     name: op-l7mp
@@ -101,4 +137,4 @@ entries:
     urls:
     - op-l7mp-0.1.0.tgz
     version: 0.1.0
-generated: "2020-11-02T17:56:11.650625297Z"
+generated: "2020-11-11T10:00:12.093210151Z"
