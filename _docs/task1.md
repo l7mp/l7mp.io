@@ -81,7 +81,7 @@ response with *WebSocket* traffic. So create a listener inside the transcoder si
 which receive *WebSocket* traffic and forward to the **uds-cluster**.
 
 ``` yaml
-cat <<EOF W kubectl appply -f -
+cat <<EOF | kubectl apply -f -
 apiVersion: l7mp.io/v1
 kind: VirtualService
 metadata:
