@@ -295,4 +295,53 @@ A protocol is marked with a flag `l` if it has a listener implementation in l7mp
 
 ## Using the l7mp service mesh
 
-<img src="../assets/images/under-construction.png" alt="Under construction" width="50">
+
+### How to setup Minikube with l7mp
+
+- For installing kubectl and minikube please follow this guide: [Install Tools](https://kubernetes.io/docs/tasks/tools/)
+- For installing helm please follow this guide: [Installing Helm](https://helm.sh/docs/intro/install/)
+  - With Helm 2 the belowed command may different. 
+
+#### Install the l7mp operator
+
+```
+minikube start
+helm repo add l7mp https://l7mp.io/charts
+helm repo update
+helm install l7mp l7mp/l7mp-ingress
+```
+
+Please wait while all pods are running.
+
+This configuration will generate these:
+  - **l7mp-ingress**: This is a *DaemonSet* which works like a *ReplicaSet* just it is only 
+  create one l7mp-ingress pod and service per node.
+  - **l7mp-operator**: This is a *Deployment* and every change what you make with l7mp will 
+  use this operator to update every l7mp instance.
+  - A simple *HTTP* service on port **1234**. Through this service you can check your current 
+  setup for debuging purpose.
+    - Like that: `curl http://<minikube ip>:1234/api/v1/config`. This will returns the whole setup. 
+
+If everything is running and your run the recommended `watch` command you should see something like that:
+
+(Recomended watch command if you not found after helm install: `watch "kubectl get pod,svc,vsvc,target,rule -o wide -n default --show-labels"`)
+
+```
+NAME                                 READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES   LABELS
+pod/l7mp-ingress-kfd7w               1/1     Running   0          9m14s   172.17.0.3   minikube   <none>           <none>            app=l7mp-ingress,controller-revision-hash=745d6bb655,pod-template-generation=1
+pod/l7mp-operator-866fb48867-bgdgq   1/1     Running   0          9m14s   172.18.0.3   minikube   <none>           <none>            app=l7mp-operator,pod-template-hash=866fb48867
+
+NAME                   TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE     SELECTOR           LABELS
+service/kubernetes     ClusterIP   10.96.0.1        <none>        443/TCP             14m     <none>             component=apiserver,provider=kubernetes
+service/l7mp-ingress   ClusterIP   10.106.149.201   <none>        1234/TCP,8080/TCP   9m14s   app=l7mp-ingress   app.kubernetes.io/managed-by=Helm,app=l7mp-ingress,prometheus=enable
+```
+
+You are ready to go! Enjoy using l7mp. 
+
+#### Clean up
+
+Just simply delete with helm:
+
+```
+helm delete l7mp
+```
