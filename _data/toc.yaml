@@ -41,3 +41,12 @@
           url: "docs/l7mp_service_mesh#reference"
         - title: Tasks
           url: "docs/l7mp_service_mesh#tasks"
+    - title: "1. Task"
+      url: "docs/task1"
+      children:
+        - title: "Before you begin"
+          url: "docs/task1#Before you begin"
+        - title: "Setup"
+          url: "docs/task1#Static configuration"
+        - title: "Cleanup"
+          url: "docs/Cleanup"

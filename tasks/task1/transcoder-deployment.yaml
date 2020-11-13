@@ -1,0 +1,71 @@
+# Create the worker service
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: transcoder-deployment
+  labels:
+    app: transcoder
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: transcoder
+  template:
+    metadata:
+      labels:
+        app: transcoder
+    spec:
+      containers:
+        - name: echo
+          image: l7mp/net-debug:0.5.3
+          command: ["/usr/bin/socat"]
+          args: 
+            - -d
+            - -d
+            - unix-l:/tmp/uds-echo.sock,fork
+            - "exec:'/usr/bin/perl -e \"$|=1;while(sysread(STDIN, $c, 1)){$_.=$c; if($c eq qq(\n)){print qq(Transcoded on $ENV{POD_NAME}: $_); $_=qq()}}\"'"
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+          volumeMounts:
+            - name: socket
+              mountPath: /tmp
+        - name: sidecar
+          image: l7mp/l7mp:latest
+          imagePullPolicy: IfNotPresent
+          command: ["node"]
+          args: ["l7mp-proxy.js", "-c", "config/transcoder-sidecar.yaml", "-s", "-l", "info"]
+          volumeMounts:
+            - name: config
+              mountPath: /app/config
+            - name: socket
+              mountPath: /tmp
+      volumes:
+        - name: config
+          configMap:
+            name: transcoder-sidecar-config
+        - name: socket
+          emptyDir: {}
+---
+# Config for l7mp-sidecar
+apiVersion: v1
+kind: ConfigMap
+metadata:
+    name: transcoder-sidecar-config
+data:
+  transcoder-sidecar.yaml: |
+    admin:
+      log_level: info
+      log_file: stdout
+      access_log_path: /tmp/admin_access.log
+    listeners:
+      - name: controller-listener
+        spec: { protocol: HTTP, port: 1234 }
+        rules:
+          - action:
+              route:
+                destination:
+                  name: l7mp-controller
+                  spec: { protocol: L7mpController }
