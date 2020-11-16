@@ -69,6 +69,9 @@ fixedNav: 'true' # true or false
 
 permalink: /:year/:title/
 markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
 
 # Collections
