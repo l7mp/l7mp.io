@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 ---
 
-<!-- <img src="../assets/images/under-construction.png" alt="Under construction" width="150"> -->
+<img src="../assets/brand/logo.svg" alt="L7mp logo" width="150">
 
 ## About
 
