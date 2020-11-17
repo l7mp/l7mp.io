@@ -2,7 +2,27 @@ apiVersion: v1
 entries:
   l7mp-ingress:
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.29916847Z"
+    created: "2020-11-17T16:33:32.949012789Z"
+    dependencies:
+    - name: l7mp-operator
+      repository: https://l7mp.io/charts
+      version: 0.1.4
+    description: Ingress gateways for the l7mp service mesh
+    digest: 32638252784dd2f5e52e7bbe2898948648941a01263322e3574020edcbe35eac
+    home: https://l7mp.io
+    icon: https://l7mp.io/assets/brand/logo.svg
+    maintainers:
+    - email: nemethf@tmit.bme.hu
+      name: Felicián Németh
+    name: l7mp-ingress
+    sources:
+    - https://github.com/l7mp/l7mp
+    type: application
+    urls:
+    - l7mp-ingress-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    created: "2020-11-17T16:33:32.94545037Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -22,7 +42,7 @@ entries:
     - l7mp-ingress-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.296543271Z"
+    created: "2020-11-17T16:33:32.922252327Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -42,7 +62,7 @@ entries:
     - l7mp-ingress-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.294333648Z"
+    created: "2020-11-17T16:33:32.891957508Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -62,7 +82,7 @@ entries:
     - l7mp-ingress-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.290521396Z"
+    created: "2020-11-17T16:33:32.88814751Z"
     dependencies:
     - name: l7mp-operator
       repository: https://l7mp.io/charts
@@ -83,9 +103,9 @@ entries:
     version: 0.1.2
   l7mp-operator:
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.312289772Z"
+    created: "2020-11-17T16:33:32.987522943Z"
     description: Operator handling CRDs of the l7mp service mesh
-    digest: 1747b02a1f9a8ac06f0bfda621ac5cca88716e8ff906aeb0b7b8cbb35aab2968
+    digest: acc4cf41429beac827089c9499446023cc45fac0ed0b6ad6ce23fdb104972c50
     home: https://l7mp.io
     icon: https://l7mp.io/assets/brand/logo.svg
     maintainers:
@@ -99,7 +119,7 @@ entries:
     - l7mp-operator-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.310663071Z"
+    created: "2020-11-17T16:33:32.98458448Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: a6a8813527e52a79c73bd41c20e189b515f082169d51b67399fe8fe96c245142
     home: https://l7mp.io
@@ -115,7 +135,7 @@ entries:
     - l7mp-operator-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.305798576Z"
+    created: "2020-11-17T16:33:32.980711106Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 8c8367ae2ed8d88c679d9afbe29e4bbe54d85764736a44d1c80b1b37006975f5
     home: https://l7mp.io
@@ -131,7 +151,7 @@ entries:
     - l7mp-operator-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
-    created: "2020-11-11T16:51:33.302461577Z"
+    created: "2020-11-17T16:33:32.973462592Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 0e55569e16ba640fc03c6137aaaf1ea023066d2bd2d0b992f318f757b14c8350
     home: https://l7mp.io
@@ -149,9 +169,9 @@ entries:
   l7mp-prometheus:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-11T16:51:33.327432339Z"
+    created: "2020-11-17T16:33:33.00886776Z"
     description: A Helm chart for monitoring L7MP, a multiprotocol servicemesh
-    digest: 2583f08c5848b5380b3ba914ad69928bd77213649c3d6528d398a969bc7bcdad
+    digest: f66a036fe42e2013fbdcd3c4434255929ac53fa3d3187f94720b999d7894a82d
     name: l7mp-prometheus
     type: application
     urls:
@@ -160,7 +180,7 @@ entries:
   op-l7mp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-11T16:51:33.3305656Z"
+    created: "2020-11-17T16:33:33.016418631Z"
     description: Operator handling CRDs of the l7mp service mesh
     digest: 259ed832c2e571b61f97534cd1dd69a00ea23ac974588037136041ddd1a758cc
     name: op-l7mp
@@ -168,4 +188,4 @@ entries:
     urls:
     - op-l7mp-0.1.0.tgz
     version: 0.1.0
-generated: "2020-11-11T16:51:33.282375672Z"
+generated: "2020-11-17T16:33:32.846292792Z"
