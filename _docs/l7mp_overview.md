@@ -24,7 +24,7 @@ The *l7mp service mesh* operator can be used to manage a legion of l7mp gateway 
 The l7mp framework is work-in-progress. This means that at any instance of time some features may not work as advertised or may not work at all, and some critical features, including the security API, are left for further development. Yet, l7mp is already capable enough to serve as a demonstrator to get a glimpse into the multiprotocol future of the service mesh concept.
 
 
-## The l7mp data plane
+### The l7mp data plane
 
 The data plane of the l7mp framework is comprised by a set of l7mp proxy instances. The l7mp proxy supports multiple deployment models; e.g., it can be deployed as an ingress gateway to feed traffic with exotic protocol encapsulations into a Kuberntes cluster, or as a sidecar proxy to expose a legacy UDP/SCTP application to a Kuberntes cluster using a cloud-native protocol.
 
@@ -35,7 +35,7 @@ Considering the strong emphasis on multiprotocol support, the l7mp proxy may act
 The l7mp proxy is written in Javascript/Node.js. This way, it is much simpler and easier to extend than Envoy or `socat`, but at the same time it is also much slower. It does not have to be that way though; a tc/ebpf-based proxy-acceleration framework is under construction that would enable l7mp to run at hundreds of thousands of packets per second speed.
 
 
-## The l7mp control plane
+### The l7mp control plane
 
 The l7mp distribution contains a Kubernetes operator that makes it possible to deploy and configure multiple instances of l7mp as sidecar proxies and service/API gateways, in a framework that can be best described as a multiprotocol service mesh. The operator uses the same high-level concepts as most service mesh frameworks (i.e., VirtualServices), but it contains a number of extensions (the Route and the Target custom resources) that allow the user to precisely control the way traffic is routed across the cluster.
 
