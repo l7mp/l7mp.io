@@ -92,7 +92,14 @@ Currently there are two ways to deploy l7mp: either the l7mp proxy is deployed i
 | Grafana Service Dashboard                    | TODO         |
 | Distributed tracing: through session metrics | Experimental |
 
-* *Security and policy enforcement:* Currently only ACLs are supported through the request routing API, in that match-action rules can be added to the l7mp VirtualService router in order to filter requests based on metadata.
+* *Security and policy enforcement:* Currently only ACLs are supported through the request routing API, in that match-action rules can be added to the l7mp VirtualService router in order to filter requests based on metadata. 
+
+| Feature                      | Status |
+| :---------------------       | :----: |
+| TLS/DTLS support             | TODO   |
+| Control plane authentication | TODO   |
+| Authorization                | TODO   |
+| Encryption/decryption        | TODO   |
 
 
 ## Contributing
