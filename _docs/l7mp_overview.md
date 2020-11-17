@@ -80,7 +80,9 @@ A protocol is marked with a flag `l` if it has a listener implementation in l7mp
 
 ## Features
 
-* *Traffic Management:* The traffic management features of l7mp allow fine-grained control over the way traffic flows through the cluster and chained through multiple microservices, load-balancing and session stickiness, ACLs, and resilience features like timeouts and retries. All this in a protocol-agnostic manner: you can route, say, a UDP stream through a series of upstream services exposed on, say, TCP, through UDP or Unix Domain Sockets or WebSocket, and things should just work out fine. 
+### Traffic Management 
+
+The traffic management features of l7mp allow fine-grained control over the way traffic flows through the cluster and chained through multiple microservices, load-balancing and session stickiness, ACLs, and resilience features like timeouts and retries. All this in a protocol-agnostic manner: you can route, say, a UDP stream through a series of upstream services exposed on, say, TCP, through UDP or Unix Domain Sockets or WebSocket, and things should just work out fine. 
 
 | Feature                                         | Status       |
 | :---------------------------------------------- | :-----:      |
@@ -94,7 +96,9 @@ A protocol is marked with a flag `l` if it has a listener implementation in l7mp
 | Service chaining: ingress/egress routing        | Stable       |
 | Traffic capture in sidecar                      | NONE/WONTFIX |
 
-* *Observability:* l7mp comes with full Prometheus integration, which allows Prometheus to scrape the l7mp sidecar proxies and surface some useful counters and metrics. Note that Prometheus support is experimental now, supporting only a minimal set of metrics (basic ingress/egress counters and session traffic/byte-rate metrics), but the framework is there to add additional metrics simply.
+### Observability
+
+L7mp comes with experimental Prometheus integration, which allows Prometheus to scrape the l7mp sidecar proxies and the gateways and surface useful counters and metrics. Note that Prometheus support is experimental for now, and it supports only a minimal set of metrics (basic ingress/egress counters and session traffic/byte-rate metrics). However, the toolchain is there and it should be easy to add additional metrics from here.
 
 | Feature                                      | Status       |
 | :---------------------                       | :----:       |
@@ -103,7 +107,9 @@ A protocol is marked with a flag `l` if it has a listener implementation in l7mp
 | Grafana Service Dashboard                    | TODO         |
 | Distributed tracing: through session metrics | Experimental |
 
-* *Security and policy enforcement:* Currently only ACLs are supported through the request routing API, in that match-action rules can be added to the l7mp VirtualService router in order to filter requests based on metadata. 
+### Security and policy enforcement
+
+Currently only ACLs are supported through the request routing API, in that match-action rules can be added to the l7mp VirtualService router in order to filter requests based on metadata. Encryption/decryption, authorization and authentication, and TLS/DTLS is to be added soon.
 
 | Feature                      | Status |
 | :---------------------       | :----: |
