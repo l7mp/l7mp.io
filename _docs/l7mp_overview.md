@@ -45,31 +45,42 @@ The l7mp distribution contains a Kubernetes operator that makes it possible to d
 Currently there are two ways to deploy l7mp: either the l7mp proxy is deployed in a standalone mode (e.g., as a gateway or a sidecar proxy) in which case each distinct l7mp proxy instance needs to be configured (using a static config file of via the l7mp proxy REST API), or it is used in conjunction with the l7mp service mesh operator for Kubernetes, which makes it possible to manage possibly large numbers of l7mp proxy instances enjoying the convenience of a high-level Kubernetes API.
 
 
-## Features
+## Multiprotocol Support
 
-* *Multiprotocol Support:* The main feature we want to support in l7mp is multiprotocol support. Whole l7mp is optimized for persistent, long-lived UDP-based media and tunneling protocol streams, and hence the support for the usual HTTP protocol suite is incomplete as of now, it should be pretty capable as a general purpose multiprotocol proxy and service mesh already, supporting lots of built-in transport and application-layer protocols. Below is a summary of the protocols supported by l7mp and the current status of the implementations.
+The main feature l7mp intends to get right is multiprotocol support. While l7mp is optimized for persistent, long-lived UDP-based media and tunneling protocol streams, and hence the support for the usual HTTP protocol suite is incomplete as of now, it should already be pretty capable as a general purpose multiprotocol proxy and service mesh, supporting lots of built-in transport and application-layer protocols. Below is a summary of the protocols supported by l7mp and the current status of the implementations.
 
 | Type      | Protocol         | Session ID               | Type            | Role  | Mode             | Re/Lb   | Status  |
 | :-------: | :--------------: | :----------------------: | :-------------: | :---: | :--------------: | :-----: | :-----: |
-| Remote    | UDP              | IP 5-tuple               | datagram-stream | l/c   | singleton/server | yes/yes | Full    |
-|           | TCP              | IP 5-tuple               | byte-stream     | l/c   | server           | yes/yes | Full    |
+| Remote    | UDP              | IP 5-tuple               | datagram-stream | l/c   | singleton/server | yes/yes | Stable  |
+|           | TCP              | IP 5-tuple               | byte-stream     | l/c   | server           | yes/yes | Stable  |
 |           | HTTP             | IP 5-tuple               | byte-stream     | l     | server           | yes/yes | Partial |
-|           | WebSocket        | IP 5-tuple + HTTP        | datagram-stream | l/c   | server           | yes/yes | Full    |
-|           | JSONSocket       | IP 5-tuple + JSON header | datagram-stream | l/c   | server           | yes/yes | Full    |
+|           | WebSocket        | IP 5-tuple + HTTP        | datagram-stream | l/c   | server           | yes/yes | Stable  |
+|           | JSONSocket       | IP 5-tuple + JSON header | datagram-stream | l/c   | server           | yes/yes | Stable  |
 |           | SCTP             | IP 5-tuple               | datagram-stream | l/c   | server           | yes/yes | TODO    |
 |           | AF\_PACKET       | file desc                | datagram-stream | l/c   | singleton        | no/no   | TODO    |
-| Local     | STDIO-fork       | N/A                      | byte-stream     | c     | singleton        | no/no   | Full    |
-|           | UNIX/stream      | file desc/path           | byte-stream     | l/c   | server           | yes/yes | Full    |
+| Local     | STDIO-fork       | N/A                      | byte-stream     | c     | singleton        | no/no   | Stable  |
+|           | UNIX/stream      | file desc/path           | byte-stream     | l/c   | server           | yes/yes | Stable  |
 |           | UNIX/dgram       | file desc/path           | datagram-stream | l/c   | singleton        | no/no   | TODO    |
 |           | PIPE             | file desc/path           | byte-stream     | l/c   | singleton        | no/no   | TODO    |
-| Transform | Stdio            | N/A                      | byte-stream     | c     | singleton        | yes/no  | Full    |
-|           | Echo             | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | Discard          | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | Logger           | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | JSONENcap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | JSONDecap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
+| Transform | Stdio            | N/A                      | byte-stream     | c     | singleton        | yes/no  | Stable  |
+|           | Echo             | N/A                      | datagram-stream | c     | singleton        | yes/no  | Stable  |
+|           | Discard          | N/A                      | datagram-stream | c     | singleton        | yes/no  | Stable  |
+|           | Logger           | N/A                      | datagram-stream | c     | singleton        | yes/no  | Stable  |
+|           | JSONENcap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Stable  |
+|           | JSONDecap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Stable  |
 
-* *Traffic Management:* The traffic management features of l7mp allow fine-grained control over the way traffic flows through the cluster and chained through multiple microservices, load-balancing and session stickiness, ACLs, and resilience features like timeouts and retries. All this in a protocol-agnostic manner. 
+The standard protocols, like TCP, HTTP/1.1 and HTTP/2 (although only listener/server side at the moment), WebSocket, and Unix Domain Socket (of the byte-stream type, see below) are fully supported, and for plain UDP there are two modes available: in the "UDP singleton mode" l7mp acts as a "connected" UDP server that is statically tied/connected to a downstream remote IP/port pair, while in "UDP server mode" l7mp emits a new "connected" UDP session for each packet received with a new IP 5-tuple. In addition, JSONSocket is a very simple "UDP equivalent of WebSocket" that allows to enrich a plain UDP stream with arbitrary JSON encoded metadata; see the spec [here](doc/jsonsocket-spec.org). Finally, SCTP is a reliable message transport protocol widely used in telco applications and AF\_PACKET would allow to send and receive raw L2/Ethernet or L3/IP packets on a stream; currently adding proper support for these protocols is a TODO.
+
+Furthermore, there is a set of custom pseudo-protocols included in the l7mp proxy to simplify debugging and troubleshooting: the "Stdio" protocol makes it possible to pipe a stream to the l7mp proxy's stdin/stdout, the "Echo" protocol implements a simple Echo server behavior which writes back everything it reads to the input stream, "Discard" simply blackholes everyting it receives, and finally "Logger" is like the Echo protocol but it also writes everything that goes through it to a file or to the standard output.  Finally, there are a couple of additional protocols (currently unimplemented) to further improve the usability of l7mp (see the equivalents in `socat(1)`): "STDIO-fork" is a protocol for communicating with a forked process through STDIO/STDOUT and PIPE uses standard UNIX pipes to do the same.
+
+There are two *types* of streams supported by L7mp: a "byte-stream" (like TCP or Unix Domain Sockets in SOCK_STREAM mode) is a bidirectional stream that ignores segmentation/message boundaries, while "datagram-stream" is the same but it prefers segmentation/message boundaries whenever possible (e.g., UDP or WebSocket). The l7mp proxy warns if a datagram-stream type stream is routed to a byte-stream protocol, because this would lead to a loss of message segmentation. In addition, protocols may support any or both of the following two modes: a "singleton" mode protocol accepts only a single connection (e.g., a fully connected UDP listener will emit only a single session) while a "server" mode listener may accept multiple client connections, emitting a separate session for each connection received  (e.g., a TCP or a HTTP listener).
+
+A protocol is marked with a flag `l` if it has a listener implementation in l7mp, acting as a server-side protocol "plug" that listens to incoming connections from downstream peers and emits new sessions, and with flag `c` if it implements the cluster side, i.e., the client-side of the protocol that can route a connection to an upstream service and load-balance across a set of remote endpoints, `Re` means that the protocol supports *retries* and `Lb` indicates that *load-balancing* support is also available for the protocol.
+
+
+## Features
+
+* *Traffic Management:* The traffic management features of l7mp allow fine-grained control over the way traffic flows through the cluster and chained through multiple microservices, load-balancing and session stickiness, ACLs, and resilience features like timeouts and retries. All this in a protocol-agnostic manner: you can route, say, a UDP stream through a series of upstream services exposed on, say, TCP, through UDP or Unix Domain Sockets or WebSocket, and things should just work out fine. 
 
 | Feature                                         | Status       |
 | :---------------------------------------------- | :-----:      |
