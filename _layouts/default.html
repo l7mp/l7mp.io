@@ -45,7 +45,7 @@
     <header>{% include header.html %}</header>
     <div id="body">
       <main role="main">
-        <section class="banner-notification">
+        <!-- <section class="banner-notification">
           <div class="container-fluid" style="display: flex; justify-content: space-around">
             <div class="row">
               <div class="text-center d-none d-sm-block col-sm-4"><img width="150" src="./assets/brand/logo.svg"></div>
@@ -55,7 +55,7 @@
               <div class="text-center d-none d-sm-block col-sm-4"><img width="100" src="./assets/images/under-construction.png"></div>
             </div>
           </div>
-        </section>
+        </section> -->
         {% include carousel.html duration="10" %}
     
         <!-- Marketing messaging and featurettes
@@ -114,6 +114,10 @@
   <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
   <script src="./assets/dist/js/bootstrap.bundle.js"></script>
   <script src="./assets/main.js"></script>
+  <script>
+    var navHeight = $('nav').outerHeight();
+    $("body").css('padding-top', navHeight);
+  </script>
   <script>
     console.log($(window).width());
     if ($( window ).width() < 576){
