@@ -6,7 +6,7 @@ tags:
  - Kubernetes
  - DNS
  - CoreDNS
-order: 5
+order: 6
 description: "Implement DNS server with l7mp-proxy and l7mp Service Mesh"
 ---
 
@@ -24,7 +24,7 @@ host.example.com.   IN  A   192.168.1.3
 
 ## Before you begin
 
-1. Able to run Minikube on your machine. 
+1. Have a Minikube on your machine. 
 2. A little knowledge about DNS servers
 3. Understand the concepts: [Concepts](./l7mp_getting_started)
 
@@ -38,7 +38,7 @@ cluster to achieve the part of this task. So let's begin.
 You have to create the configmaps which will contain the l7mp configuration 
 and the CoreDNS configuration. 
 
-CoreDNS: To accomplish this task, it is sufficient to create these two files 
+**CoreDNS**: To accomplish this task, it is sufficient to create these two files 
 on each pod that will act as the DNS server.
 
 ``` yaml
@@ -69,9 +69,9 @@ data:
 EOF
 ```
 
-l7mp-ingress: To make a working setup you have to configure the ingress DaemonSet to
+**l7mp-ingress**: To make a working setup you have to configure the ingress DaemonSet to
 act like the ingress gateway. So you have to define a simple UDP listener which will 
-listen on port 5000 and transfer traffic to the appropriate pod. If you want you 
+listen on `port 5000` and transfer traffic to the appropriate pod. If you want you 
 can create a simple controller-listener for debugging purposes, we recommend to
 that.
 
@@ -84,52 +84,52 @@ metadata:
 data:
   l7mp-ingress-gw.yaml: |
       admin:
-      log_level: info
-      log_file: stdout
-      access_log_path: /tmp/admin_access.log
+        log_level: info
+        log_file: stdout
+        access_log_path: /tmp/admin_access.log
       listeners:
-      - name: udp-listener
+        - name: udp-listener
           spec: {protocol: UDP, port: 5000}
           rules:
-          - name: rule-0
+            - name: rule-0
               match: {op: starts, path: /IP/src_addr, value: <Docker bridge gateway IP> }
               action:
-              route:
+                route:
                   destination: coredns
                   retry: 
-                  retry_on: always
-                  num_retries: 3
-                  timeout: 2000
-      - name: controller-listener
+                    retry_on: always
+                    num_retries: 3
+                    timeout: 2000
+        - name: controller-listener
           spec: { protocol: HTTP, port: 1234 }
           rules:
-          - action:
-              route:
+            - action:
+                route:
                   destination:
-                  name: l7mp-controller
-                  spec: { protocol: L7mpController }
+                    name: l7mp-controller
+                    spec: { protocol: L7mpController }
       clusters:
-      - name: coredns
+        - name: coredns
           spec: { protocol: UDP, port: 100 }
           endpoints:
-          - name: ep0
+            - name: ep0
               spec: { address: dns-0.dns, port: 100 }
-          - name: ep1
+            - name: ep1
               spec: { address: dns-1.dns, port: 100 }
 EOF
 ```
 If you look closely to the `clusters` section you will notice the strange 
-endpoint addresses. That why because later you will create a StatefulSet
-with a Headless service and in that way you can define the pod's addresses.
+endpoint addresses. That why because later you will create a *StatefulSet*
+with a *Headless service* and in that way you can define the pod's addresses.
 
 ### DNS server
 
-You have to create the DNS server with StatefulSet and Headless service. 
+You have to create the DNS server with *StatefulSet* and *Headless service.* 
 In that way you can define the pods DNS names and with the Kubernetes 
 DNS resolve the ingress gateway will find them. 
 
-Because the CoreDNS configuration listen on port 100 you have to attach 
-the Headless service to that port. 
+Because the *CoreDNS* configuration listen on `port 100` you have to attach 
+the *Headless service* to that port. 
 
 ``` yaml
 cat <<EOF | kubectl apply -f - 
@@ -138,7 +138,7 @@ kind: Service
 metadata:
   name: dns
   labels:
-  app: dns
+    app: dns
 spec:
   clusterIP: None
   selector:
@@ -160,7 +160,7 @@ kind: StatefulSet
 metadata:
   name: dns
   labels:
-  app: dns
+    app: dns
 spec:
   serviceName: dns
   replicas: 2
@@ -188,9 +188,10 @@ EOF
 
 ### l7mp ingress
 
-Finally you only have to create a DaemonSet which will act like an ingress gateway 
-to the cluster. And will use the l7mp-ingress-gw-config configmap what you defined 
-before. 
+Finally you only have to create a *DaemonSet* which will act like an ingress gateway 
+to the cluster. And will use the *l7mp-ingress-gw-config* configmap what you defined 
+before. As you can see this DaemonSet will run with `hostNetwork = true` so it will 
+automatically use the minikube ip. 
 
 ```yaml
 cat <<EOF | kubectl apply -f -
@@ -198,8 +199,8 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: l7mp-ingress-gw
-    labels:
-      app: l7mp-ingress-gw
+  labels:
+    app: l7mp-ingress-gw
 spec:
   selector:
     matchLabels:
@@ -268,28 +269,27 @@ The resilience means: the quality of being able to return quickly to a previous 
 condition after problems. So in that case, what if you are deleting a pod with the 
 following script while an active name resolution? 
 
-Write that script on your local machine and names it something like `pod-del.sh`: 
+Create a workaround to make name resolution every seconds: 
 
-```bash
-#!/bin/bash                                                                                                                               
-POD=$1
-ENDPOINT=$2
-[ -z $POD -o -z $ENDPOINT ] && echo "usage: reset_worker.sh <pod_name> <endpoint_name>" && exit 1
-echo Removing pod ${POD}/${ENDPOINT}
-# remove pod                                                                                                                              
-kubectl delete pod $POD
-curl -sX DELETE http://$(minikube ip):1234/api/v1/endpoints/${ENDPOINT}'?recursive=true'
+```
+watch -n 1 dig @$(minikube ip) -p 5000 host.example.host
 ```
 
-Make it runnable if it is not in default: `sudo chmod u+x pod-del.sh`.
+Download and run this script. This script only delete an endpoint and 
+a pod from your cluster. So the first parameter is the pod name and the 
+second is the endpoint name. 
 
-So you are able to delete a pod in the cluster and from the l7mp. 
+```
+curl -LO https://l7mp.io/task/dns-task/delete-endpoint.sh 
+chmod u+x delete-endpoint.sh 
+./delete-endpoint.sh dns-0 ep0
+```
 
-1. In the test case, you have to open a terminal and make continuous name resolution 
-   to the DNS server: `watch -n 1 dig @$(minikube ip) -p 5000 host.example.host`.
-2. Now use the deletion script: `./pod-del.sh dns-0 ep0`.
+As you can see, the name resolution did not stop and works as before the deletion.
 
-As you can see, the name resolution did not stop and works as before the deletion. 
+But there is some limitation in the resilience, if you not using l7mp Service Mesh. 
+Exactly you now won't able to delete an other active pod and endpoint because the new 
+pod what the StatefulSet creates is not registered as an endpoint in l7mp. 
 
 ### Request routing 
 
@@ -313,12 +313,20 @@ dig @$(minikube ip) -p 5000 -b 10.0.2.15 host.example.com
 ;; connection timed out; no servers could be reached
 ```
 
+### Cleanup
+
+```
+curl -LO https://l7mp.io/tasks/dns-task/proxy-cleanup.sh
+chmod u+x proxy-cleanup.sh
+./proxy-cleanup.sh
+```
+
 ## l7mp Service Mesh
 
 ### Before you begin
 
 First of all you have to setup a Minikube with **l7mp-ingress and operator**, so 
-follow this [Link](Link-to-minikube-setup) guide to achieve it.
+follow this [Minikube](./l7mp_getting_started) guide to achieve it.
 
 If everything up and running you are now able to start this demo. 
 
@@ -359,8 +367,9 @@ spec:
       - key: app
         operator: In
         values:
-        - l7mp-ingress
+          - l7mp-ingress
   cluster:
+    name: udp-cluster
     spec:
       UDP:
         port: 5000
@@ -496,3 +505,8 @@ chmod u+x delete.sh
 ```
 
 ## Recap 
+
+As you can see, you can use both of l7mp proxy and service mesh, but you have to 
+consider about the usage. If you want a better resilience you should have to 
+us service mesh, but if you only want to use a simple task which is not require 
+any complex workaround the simple proxy should do the work for you. 
