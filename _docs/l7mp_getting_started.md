@@ -406,36 +406,3 @@ curl -iX DELETE http://localhost:1234/api/v1/clusters/ws-cluster?recursive=true
 
 You can avoid this by not using embedded defs or, if this is too inconvenient, explicitly naming all embedded objects and then using the specific APIs (the RuleList API, Rule API, etc.) to clean up each object selectively.
 
-### Status
-
-Below is a summary of the protocols supported by l7mp and the current status of the implementations.
-
-| Type      | Protocol         | Session ID               | Type            | Role  | Mode             | Re/Lb   | Status  |
-| :-------: | :--------------: | :----------------------: | :-------------: | :---: | :--------------: | :-----: | :-----: |
-| Remote    | UDP              | IP 5-tuple               | datagram-stream | l/c   | singleton/server | yes/yes | Full    |
-|           | TCP              | IP 5-tuple               | byte-stream     | l/c   | server           | yes/yes | Full    |
-|           | HTTP             | IP 5-tuple               | byte-stream     | l     | server           | yes/yes | Partial |
-|           | WebSocket        | IP 5-tuple + HTTP        | datagram-stream | l/c   | server           | yes/yes | Full    |
-|           | JSONSocket       | IP 5-tuple + JSON header | datagram-stream | l/c   | server           | yes/yes | Full    |
-|           | SCTP             | IP 5-tuple               | datagram-stream | l/c   | server           | yes/yes | TODO    |
-|           | AF\_PACKET       | file desc                | datagram-stream | l/c   | singleton        | no/no   | TODO    |
-| Local     | STDIO-fork       | N/A                      | byte-stream     | c     | singleton        | no/no   | Full    |
-|           | UNIX/stream      | file desc/path           | byte-stream     | l/c   | server           | yes/yes | Full    |
-|           | UNIX/dgram       | file desc/path           | datagram-stream | l/c   | singleton        | no/no   | TODO    |
-|           | PIPE             | file desc/path           | byte-stream     | l/c   | singleton        | no/no   | TODO    |
-| Transform | Stdio            | N/A                      | byte-stream     | c     | singleton        | yes/no  | Full    |
-|           | Echo             | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | Discard          | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | Logger           | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | JSONENcap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-|           | JSONDecap        | N/A                      | datagram-stream | c     | singleton        | yes/no  | Full    |
-
-The standard protocols, like TCP, HTTP/1.1 and HTTP/2 (although only listener/server side at the moment), WebSocket, and Unix Domain Socket (of the byte-stream type, see below) are fully supported, and for plain UDP there are two modes available: in the "UDP singleton mode" l7mp acts as a "connected" UDP server that is statically tied/connected to a downstream remote IP/port pair, while in "UDP server mode" l7mp emits a new "connected" UDP session for each packet received with a new IP 5-tuple. In addition, JSONSocket is a very simple "UDP equivalent of WebSocket" that allows to enrich a plain UDP stream with arbitrary JSON encoded metadata; see the spec [here](doc/jsonsocket-spec.org). Finally, SCTP is a reliable message transport protocol widely used in telco applications and AF\_PACKET would allow to send and receive raw L2/Ethernet or L3/IP packets on a stream; currently adding proper support for these protocols is a TODO.
-
-Furthermore, there is a set of custom pseudo-protocols included in the l7mp proxy to simplify debugging and troubleshooting: the "Stdio" protocol makes it possible to pipe a stream to the l7mp proxy's stdin/stdout, the "Echo" protocol implements a simple Echo server behavior which writes back everything it reads to the input stream, "Discard" simply blackholes everyting it receives, and finally "Logger" is like the Echo protocol but it also writes everything that goes through it to a file or to the standard output.  Finally, there are a couple of additional protocols (currently unimplemented) to further improve the usability of l7mp (see the equivalents in `socat(1)`): "STDIO-fork" is a protocol for communicating with a forked process through STDIO/STDOUT and PIPE uses standard UNIX pipes to do the same.
-
-There are two *types* of streams supported by L7mp: a "byte-stream" (like TCP or Unix Domain Sockets in SOCK_STREAM mode) is a bidirectional stream that ignores segmentation/message boundaries, while "datagram-stream" is the same but it prefers segmentation/message boundaries whenever possible (e.g., UDP or WebSocket). The l7mp proxy warns if a datagram-stream type stream is routed to a byte-stream protocol, because this would lead to a loss of message segmentation. In addition, protocols may support any or both of the following two modes: a "singleton" mode protocol accepts only a single connection (e.g., a fully connected UDP listener will emit only a single session) while a "server" mode listener may accept multiple client connections, emitting a separate session for each connection received  (e.g., a TCP or a HTTP listener).
-
-A protocol is marked with a flag `l` if it has a listener implementation in l7mp, acting as a server-side protocol "plug" that listens to incoming connections and emits new sessions, and with flag `c` if it implements the cluster side, i.e., the client-side of the protocol that can route a connection to an upstream service and load-balance across a set of remote endpoints, `Re` means that the protocol supports *retries* and `Lb` indicates that *load-balancing* support is also available for the protocol.
-
-
