@@ -45,8 +45,15 @@
       url: "docs/task1"
       children:
         - title: "Before you begin"
-          url: "docs/task1#Before you begin"
+          url: "docs/task1#before-you-begin"
         - title: "Setup"
-          url: "docs/task1#Static configuration"
+          url: "docs/task1#static-configuration"
         - title: "Cleanup"
-          url: "docs/Cleanup"
+          url: "docs/task1#cleanup"
+    - title: "DNS server task"
+      url: "docs/dns-task"
+      children:
+        - title: "l7mp proxy"
+          url: "docs/dns-task#l7mp-proxy"
+        - title: "l7mp Service Mesh"
+          url: "docs/dns-task#l7mp-service-mesh"
