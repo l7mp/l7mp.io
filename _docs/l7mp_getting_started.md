@@ -7,19 +7,23 @@ order: 2
 description: Getting started with l7mp
 ---
 
+# Getting started guide
+
 There are two ways to deploy l7mp: for implementing complex use cases we recommend the "service mesh" setup, where a set of l7mp proxies are deployed at the perimeter to ingress traffic into the cluster and route it along the proper chain of microservices, while for experimentation with the l7mp proxy itself we recommend the "standalone" installation.
 
 ## Using the l7mp service mesh
 
 
-### How to setup Minikube with l7mp
+### Set up l7mp inside a Minikube cluster
+
+In this short introduction we use Minikube to demonstrate the installation of the l7mp service mesh. Of course, using the below `helm` charts will make it possible to deploy l7mp in any Kubernetes cluster.
+
+First, install `kubectl` and `helm`:
 
 - For installing `kubectl` and minikube please follow this guide: [Install Tools](https://kubernetes.io/docs/tasks/tools/)
 - For installing `helm` please follow this guide: [Installing Helm](https://helm.sh/docs/intro/install/). Note that with Helm 2 the below commands may take a bit different form. 
 
-#### Install the l7mp operator
-
-First, bootstrap your `minikube` cluster and deploy the `l7mp-ingress` helm chart.
+Then, bootstrap your `minikube` cluster and deploy the `l7mp-ingress` helm chart.
 
 ``` sh
 minikube start
@@ -37,7 +41,7 @@ This configuration will deploy the following components into the `default` names
 In order to add the l7mp Prometheus toolchain into the `monitoring` namespace for automatically surfacing data-plane metrics from the l7mp proxies, install the `l7mp-prometheus` chart:
 
 ``` sh
-helm install l7mp l7mp/l7mp-prometheus
+helm install l7mp-prometheus l7mp/l7mp-prometheus
 ```
 
 After the installation finishes, your Prometheus instance will be available on the NodePort 30900.
