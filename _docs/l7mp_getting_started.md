@@ -94,9 +94,9 @@ curl http://$(minikube ip):1234/api/v1/sessions
 curl -iX DELETE http://$(minikube ip):1234/api/v1/sessions/<session-name>
 ```
 
-### Example: Expose kube-dns on the l7mp ingress gateway
+### Usage example: 
 
-The below will expose the `kube-dns` Kubernetes system DNS service through the l7mp ingress gateway on port 5053. Note that, depending on the type of DNS service deployed, the below may or may not work in your own cluster.
+Applying the below configuration will expose the `kube-dns` Kubernetes system DNS service through the l7mp ingress gateway on port 5053. Note that, depending on the type of DNS service deployed, the below may or may not work in your own cluster.
 
 ``` sh
 kubectl apply -f - <<EOF
@@ -124,6 +124,9 @@ spec:
 EOF
 ```
 
+In an on itself, this configuration does not make anything fancier than exposing the service using a NodePort. The additional features provided by l7mp, inclusing routing, timeouts/retries, load-balancing, and monitoring, can be enabled with customizing this VirtualService spec. For more information on the use of the l7mp service mesh, consult the Tasks section in the documentation.
+
+
 ### Test
 
 Administer a DNS query to your Kubernetes cluster:
@@ -134,8 +137,6 @@ dig @$(minikube ip) +timeout=1 +notcp +short kube-dns.kube-system.svc.cluster.lo
 ```
 
 The above call will send a DNS query to the minikube cluster, which the l7mp ingress gateway will properly route to the `kube-dns` service (after querying the same DNS service for the ClusterIP corresponding to `kube-dns`) and deliver the result back to the sender.
-
-For more information on the use of the l7mp service mesh, consult the Tasks section in the documentation.
 
 ### Clean up
 
