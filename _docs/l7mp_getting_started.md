@@ -13,10 +13,9 @@ There are two ways to deploy l7mp: for implementing complex use cases we recomme
 
 ## Using the l7mp service mesh
 
+In this short introduction we use Minikube to demonstrate the installation of the l7mp service mesh. Of course, using the below `helm` charts will make it possible to deploy l7mp in any Kubernetes cluster.
 
 ### Set up l7mp inside a Minikube cluster
-
-In this short introduction we use Minikube to demonstrate the installation of the l7mp service mesh. Of course, using the below `helm` charts will make it possible to deploy l7mp in any Kubernetes cluster.
 
 First, install `kubectl` and `helm`:
 
@@ -148,7 +147,7 @@ kubectl delete virtualservice kube-dns-vsvc
 
 To delete the entire l7mp service mesh, Simply delete with `helm`. Note that this will not remove the Custom Resource Definitions installed by the l7mp helm chart, you will need to do that manually:
 
-```
+``` sh
 helm delete l7mp
 ```
 
