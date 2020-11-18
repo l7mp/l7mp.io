@@ -79,7 +79,9 @@ You are ready to go! Enjoy using l7mp.
 
 ### Query configuration and manage sessions
 
-At any point in time you can directly read the configuration of the l7mp proxies using the l7mp REST API. By default, the l7mp proxy HTTP REST API port is opened at port 1234 *on all proxy pods*. This is extremely useful to check your mesh configuration for debuging purposes. For instance, the below returns the whole setup of the ingress gateway l7mp proxy:
+At any point in time you can directly read the configuration of the l7mp proxies using the l7mp REST API. By default, the l7mp proxy HTTP REST API port is opened at port 1234 *on all proxy pods*. This is extremely useful to check your mesh configuration for debuging purposes, but as mentioned above it also opens a considerable security hole if the port is reachable from outside your cluster. 
+
+The below call returns the whole configuration of the ingress gateway l7mp proxy:
 
 ``` sh
 curl http://$(minikube ip):1234/api/v1/config
@@ -137,7 +139,13 @@ For more information on the use of the l7mp service mesh, consult the Tasks sect
 
 ### Clean up
 
-Simply delete with `helm`:
+Delete the VirtualService we created above:
+
+``` sh
+kubectl delete virtualservice kube-dns-vsvc
+```
+
+To delete the entire l7mp service mesh, Simply delete with `helm`. Note that this will not remove the Custom Resource Definitions installed by the l7mp helm chart, you will need to do that manually:
 
 ```
 helm delete l7mp
