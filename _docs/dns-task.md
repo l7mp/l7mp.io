@@ -12,8 +12,9 @@ description: "Implement DNS server with l7mp-proxy and l7mp Service Mesh"
 
 # DNS server
 
-In this task you will be able to deploy a CoreDNS DNS server in a 
-Kubernetes cluster and use resilience and request control through l7mp. 
+In this task, you will implement a *CoreDNS* DNS server using the **l7mp proxy** and 
+**Service Mesh**. You can implement the proxy version first and then try the service 
+mesh. Thus, functions such as **Resilience** and **Request control** can be implemented using l7mp.
 
 For the sake of simplicity the DNS server provides a simple `A` record, 
 which is looks like this:
@@ -30,16 +31,15 @@ host.example.com.   IN  A   192.168.1.3
 
 ## l7mp proxy
 
-For the simple usage of l7mp you do not have to make any changes in your 
-cluster to achieve the part of this task. So let's begin. 
+To use l7mp as a proxy, you do not need to make any special preparations with the cluster.
+ So let's begin. 
 
 ### Configmaps
 
-You have to create the configmaps which will contain the l7mp configuration 
-and the CoreDNS configuration. 
-
-**CoreDNS**: To accomplish this task, it is sufficient to create these two files 
-on each pod that will act as the DNS server.
+The first is to create the *configmaps*, of which there will be a total of two. 
+The first is **dns-config** will provide the appropriate files to configure *CoreDNS*. 
+These files are the **Corefile** in which the server itself can be configured, which 
+port to use and much more. While in the **example.db** file, DNS records can be stored.
 
 ``` yaml
 cat << EOF | kubectl apply -f - 
@@ -68,12 +68,17 @@ data:
         server.example.com. IN  CNAME   host.example.com
 EOF
 ```
+The second configmap will be **l7mp-ingress-gw**, which l7mp will use as a configuration 
+file. In this essentially *two listener* is created and *two cluster*. One will be the 
+**controller-listener**, which allows us to program l7mp without having to boot a new pod and debug 
+it if we want to see the configuration. It includes an l7mp-controller cluster that will perform 
+this task. 
 
-**l7mp-ingress**: To make a working setup you have to configure the ingress DaemonSet to
-act like the ingress gateway. So you have to define a simple UDP listener which will 
-listen on `port 5000` and transfer traffic to the appropriate pod. If you want you 
-can create a simple controller-listener for debugging purposes, we recommend to
-that.
+The other listener is **udp-listener**, which will wait for UDP traffic on **port 5000** of 
+the cluster. It is important to note that in the `match` field you must enter either the IP address 
+of the **Docker bridge** or the **address of the cluster**used. It also includes a cluster in which 
+endpoints can be added to where the incoming traffic on the listener is directed. In this case, 
+these will be the two DNS servers.
 
 ``` yaml
 cat <<EOF | kubectl apply -f -
