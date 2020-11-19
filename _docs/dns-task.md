@@ -1,5 +1,5 @@
 ---
-title: "DNS server Task"
+title: "DNS proxying"
 tags: 
  - Service Mesh
  - Task
