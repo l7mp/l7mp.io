@@ -43,15 +43,22 @@ Each pod will contain two containers: a container for the transcoder process
 itself that accepts connections via UDS (can be an UDS echo server for testing) 
 and another `l7mp` container that implements the sidecar.
 
-For achive this you have to create the proper deployment first, so deploy it:
+To achieve this, you must first execute the following command, which will create a **Deployment** 
+with two Pods containing 2-2 containers. One container will be the **l7mp as a sidecar** 
+with a simple *Controller* configuration through which the l7mp operator will be able to configure 
+the sidecar. The second container will be a **Unix Domain Socket** echo server with a simple `socat` 
+command that reads from the `/tmp/uds-echo.sock` socket and writes back the transcoded messages 
+there as follows: `Transcoded on <pod-name>: <message>`.
 
 ```
 kubectl apply -f https://l7mp.io/tasks/task1/transcoder-deployment.yaml
 ```
 
-Now, you have to make sure, that the incoming traffic will be routed to the proper 
-*Unix Domain Socket* file which is `/tmp/uds-echo.sock`. For this functionality 
-you have to create a **UnixDomainSocket cluster** in your sidecar.
+Now that this is the case, you should somehow configure the **l7mp sidecar** to be able to convert 
+incoming *WebSocket packets* to a *Unix Domain Socket* and write it to the `/tmp/uds-echo.sock` socket. 
+The first step is to create a cluster on the transcoder objects. Therefore, you must first 
+select the pods that have such a label and write a cluster in the sidecar that listens to and 
+directs traffic to */tmp/uds-echo.sock*.
 
 ``` yaml
 cat <<EOF | kubectl apply -f -
@@ -76,9 +83,10 @@ spec:
 EOF
 ```
 
-Please notice, that setup only use *Unix Domain Socket*, but you have to receive and 
-response with *WebSocket* traffic. So create a listener inside the transcoder sidecar
-which receive *WebSocket* traffic and forward to the **uds-cluster**.
+Secondly, the protocol conversion itself would need to be implemented by creating a *listener* 
+object in the transcoder sidecar, which will listen WebSocket packets on port 8888 and 
+redirect to the cluster you just created. Thus, the transcoder can only receive and transmit 
+WebSocket traffic, but only UDS traffic within it.
 
 ``` yaml
 cat <<EOF | kubectl apply -f -
@@ -137,19 +145,23 @@ spec:
 EOF
 ```
 
+The loadbalancer will allow pods to be accessed randomly each time you connect. The 
+randomness stems from not specifying a key for the *ConsistentHash* loadbalancer.
+
 #### Worker
 
-Next, add a `worker` deployment with a worker server that processes the UDP 
-payloads and sends the results back (can be an UDP echo server for testing).
-
-First create a deployment with *sidecar* and *UDP echo* server.
+The next command will create a very similar deployment to the *transcoder*, the only 
+difference being that there will be a **UDP echo server** here and not a UDS. This echo 
+server will echo back packets from any address on *port 9999* in the following format: 
+`Echo on <pod-name>: <message>`.
 
 ```
 kubectl apply -f https://l7mp.io/tasks/task1/worker-deployment.yaml
 ```
 
-Now you only have to create a **Target** (cluster), which receive UDP traffic on port 9999
-send back. 
+Now you need to create a new cluster, but this time it will not be written to sidecar 
+for the worker, but to the ingress gateway, for which you simply need to filter with this 
+key value pair when selecting: app: `l7mp-ingress`.
 
 ``` yaml
 cat <<EOF | kubectl apply -f -
