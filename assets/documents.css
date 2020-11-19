@@ -17,11 +17,16 @@ body {
 
 /* ARTICLE */
 
-.content {
+/* .content {
     position: relative;
     padding-top: 4rem; 
-  }
+  } */
 
+
+article {
+    padding-right: 10%;
+    width: 100%;
+}
 
 /*
  * Sidebar
