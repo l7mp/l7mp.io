@@ -398,6 +398,7 @@ UDP traffic on port 5000 and transfer them to `localhost` on port 100. The
 CoreDNS will listen on that address. 
 
 ``` yaml
+cat <<EOF | kubectl apply -f - 
 apiVersion: l7mp.io/v1
 kind: VirtualService
 metadata:
@@ -423,6 +424,7 @@ spec:
               retry_on: always
               num_retries: 3
               timeout: 2000
+EOF
 ```
 
 After all of this you only have to create the connection with l7mp-ingress and dns pods. 
@@ -431,6 +433,7 @@ and forward every traffic from outside of the cluster into dns-cluster which wil
 have the pods as endpoints.
 
 ``` yaml
+cat <<EOF | kubectl apply -f - 
 apiVersion: l7mp.io/v1
 kind: VirtualService
 metadata:
@@ -451,6 +454,7 @@ spec:
               retry_on: always
               num_retries: 3
               timeout: 2000
+EOF
 ```
 
 And that's it your own DNS server with l7mp service-mesh are ready to use. You 
@@ -499,7 +503,7 @@ If the test above are successful you have to run it continuously with the
 
 In the new terminal try to delete one of the dns pods, and see if the 
 `dig` command are crash or something. If it is not crash, everything is 
-good.
+good. And it means that the **Resilience** works well. 
 
 ### Cleanup
 
