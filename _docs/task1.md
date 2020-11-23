@@ -124,6 +124,26 @@ cat <<EOF | kubectl apply -f -
 apiVersion: l7mp.io/v1
 kind: Target
 metadata:
+  name: ws-svc
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: l7mp-ingress
+  linkedVirtualService: /apis/l7mp.io/v1/namespaces/default/virtualservices/transcoder-vsvc
+EOF
+```
+
+With the configuration above you can't use a specific loadbalancer it always use trivial, which 
+will always route traffic to the first endpoint in the cluster. So if you want to specify for 
+example a *ConsistentHash* loadbalanacer you should use the configuration below instead the 
+previously described. 
+
+``` yaml
+cat <<EOF | kubectl apply -f -
+apiVersion: l7mp.io/v1
+kind: Target
+metadata:
   name: websocket-cluster
 spec:
   selector:
