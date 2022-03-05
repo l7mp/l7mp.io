@@ -1,12 +1,12 @@
-- title: About
-  url: about
+# - title: About
+#   url: about
 - title: Documentation
   url: docs
 - title: News
   url: news
-- title: FAQ
-  url: faq
-- title: OpenAPI
-  url: openapi
+# - title: FAQ
+#   url: faq
+# - title: OpenAPI
+#   url: openapi
 # - title: GitHub
 #   external_url: https://github.com/l7mp/l7mp

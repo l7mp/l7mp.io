@@ -1,4 +1,0 @@
----
-title: OpenAPI
-permalink: /openapi/
----
