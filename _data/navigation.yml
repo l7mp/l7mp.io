@@ -1,7 +1,9 @@
 # - title: About
 #   url: about
-- title: Documentation
-  url: docs
+# - title: Documentation
+#   url: docs
+- title: Projects
+  url: projects
 - title: News
   url: news
 # - title: FAQ
