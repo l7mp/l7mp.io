@@ -1,30 +1,30 @@
 - header: |
-    Migrate your WebRTC backend services to Kubernetes 
+    Migrate WebRTC backend services to Kubernetes 
   background: control-bg.jpg
   align: text-left
   paragraph: |
-    Deploy a complete WebRTC infrastructure into Kubernetes pods/containers and benefit from the
-    unmatched lifecycle management capabilities
+    Deploy a containerized WebRTC infrastructure into Kubernetes and benefit from the unmatched
+    lifecycle management features
   button: Learn more
   url: "https://github.com/l7mp/stunner#description"
   active: "active"
 - header: |
-    Easily ingest all WebRTC traffic into Kubernetes
+    Easily ingest WebRTC traffic into Kubernetes
   background: service-mesh.jpg
   align: ""
   paragraph: |
-    Expose all your WebRTC media servers over a single public-facing IP address and port, with full
-    browser compatibility
+    Expose the WebRTC media server pool over a single public IP address and port, with full browser
+    compatibility
   active: ""
   button: Learn more
   url: "https://github.com/l7mp/stunner#security"
 - header: |
-    Scale your WebRTC infra & load-balance media traffic
+    Scale the WebRTC infra & load-balance media traffic
   background: udp.jpg
   align: text-right
   paragraph: |
-    Add or remove media server instances with a single command and let Kubernetes to automatically
-    distribute WebRTC sessions over the pool
+    Add or remove WebRTC media server replicas with a single command and let Kubernetes to
+    automatically distribute WebRTC sessions
   active: ""
   button: Learn more
   url: "https://github.com/l7mp/stunner#features"
