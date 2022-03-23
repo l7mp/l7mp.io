@@ -1,24 +1,30 @@
-- header: h1_placeholder
+- header: |
+    Run WebRTC backend services over Kubernetes 
   background: control-bg.jpg
   align: text-left
-  paragraph: >
-    Placeholder
+  paragraph: |
+    Deploy a complete WebRTC infrastructure into Kubernetes pods/containers and benefit from the
+    unmatched lifecycle management capabilities
   button: Learn more
-  url: "/"
+  url: "https://github.com/l7mp/stunner#description"
   active: "active"
-- header: h2_placeholder
+- header: |
+    Easily ingest WebRTC traffic into Kubernetes
   background: service-mesh.jpg
   align: ""
-  paragraph: >
-    Placeholder
+  paragraph: |
+    Secure your WebRTC media plane at the cluster perimeter by ingesting all WebRTC media traffic
+    over a single public-facing IP address and port, with full browser compatibility
   active: ""
   button: Learn more
-  url: "/"
-- header: h3_placeholder
+  url: "https://github.com/l7mp/stunner#security"
+- header: |
+    Scale & load-balance WebRTC traffic
   background: udp.jpg
   align: text-right
-  paragraph: >
-    Placeholder
+  paragraph: |
+    Add and remove media server instances with a single command and automatically load balance
+    WebRTC sessions over the media server pool
   active: ""
   button: Learn more
-  url: "/"
+  url: "https://github.com/l7mp/stunner#features"
