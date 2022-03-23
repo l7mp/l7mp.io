@@ -69,48 +69,54 @@
               <div class="col-12">
                 <p>
                   <b>L7mp Labs</b> is a small team of researchers and practitioners working on
-                  projects related to integrating real-time communications workloads, and
-                  especially WebRTC and cloud-gaming, into the cloud native
-                  ecosystem. Our <b>vision</b> is an ideal world where WebRTC application servers
-                  and media servers can be hosted over Kubernetes like any other workload, and
-                  everything just works smoothly. Our aim is to create the Kubernetes tooling that
-                  would allow anyone deploy a WebRTC infrastructure over any Kubernetes service, be
-                  that hosted or on-prem, adaptively scale the infra with demand to save big on
-                  OPEX, and still enjoy the same security, performance and observability features
-                  we have come to expect from large-scale cloud native applications.
+                  projects related to integrating real-time communications workloads, especially
+                  <a href="https://webrtc.org/">WebRTC</a> and cloud-gaming, into the cloud native
+                  ecosystem. Our <b>vision</b> is an ideal world in which WebRTC application/media
+                  servers can be hosted over Kubernetes just like any other workload, and
+                  everything works smoothly. Our <b>aim</b> is to create the Kubernetes tooling to
+                  allow anyone to deploy a WebRTC backend service over any Kubernetes service, be
+                  that hosted or on-prem, and benefit from the same security, scalability and
+                  observability features we have come to expect from large-scale cloud native
+                  applications.
                 </p>
-                </br>
+                <hr>
                 <p>
                   <a href="https://github.com/l7mp/stunner"<b>STUNner</b></a> is a WebRTC ingress
                   gateway for Kubernetes. STUNner allows to expose a WebRTC media server pool,
-                  potentially scaled to hundreds of Kubernetes containers/pods, over a IP address
-                  and port, and load-balance WebRTC sessions over the servers, seamlessly scale the
-                  application servers and media servers with load, secure the media plane with
-                  microsegmentation, etc. STUNner eliminates the usual hacks required to run WebRTC
-                  inside Kubernetes (no more <code>hostNetwork</code> and <code>hostPort</code>),
-                  while still maintains full compatibility with browsers, WebRTC media servers and
-                  application servers. Meanwhile, STUNner is fully integrated with Kubernetes and
-                  provides a smooth CI/CD installation/deployment experience.
+                  potentially scaled to hundreds of Kubernetes containers/pods, over a single IP
+                  address and port, and load-balance WebRTC sessions across the cluster and
+                  seamlessly scale the WebRTC infrastructure using standard Kubernetes
+                  workflows. STUNner eliminates the usual
+                  <a href="https://kubernetes.io/docs/concepts/configuration/overview">hacks</a>
+                  required to run WebRTC inside Kubernetes (no more <code>hostNetwork</code>
+                  and <code>hostPort</code>), while it maintains full compatibility with browsers,
+                  WebRTC media servers and application servers. Meanwhile, STUNner is fully
+                  integrated with Kubernetes and provides a smooth CI/CD installation/deployment
+                  experience.
                 </p>
-                </br>
+                <hr>
                 <p>
                   The <a href="https://github.com/l7mp/l7mp"<b>l7mp service mesh</b></a> is an
-                  experimental service mesh designed and implemented to support real-time
-                  communications workloads from the bottom up. VoIP/WebRTC relies on a suite of
-                  exotic network protocols, like UDP/RTP, DTLS and ICE/STUN/TURN, and support for
-                  these protocols in Envoy, and the popular service meshes built on top of it like
-                  Istio, is ranging from non-existent to rudimentary at best at this point. The
-                  l7mp service mesh comprises a custom data plane proxy optimized for UDP media
-                  plane traffic and a control plane that allows WebRTC sessions to be configured
-                  via a high-level Istio-like API. Apart from full Kubernetes and VoIP
-                  compatibility, the most important feature is accelerated media traffic processing
-                  using a generic Linux/eBPF kernel offload engine, which allows the l7mp service
-                  mesh data plane to process millions of UDP/RTP packets per second, improving more
-                  than 15x on the performance of raw Envoy.
+                  experimental service mesh designed for real-time communications workloads from
+                  the bottom up. VoIP/WebRTC relies on a suite
+                  of <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Protocols">exotic
+                  network protocols</a>, like UDP/RTP, DTLS and ICE/STUN/TURN, and support for
+                  these protocols in application-layer proxies
+                  like <a href="https://www.envoyproxy.io">Envoy</a>, and the popular service
+                  meshes built on top of it like <a href="https://istio.io">Istio</a>, is ranging
+                  from non-existent to rudimentary at best at this point. The l7mp service mesh
+                  comprises a custom data plane proxy, deployed as an ingress gateway and as a
+                  sidecar proxy in each pod, optimized for UDP media plane traffic, plus a control
+                  plane component that allows WebRTC sessions to be configured using a high-level
+                  Istio-like API. Apart from full Kubernetes and VoIP compatibility, the most
+                  important feature is accelerated media traffic processing using a generic
+                  <a href="https://ebpf.io/">Linux/eBPF</a> kernel offload engine that makes it
+                  possible for the l7mp service mesh data plane to process millions of UDP/RTP
+                  packets per second, improving more than 15x on the performance of raw Envoy.
                   </p>
                   <p>
-                  NOTE: The L7mp service mesh is discontinued. We are working towards reproducing
-                  the most useful features from the service mesh in STUNner.
+                  NOTE: The L7mp service mesh is discontinued at this point. We are working towards
+                  reproducing the most useful features from the service mesh in STUNner.
                 </p>
               </div>
             </div>
