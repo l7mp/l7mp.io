@@ -13,8 +13,8 @@
   background: service-mesh.jpg
   align: ""
   paragraph: |
-    Secure your WebRTC media plane at the perimeter by ingesting all WebRTC traffic over a single
-    public-facing IP address and port, with full browser compatibility
+    Expose all your WebRTC media servers over a single public-facing IP address and port, with full
+    browser compatibility
   active: ""
   button: Learn more
   url: "https://github.com/l7mp/stunner#security"
@@ -24,7 +24,7 @@
   align: text-right
   paragraph: |
     Add or remove media server instances with a single command and let Kubernetes to automatically
-    load balance WebRTC sessions
+    distribute WebRTC sessions over the pool
   active: ""
   button: Learn more
   url: "https://github.com/l7mp/stunner#features"
