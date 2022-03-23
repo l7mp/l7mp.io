@@ -20,13 +20,19 @@ $("table").each(function() {
 });
 
 $(document).ready(function() {
-    var url = "https://api.github.com/repos/l7mp/l7mp";
-    fetch(url).then(function(e) {
+    fetch("https://api.github.com/repos/l7mp/l7mp").then(function(e) {
       return e.json()
     }).then(function(r) {
        stars = r.stargazers_count
        forks = r.forks_count
-       $('#git_details').text(stars + " stars " + forks + " forks")
+       $('#git_details_l7mp').text(stars + " stars " + forks + " forks")
+    });
+    fetch("https://api.github.com/repos/l7mp/stunner").then(function(e) {
+      return e.json()
+    }).then(function(r) {
+       stars = r.stargazers_count
+       forks = r.forks_count
+       $('#git_details_stunner').text(stars + " stars " + forks + " forks")
     });
   });
 
