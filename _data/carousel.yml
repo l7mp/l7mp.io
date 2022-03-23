@@ -24,7 +24,7 @@
   align: text-right
   paragraph: |
     Add or remove WebRTC media server replicas with a single command and let Kubernetes to
-    automatically distribute WebRTC sessions
+    automatically distribute WebRTC sessions across the replicas
   active: ""
   button: Learn more
   url: "https://github.com/l7mp/stunner#features"
