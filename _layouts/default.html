@@ -68,18 +68,49 @@
             <div class="row">
               <div class="col-12">
                 <p>
-                  L7mp is a multiprotocol service proxy and a service mesh framework. L7mp can
-                  handle essentially any transport- and application-layer network protocol natively
-                  and transparently convert between different protocol encapsulations, exposing a
-                  simple high-level Kubernetes API that allows to maintain versatile
-                  load-balancing, resilience, security and monitoring policies in a
-                  protocol-agnostic manner.
+                  <b>L7mp Labs</b> is a small team of researchers and practitioners working on
+                  projects related to integrating real-time communications workloads, and
+                  especially WebRTC and cloud-gaming, into the cloud native
+                  ecosystem. Our <b>vision</b> is an ideal world where WebRTC application servers
+                  and media servers can be hosted over Kubernetes like any other workload, and
+                  everything just works smoothly. Our aim is to create the Kubernetes tooling that
+                  would allow anyone deploy a WebRTC infrastructure over any Kubernetes service, be
+                  that hosted or on-prem, adaptively scale the infra with demand to save big on
+                  OPEX, and still enjoy the same security, performance and observability features
+                  we have come to expect from large-scale cloud native applications.
                 </p>
                 </br>
                 <p>
-                  The intention is for l7mp to serve as an incubator project to prototype the main
-                  service mesh features that are indispensable to support network-intensive
-                  legacy/non-HTTP applications seamlessly in Kubernetes.
+                  <a href="https://github.com/l7mp/stunner"<b>STUNner</b></a> is a WebRTC ingress
+                  gateway for Kubernetes. STUNner allows to expose a WebRTC media server pool,
+                  potentially scaled to hundreds of Kubernetes containers/pods, over a IP address
+                  and port, and load-balance WebRTC sessions over the servers, seamlessly scale the
+                  application servers and media servers with load, secure the media plane with
+                  microsegmentation, etc. STUNner eliminates the usual hacks required to run WebRTC
+                  inside Kubernetes (no more <code>hostNetwork</code> and <code>hostPort</code>),
+                  while still maintains full compatibility with browsers, WebRTC media servers and
+                  application servers. Meanwhile, STUNner is fully integrated with Kubernetes and
+                  provides a smooth CI/CD installation/deployment experience.
+                </p>
+                </br>
+                <p>
+                  The <a href="https://github.com/l7mp/l7mp"<b>l7mp service mesh</b></a> is an
+                  experimental service mesh designed and implemented to support real-time
+                  communications workloads from the bottom up. VoIP/WebRTC relies on a suite of
+                  exotic network protocols, like UDP/RTP, DTLS and ICE/STUN/TURN, and support for
+                  these protocols in Envoy, and the popular service meshes built on top of it like
+                  Istio, is ranging from non-existent to rudimentary at best at this point. The
+                  l7mp service mesh comprises a custom data plane proxy optimized for UDP media
+                  plane traffic and a control plane that allows WebRTC sessions to be configured
+                  via a high-level Istio-like API. Apart from full Kubernetes and VoIP
+                  compatibility, the most important feature is accelerated media traffic processing
+                  using a generic Linux/eBPF kernel offload engine, which allows the l7mp service
+                  mesh data plane to process millions of UDP/RTP packets per second, improving more
+                  than 15x on the performance of raw Envoy.
+                  </p>
+                  <p>
+                  NOTE: The L7mp service mesh is discontinued. We are working towards reproducing
+                  the most useful features from the service mesh in STUNner.
                 </p>
               </div>
             </div>
