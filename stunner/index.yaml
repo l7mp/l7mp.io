@@ -1,0 +1,25 @@
+apiVersion: v1
+entries:
+  kurento_webrtc_demo:
+  - apiVersion: v2
+    appVersion: 6.16.0
+    created: "2022-04-02T13:52:44.207466631+02:00"
+    description: A Helm chart for Kubernetes
+    digest: d272ea26a251d88038ff60937f2d67180a2dc61207de4fc8abdc2b536f8f9a64
+    name: kurento_webrtc_demo
+    type: application
+    urls:
+    - https://l7mp.io/stunner/kurento_webrtc_demo-0.1.0.tgz
+    version: 0.1.0
+  stunner:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-04-02T13:52:44.208194719+02:00"
+    description: A Helm chart for Kubernetes
+    digest: 779648172f6bf6a196a6b994e3c3beccf4f8bb5ac0a8253626ce458386075a0a
+    name: stunner
+    type: application
+    urls:
+    - https://l7mp.io/stunner/stunner-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-02T13:52:44.206591387+02:00"
