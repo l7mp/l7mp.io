@@ -3,9 +3,9 @@ entries:
   kurento_webrtc_demo:
   - apiVersion: v2
     appVersion: 6.16.0
-    created: "2022-06-10T09:49:06.740358503Z"
+    created: "2022-06-16T17:51:40.124386484Z"
     description: A Helm chart for Kubernetes
-    digest: 51d3da10230891fa6a886e92b8f74b6ee9a6f9184013a109b3e0cdc082d8932c
+    digest: 7c050ed342554f201c49f35fce3bdf9a456a229b062ded9184fc2dc4fbabe4f5
     name: kurento_webrtc_demo
     type: application
     urls:
@@ -14,7 +14,17 @@ entries:
   stunner:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-06-10T09:49:06.74073011Z"
+    created: "2022-06-16T17:51:40.125691503Z"
+    description: A Helm chart for Kubernetes
+    digest: a927d99fe1ab558645b9e960f177156f79042ed54971e44197e3b36b6241ba77
+    name: stunner
+    type: application
+    urls:
+    - https://l7mp.io/stunner/stunner-0.10.1.tgz
+    version: 0.10.1
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2022-06-16T17:51:40.12480359Z"
     description: A Helm chart for Kubernetes
     digest: b58377c453e0e2d2affcf22c4b7a29d7709ddac561b00f0e94567dbcd76934a6
     name: stunner
@@ -24,7 +34,7 @@ entries:
     version: 0.10.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-06-10T09:49:06.742046035Z"
+    created: "2022-06-16T17:51:40.129530856Z"
     description: A Helm chart for Kubernetes
     digest: b740d16f737585ca28c37b6b650161bdf560660486e6d2398672a29251af3f95
     name: stunner
@@ -34,7 +44,7 @@ entries:
     version: 0.9.9
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-06-10T09:49:06.741577326Z"
+    created: "2022-06-16T17:51:40.128947448Z"
     description: A Helm chart for Kubernetes
     digest: dd37a4cc51d1c69f3a5706ff9a097c6078386f026545a1b7712dec001f6a8b12
     name: stunner
@@ -44,7 +54,7 @@ entries:
     version: 0.9.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2022-06-10T09:49:06.741106417Z"
+    created: "2022-06-16T17:51:40.126042908Z"
     description: A Helm chart for Kubernetes
     digest: e70723f6b250d9a3ea9f881180843d7639ffec693e871f6f0af9fe4f90089cb3
     name: stunner
@@ -52,4 +62,4 @@ entries:
     urls:
     - https://l7mp.io/stunner/stunner-0.9.1.tgz
     version: 0.9.1
-generated: "2022-06-10T09:49:06.739827692Z"
+generated: "2022-06-16T17:51:40.123846377Z"
