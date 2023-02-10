@@ -1,0 +1,54 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '19'
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # - run: npm ci
+      - name: Build
+        run: |
+          touch .env.production
+          echo "REACT_APP_EMAILJS_SERVICE_ID=$EMAILJS_SERVICE_ID" >> .env.production
+          echo "REACT_APP_EMAILJS_TEMPLATE_ID=$EMAILJS_TEMPLATE_ID" >> .env.production
+          echo "REACT_APP_EMAILJS_PUBLIC_KEY=$EMAILJS_PUBLIC_KEY" >> .env.production
+          rm -rf .env.production
+          npm i
+          npm run build
+        env:
+         EMAILJS_SERVICE_ID: ${{ secrets.EMAILJS_SERVICE_ID }}
+         EMAILJS_TEMPLATE_ID: ${{ secrets.EMAILJS_TEMPLATE_ID }}
+         EMAILJS_PUBLIC_KEY: ${{ secrets.EMAILJS_PUBLIC_KEY }}
+         CI: false
+         GENERATE_SOURCEMAP: false
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
