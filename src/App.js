@@ -13,7 +13,7 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Contact from "./pages/Contact";
 
-const App = () => {
+const App = () => { 
   return (
       <Router>
         <Nav />

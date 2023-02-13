@@ -19,7 +19,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -m 'Updates'",
+    "deploy": "gh-pages -d build -m 'Updates' -f",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "serve -s build",
