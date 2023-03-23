@@ -13,6 +13,15 @@ export const blogDataHeader = {
 export const blogData = [
     {
         type: 'Article',
+        publishDate: '2023. 03. 23.',
+        title: 'Use of TURN in WebRTC Revisited: It may be more useful than you thought',
+        subtitle: 'The TURN protocol is one of those annoyances that WebRTC critically depends on yet very few actually understand (another example is SDP).',
+        publisher: 'Gábor Rétvári',
+        publisherImg: RGaborImg,
+        href: 'https://medium.com/l7mp-technologies/use-of-turn-in-webrtc-revisited-it-may-be-more-useful-than-you-thought-856059fd27a3'
+    },
+    {
+        type: 'Article',
         publishDate: '2023. 02. 01.',
         title: 'Kubernetes: The next step for WebRTC',
         subtitle: 'An article about the relationship between WebRTC and Kubernetes.',
