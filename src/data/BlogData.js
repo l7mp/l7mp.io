@@ -36,7 +36,7 @@ export const blogData = [
         subtitle: 'This document guides you through the installation of Jitsi into Kubernetes, when it is used together with the STUNner WebRTC media gateway.',
         publisher: 'Richárd Váradi',
         publisherImg: VRichardImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/jitsi'
+        href: 'https://docs.l7mp.io/en/latest/examples/jitsi/'
     },
     {
         type: 'Tutorial',
@@ -45,7 +45,7 @@ export const blogData = [
         subtitle: 'This document guides you through the installation of LiveKit into Kubernetes, when it is used together with the STUNner WebRTC media gateway.',
         publisher: 'Kornél Dávid',
         publisherImg: DKornelImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/livekit'
+        href: 'https://docs.l7mp.io/en/latest/examples/livekit/'
     },
     {
         type: 'Tutorial',
@@ -54,7 +54,7 @@ export const blogData = [
         subtitle: 'With the help of this guide you are able to take performance measurments in your setup using STUNner. Both running STUNner locally (outside of Kubernetes) and running STUNner in Kubernetes can be evaluated.',
         publisher: 'Kornél Dávid',
         publisherImg: DKornelImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/benchmark'
+        href: 'https://docs.l7mp.io/en/latest/examples/benchmark/'
     },
     {
         type: 'Tutorial',
@@ -63,7 +63,7 @@ export const blogData = [
         subtitle: 'This guide shows how you can use Neko inside a Kubernetes cluster, using STUNner as a WebRTC gateway. Neko uses WebRTC to stream a desktop inside of a docker container to your browser. However, integrating Neko into Kubernetes is far from trivial.',
         publisher: 'Péter Megyesi',
         publisherImg: MPeterImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/neko'
+        href: 'https://docs.l7mp.io/en/latest/examples/neko/'
     },
     {
         type: 'Tutorial',
@@ -72,7 +72,7 @@ export const blogData = [
         subtitle: 'This is the Kurento Magic mirror demo, adopted for STUNner and Kubernetes. The demo shows a basic WebRTC loopback server with some media processing added: the application uses computer vision and augmented reality techniques to add a funny hat on top of faces.',
         publisher: 'Máté Nagy',
         publisherImg: NMateImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/kurento-magic-mirror'
+        href: 'https://docs.l7mp.io/en/latest/examples/kurento-magic-mirror/'
     },
     {
         type: 'Tutorial',
@@ -81,7 +81,7 @@ export const blogData = [
         subtitle: 'This tutorial showcases the headless deployment model of STUNner, that is, when WebRTC clients connect to each other directly via STUNner, without going through a media server.',
         publisher: 'Gábor Rétvári',
         publisherImg: RGaborImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/direct-one2one-call'
+        href: 'https://docs.l7mp.io/en/latest/examples/direct-one2one-call/'
     },
     {
         type: 'Tutorial',
@@ -90,7 +90,7 @@ export const blogData = [
         subtitle: 'This tutorial demonstrates the media-plane deployment model of STUNner, that is, when WebRTC clients connect to each other via the Kurento media server deployed into Kubernetes. The media servers are exposed to clients via a STUNner gateway.',
         publisher: 'Gábor Rétvári',
         publisherImg: RGaborImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/kurento-one2one-call'
+        href: 'https://docs.l7mp.io/en/latest/examples/kurento-one2one-call/'
     },
     {
         type: 'Tutorial',
@@ -99,7 +99,7 @@ export const blogData = [
         subtitle: 'This tutorial shows how to tunnel an external connection via STUNner to a UDP service deployed into Kubernetes. The tutorial can also be used to quickly check a STUNner installation.',
         publisher: 'Gábor Rétvári',
         publisherImg: RGaborImg,
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/simple-tunnel'
+        href: 'https://docs.l7mp.io/en/latest/examples/simple-tunnel/'
     },
     {
         type: 'Tutorial',
@@ -108,6 +108,6 @@ export const blogData = [
         subtitle: 'In this demo, we will install CloudRetro into a Kubernetes cluster. In this demo, we use STUNner to establish the UDP media streams between clients and the CloudRetro media servers deployed into Kubernetes.',
         publisher: 'Bálint Bombitz',
         publisherImg: 'https://avatars.githubusercontent.com/u/74309145?v=4',
-        href: 'https://github.com/l7mp/stunner/tree/main/examples/cloudretro'
+        href: 'https://docs.l7mp.io/en/latest/examples/cloudretro/'
     },
 ];
