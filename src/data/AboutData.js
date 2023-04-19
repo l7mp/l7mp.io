@@ -42,7 +42,7 @@ export const membersData = {
         },
         {
             image: RGaborImg,
-            name: 'Gábor Rétvári, Dsc',
+            name: 'Gábor Rétvári, DSc',
             title: 'CTO/Co-founder',
             social: [
                 {
