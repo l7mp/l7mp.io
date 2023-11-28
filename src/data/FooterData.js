@@ -9,7 +9,7 @@ export const footerData = {
     about: [
         {
             name: 'L7mp',
-            href: '/about'
+            href: '/#/about'
         }
     ],
     followUs: [
