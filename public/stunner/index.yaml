@@ -3,7 +3,7 @@ entries:
   kurento_webrtc_demo:
   - apiVersion: v2
     appVersion: 6.16.0
-    created: "2024-02-02T18:25:26.251162165Z"
+    created: "2024-02-05T15:39:31.979657313Z"
     description: A Helm chart for Kubernetes
     digest: 5e06739d487505f51d53b2dcfe3972b7a468abca94d5b1f21ab3edf901bdd499
     name: kurento_webrtc_demo
@@ -14,7 +14,7 @@ entries:
   stunner:
   - apiVersion: v2
     appVersion: 0.17.0
-    created: "2024-02-02T18:25:26.258545592Z"
+    created: "2024-02-05T15:39:31.987024093Z"
     description: A Helm chart for Kubernetes
     digest: deb34d14e85ca84631818b290e903fddb4423f0cda8319fa330dbd1de212cc78
     maintainers:
@@ -26,7 +26,7 @@ entries:
     version: 0.17.0
   - apiVersion: v2
     appVersion: 0.16.0
-    created: "2024-02-02T18:25:26.25808763Z"
+    created: "2024-02-05T15:39:31.986591406Z"
     description: A Helm chart for Kubernetes
     digest: 27605893b572a61369448489ae1abba5e952f4c5452c924ff0a2246ef0f79d25
     maintainers:
@@ -38,7 +38,7 @@ entries:
     version: 0.16.0
   - apiVersion: v2
     appVersion: 0.15.0
-    created: "2024-02-02T18:25:26.256886892Z"
+    created: "2024-02-05T15:39:31.986131188Z"
     description: A Helm chart for Kubernetes
     digest: d18b227e46491cd460b86ee1dac52bd2903bcba62f920f876d24f5ed5df346e2
     maintainers:
@@ -50,7 +50,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 0.14.0
-    created: "2024-02-02T18:25:26.256422668Z"
+    created: "2024-02-05T15:39:31.985697459Z"
     description: A Helm chart for Kubernetes
     digest: 2cc2488a41b3bbb0a1acfe2144c5e366adc82a89295107ff67bb64edcdd05d62
     name: stunner
@@ -60,7 +60,7 @@ entries:
     version: 0.14.0
   - apiVersion: v2
     appVersion: 0.13.0
-    created: "2024-02-02T18:25:26.256134643Z"
+    created: "2024-02-05T15:39:31.985405024Z"
     description: A Helm chart for Kubernetes
     digest: cdd8a3ab59ea2e715cc105442eba6428db35012bcb4cffa17b29fe2a65c0b5b5
     name: stunner
@@ -70,7 +70,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 0.11.3
-    created: "2024-02-02T18:25:26.255822953Z"
+    created: "2024-02-05T15:39:31.985100987Z"
     description: A Helm chart for Kubernetes
     digest: a8954e66d8d99739d3feca71f516cffe252bca543894e18cba4dc0625c13a528
     name: stunner
@@ -80,7 +80,7 @@ entries:
     version: 0.11.3
   - apiVersion: v2
     appVersion: 0.11.2
-    created: "2024-02-02T18:25:26.255532363Z"
+    created: "2024-02-05T15:39:31.984797471Z"
     description: A Helm chart for Kubernetes
     digest: afafd623cb387448f1034f8710f7ce0f547b41747a0b3f859d1a9ffe80111b13
     name: stunner
@@ -90,7 +90,7 @@ entries:
     version: 0.11.2
   - apiVersion: v2
     appVersion: 0.11.1
-    created: "2024-02-02T18:25:26.25525164Z"
+    created: "2024-02-05T15:39:31.984501308Z"
     description: A Helm chart for Kubernetes
     digest: e871426c008a02a911c5f8eabdff9e6202f959671b1372195493765b26620fe1
     name: stunner
@@ -100,7 +100,7 @@ entries:
     version: 0.11.1
   - apiVersion: v2
     appVersion: 0.11.0
-    created: "2024-02-02T18:25:26.254956201Z"
+    created: "2024-02-05T15:39:31.984045288Z"
     description: A Helm chart for Kubernetes
     digest: 315387074549e107685f122a2562219b324d17951d31cbeee5e14bee57efe5b0
     name: stunner
@@ -110,7 +110,7 @@ entries:
     version: 0.11.0
   - apiVersion: v2
     appVersion: 0.10.10
-    created: "2024-02-02T18:25:26.25213296Z"
+    created: "2024-02-05T15:39:31.98061005Z"
     description: A Helm chart for Kubernetes
     digest: 4847572e131dc2d451c36a30fa421dd3b6616af996899c106ce81323dffeda21
     name: stunner
@@ -120,7 +120,7 @@ entries:
     version: 0.10.10
   - apiVersion: v2
     appVersion: 0.10.9
-    created: "2024-02-02T18:25:26.254672994Z"
+    created: "2024-02-05T15:39:31.983313352Z"
     description: A Helm chart for Kubernetes
     digest: cf9cbdd17b5e2fb2861fa4d6fd99d0f28432eb846f1bfd9c89dbd915e3e9c06d
     name: stunner
@@ -130,7 +130,7 @@ entries:
     version: 0.10.9
   - apiVersion: v2
     appVersion: 0.10.8
-    created: "2024-02-02T18:25:26.254400337Z"
+    created: "2024-02-05T15:39:31.982883029Z"
     description: A Helm chart for Kubernetes
     digest: 4364e5b25b236472c86b4c80786b849287dd59cea823b4886026e4265d61b002
     name: stunner
@@ -140,7 +140,7 @@ entries:
     version: 0.10.8
   - apiVersion: v2
     appVersion: 0.10.7
-    created: "2024-02-02T18:25:26.254116399Z"
+    created: "2024-02-05T15:39:31.982592928Z"
     description: A Helm chart for Kubernetes
     digest: 0abfb0ca3ff6553bb61c6f7a5bc681f8a4d23a3943fb0595fa0d3b7b83f06472
     name: stunner
@@ -150,7 +150,7 @@ entries:
     version: 0.10.7
   - apiVersion: v2
     appVersion: 0.10.6
-    created: "2024-02-02T18:25:26.253829545Z"
+    created: "2024-02-05T15:39:31.982297047Z"
     description: A Helm chart for Kubernetes
     digest: 716e1adf8dcfeb578db25c92a2552f8be45da7a74454894f7dafc5e85db457c7
     name: stunner
@@ -160,7 +160,7 @@ entries:
     version: 0.10.6
   - apiVersion: v2
     appVersion: 0.10.5
-    created: "2024-02-02T18:25:26.253534367Z"
+    created: "2024-02-05T15:39:31.982027163Z"
     description: A Helm chart for Kubernetes
     digest: 953fc72f7d33ca142377dedb0a2e4de24abd14c96cbb772e01a6169d18be4b1c
     name: stunner
@@ -170,7 +170,7 @@ entries:
     version: 0.10.5
   - apiVersion: v2
     appVersion: 0.10.4
-    created: "2024-02-02T18:25:26.253271257Z"
+    created: "2024-02-05T15:39:31.981760496Z"
     description: A Helm chart for Kubernetes
     digest: aa65121c28a406b9cfb919bacae20cfbeca1d7d138c4a081dde38473d2cc7787
     name: stunner
@@ -180,7 +180,7 @@ entries:
     version: 0.10.4
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.252989854Z"
+    created: "2024-02-05T15:39:31.981476837Z"
     description: A Helm chart for Kubernetes
     digest: c557212d588a1919b10abcb0437d05bc4d45e97f849f6b30036a4ca6a9f667dd
     name: stunner
@@ -190,7 +190,7 @@ entries:
     version: 0.10.3
   - apiVersion: v2
     appVersion: 0.10.3-t
-    created: "2024-02-02T18:25:26.252716005Z"
+    created: "2024-02-05T15:39:31.981194059Z"
     description: A Helm chart for Kubernetes
     digest: 525596a0f2e8323150a419d38f92034a8c2dd30b6404eb64fb12695650ec5f34
     name: stunner
@@ -200,7 +200,7 @@ entries:
     version: 0.10.3-t
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.252408322Z"
+    created: "2024-02-05T15:39:31.980896374Z"
     description: A Helm chart for Kubernetes
     digest: 81a5437c9acbf1c45e5694e123eb8253fcdb5dd1cf7540b3226185dd3a2e7df2
     name: stunner
@@ -210,7 +210,7 @@ entries:
     version: 0.10.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.251828484Z"
+    created: "2024-02-05T15:39:31.980288841Z"
     description: A Helm chart for Kubernetes
     digest: a927d99fe1ab558645b9e960f177156f79042ed54971e44197e3b36b6241ba77
     name: stunner
@@ -220,7 +220,7 @@ entries:
     version: 0.10.1
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.251497198Z"
+    created: "2024-02-05T15:39:31.980001565Z"
     description: A Helm chart for Kubernetes
     digest: b58377c453e0e2d2affcf22c4b7a29d7709ddac561b00f0e94567dbcd76934a6
     name: stunner
@@ -230,7 +230,7 @@ entries:
     version: 0.10.0
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.259392557Z"
+    created: "2024-02-05T15:39:31.987870542Z"
     description: A Helm chart for Kubernetes
     digest: b740d16f737585ca28c37b6b650161bdf560660486e6d2398672a29251af3f95
     name: stunner
@@ -240,7 +240,7 @@ entries:
     version: 0.9.9
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.25911438Z"
+    created: "2024-02-05T15:39:31.987582585Z"
     description: A Helm chart for Kubernetes
     digest: dd37a4cc51d1c69f3a5706ff9a097c6078386f026545a1b7712dec001f6a8b12
     name: stunner
@@ -250,7 +250,7 @@ entries:
     version: 0.9.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.258841052Z"
+    created: "2024-02-05T15:39:31.987296882Z"
     description: A Helm chart for Kubernetes
     digest: e70723f6b250d9a3ea9f881180843d7639ffec693e871f6f0af9fe4f90089cb3
     name: stunner
@@ -261,9 +261,9 @@ entries:
   stunner-dev:
   - apiVersion: v2
     appVersion: dev
-    created: "2024-02-02T18:25:26.259809924Z"
+    created: "2024-02-05T15:39:31.988293171Z"
     description: A Helm chart for Kubernetes
-    digest: 2c469ee782b5bbbae83fa08b39dc6a2f9b56bd4b24641c8874aeb1b58d4309ad
+    digest: 9c6812236d64dba4d6f061870280d563c25dae40598aba3dd9bfd0124e8b0198
     maintainers:
     - name: l7mp
     name: stunner-dev
@@ -274,7 +274,7 @@ entries:
   stunner-gateway-operator:
   - apiVersion: v2
     appVersion: 0.17.0
-    created: "2024-02-02T18:25:26.284666064Z"
+    created: "2024-02-05T15:39:32.012336103Z"
     description: A Helm chart for Kubernetes
     digest: 0f789bf934aecc208bf216a298bf39a96c2f75fa8fed9f42a8d919cb8087ede5
     maintainers:
@@ -286,7 +286,7 @@ entries:
     version: 0.17.0
   - apiVersion: v2
     appVersion: 0.16.0
-    created: "2024-02-02T18:25:26.280449006Z"
+    created: "2024-02-05T15:39:32.008644959Z"
     description: A Helm chart for Kubernetes
     digest: 07beb8c9a1c20f25bdff718989b885e32a8cf9c98439c00714239d77442a8bb7
     maintainers:
@@ -298,7 +298,7 @@ entries:
     version: 0.16.0
   - apiVersion: v2
     appVersion: 0.15.0
-    created: "2024-02-02T18:25:26.277410916Z"
+    created: "2024-02-05T15:39:32.005156452Z"
     description: A Helm chart for Kubernetes
     digest: 022d8c293ca624be4febd1b5739edfc71f2f240191031c9c7ae829895c9720f5
     maintainers:
@@ -310,7 +310,7 @@ entries:
     version: 0.15.0
   - apiVersion: v2
     appVersion: 0.13.0
-    created: "2024-02-02T18:25:26.275856711Z"
+    created: "2024-02-05T15:39:32.004312869Z"
     description: A Helm chart for Kubernetes
     digest: da6cc505b743b6e82b609e6a117fa4d9e58a70e1772c4c7aec10f4a58f81b93b
     name: stunner-gateway-operator
@@ -320,7 +320,7 @@ entries:
     version: 0.13.0
   - apiVersion: v2
     appVersion: 0.12.1
-    created: "2024-02-02T18:25:26.274184451Z"
+    created: "2024-02-05T15:39:32.002637504Z"
     description: A Helm chart for Kubernetes
     digest: 0766ef638a5505c24e908af54f47d4b4d486526c3a06ad15d9b26861c1bc4d60
     name: stunner-gateway-operator
@@ -330,7 +330,7 @@ entries:
     version: 0.12.1
   - apiVersion: v2
     appVersion: 0.12.0
-    created: "2024-02-02T18:25:26.272508213Z"
+    created: "2024-02-05T15:39:32.000386436Z"
     description: A Helm chart for Kubernetes
     digest: 55656e8ab82276d1332dd66c6923bd176dcad7a3f4a3094398b1ccd9e06257a9
     name: stunner-gateway-operator
@@ -340,7 +340,7 @@ entries:
     version: 0.12.0
   - apiVersion: v2
     appVersion: 0.11.9
-    created: "2024-02-02T18:25:26.270793544Z"
+    created: "2024-02-05T15:39:31.998734685Z"
     description: A Helm chart for Kubernetes
     digest: ec3b9a73b88dba019150aba65302e2f170c36d4cf17653f0747a9d85c7321ff9
     name: stunner-gateway-operator
@@ -350,7 +350,7 @@ entries:
     version: 0.11.9
   - apiVersion: v2
     appVersion: 0.11.8
-    created: "2024-02-02T18:25:26.268329071Z"
+    created: "2024-02-05T15:39:31.997008796Z"
     description: A Helm chart for Kubernetes
     digest: 7feece3418634ee79f51a3a7a4f22c47937bb8c47e2b65640616df1489352cd2
     name: stunner-gateway-operator
@@ -360,7 +360,7 @@ entries:
     version: 0.11.8
   - apiVersion: v2
     appVersion: 0.11.7
-    created: "2024-02-02T18:25:26.26745252Z"
+    created: "2024-02-05T15:39:31.995460789Z"
     description: A Helm chart for Kubernetes
     digest: 5604170a79f0bdeda70b87ca9915a1799d4e636c808ed88bae56ed72e091e8c5
     name: stunner-gateway-operator
@@ -370,7 +370,7 @@ entries:
     version: 0.11.7
   - apiVersion: v2
     appVersion: 0.11.6
-    created: "2024-02-02T18:25:26.266450427Z"
+    created: "2024-02-05T15:39:31.994568846Z"
     description: A Helm chart for Kubernetes
     digest: cd4f01cef4ca6a2975ce3834b7a6ee32c752d375153bebb3a5dfaaed4fd3e39d
     name: stunner-gateway-operator
@@ -380,7 +380,7 @@ entries:
     version: 0.11.6
   - apiVersion: v2
     appVersion: 0.11.5
-    created: "2024-02-02T18:25:26.265542528Z"
+    created: "2024-02-05T15:39:31.993566276Z"
     description: A Helm chart for Kubernetes
     digest: 92b46d6bb8d686f7ba087a236c1447cb6c09be93bc928deb6bf110d094dcd773
     name: stunner-gateway-operator
@@ -390,7 +390,7 @@ entries:
     version: 0.11.5
   - apiVersion: v2
     appVersion: 0.11.4
-    created: "2024-02-02T18:25:26.264610785Z"
+    created: "2024-02-05T15:39:31.992696634Z"
     description: A Helm chart for Kubernetes
     digest: 11a0ca596ecfcb3fb0f712e616e7b5d703979eb10583c432fccf2c4de46c4e42
     name: stunner-gateway-operator
@@ -400,7 +400,7 @@ entries:
     version: 0.11.4
   - apiVersion: v2
     appVersion: 0.11.3
-    created: "2024-02-02T18:25:26.262492974Z"
+    created: "2024-02-05T15:39:31.991806404Z"
     description: A Helm chart for Kubernetes
     digest: 806a1eb79cdf53e02ff80951da3387f796d259561de6d104bd12855e08e0d520
     name: stunner-gateway-operator
@@ -410,7 +410,7 @@ entries:
     version: 0.11.3
   - apiVersion: v2
     appVersion: 0.11.2
-    created: "2024-02-02T18:25:26.261639386Z"
+    created: "2024-02-05T15:39:31.990738852Z"
     description: A Helm chart for Kubernetes
     digest: 67c27485f1f05e377194b75e7c81e2871f310235b9dda3b360df6d2db52b4e1b
     name: stunner-gateway-operator
@@ -420,7 +420,7 @@ entries:
     version: 0.11.2
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2024-02-02T18:25:26.260745253Z"
+    created: "2024-02-05T15:39:31.989187709Z"
     description: A Helm chart for Kubernetes
     digest: 92a49c90cfb0047e5fa18730337590a56b5ad4a7f9b83126310ac3bd7ae5c6fe
     name: stunner-gateway-operator
@@ -431,7 +431,7 @@ entries:
   stunner-gateway-operator-dev:
   - apiVersion: v2
     appVersion: dev
-    created: "2024-02-02T18:25:26.289174306Z"
+    created: "2024-02-05T15:39:32.01641492Z"
     description: A Helm chart for Kubernetes
     digest: 38c97d2e6b718d557edc4883e382f137e72d99ba20d4c3e197d5ba3457fbc9f2
     maintainers:
@@ -444,7 +444,7 @@ entries:
   stunner-kurento-one2one-call:
   - apiVersion: v2
     appVersion: 6.16.0
-    created: "2024-02-02T18:25:26.289443767Z"
+    created: "2024-02-05T15:39:32.016683391Z"
     description: A Helm chart for Kubernetes
     digest: e67349dde8704331a21da04aefc541523486ac72827684251d776322421f8bdf
     name: stunner-kurento-one2one-call
@@ -455,7 +455,7 @@ entries:
   stunner-prometheus:
   - apiVersion: v2
     appVersion: 0.17.0
-    created: "2024-02-02T18:25:26.307541209Z"
+    created: "2024-02-05T15:39:32.035316665Z"
     description: A Helm chart for monitoring STUNner, the Kubernetes media gateway
       for WebRTC
     digest: 5faed3be5dcc78d6b2a6b39fd91388fcf2ee519889bdb6384c10c47b71ce22df
@@ -468,7 +468,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 0.17.0
-    created: "2024-02-02T18:25:26.301407537Z"
+    created: "2024-02-05T15:39:32.029110063Z"
     description: A Helm chart for monitoring STUNner, the Kubernetes ingress gateway
       for WebRTC
     digest: 6a2f8d86c3fb3137fa9dc4941d3fae3b7614f71270af9bb46e597d75861eb33c
@@ -481,7 +481,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 0.11.0
-    created: "2024-02-02T18:25:26.294929283Z"
+    created: "2024-02-05T15:39:32.022358781Z"
     description: A Helm chart for monitoring STUNner, the Kubernetes ingress gateway
       for WebRTC
     digest: ad122d9adf90a33e4d30503cfc482a4c3ee5710fb96babbdbeec736f4f222ce9
@@ -492,4 +492,4 @@ entries:
     urls:
     - https://l7mp.io/stunner/stunner-prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-02T18:25:26.250753435Z"
+generated: "2024-02-05T15:39:31.979224907Z"
