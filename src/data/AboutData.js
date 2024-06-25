@@ -93,7 +93,7 @@ export const membersData = {
         },
         {
             image: VRichardImg,
-            name: 'Richárd Váradi, BSc',
+            name: 'Richárd Váradi, MSc',
             title: 'Developer/Co-founder',
             social: [
                 {
@@ -110,7 +110,7 @@ export const membersData = {
         },
         {
             image: DKornelImg,
-            name: 'Kornél Dávid, BSc',
+            name: 'Kornél Dávid, MSc',
             title: 'Developer/Co-founder',
             social: [
                 {
