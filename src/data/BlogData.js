@@ -1,9 +1,9 @@
 import RGaborImg from '../../src/assets/img/members/rgabor.jpg';
-import MPeterImg from '../../src/assets/img/members/mpeter.png';
-import LTamasImg from '../../src/assets/img/members/ltamas.png';
-import NMateImg from '../../src/assets/img/members/nmate.png';
-import VRichardImg from '../../src/assets/img/members/vrichard.png';
-import DKornelImg from '../../src/assets/img/members/dkornel.png';
+import MPeterImg from '../../src/assets/img/members/mpeter.jpg';
+import LTamasImg from '../../src/assets/img/members/ltamas.jpg';
+import NMateImg from '../../src/assets/img/members/nmate.jpg';
+import VRichardImg from '../../src/assets/img/members/vrichard.jpg';
+import DKornelImg from '../../src/assets/img/members/dkornel.jpg';
 
 export const blogDataHeader = {
     title: 'Our blog',
