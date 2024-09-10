@@ -92,23 +92,6 @@ export const membersData = {
             ]
         },
         {
-            image: VRichardImg,
-            name: 'Richárd Váradi, MSc',
-            title: 'Developer/Co-founder',
-            social: [
-                {
-                    href: 'https://github.com/VidarHUN',
-                    alt: 'github',
-                    image: githubPath
-                },
-                {
-                    href: 'https://www.linkedin.com/in/richard-varadi/',
-                    alt: 'linkedin',
-                    image: linkedinPath
-                }
-            ]
-        },
-        {
             image: DKornelImg,
             name: 'Kornél Dávid, MSc',
             title: 'Developer/Co-founder',
