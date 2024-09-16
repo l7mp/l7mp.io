@@ -15,7 +15,7 @@ export const stunnerOperatorData = {
 export const productDescriptionData = {
     title: 'Use it with mainstream media servers',
     subtitle: 'Set up and start using STUNner with your preferred media server in 5 minutes, integration is simple and straightforward. Whether you are looking into improving the management of your WebRTC media services or simply want to switch from a manual workflow to fully automated cloud-native Kubernetes lifecycle management, STUNner offers a convenient and efficient solution. Seamless and tested integration with popular media servers such as Jitsi, LiveKit, Kurento, n.eko, and CloudRetro is just one of the many reasons why STUNner is the ideal choice for your WebRTC media needs.',
-    examples_href: 'https://github.com/l7mp/stunner/tree/main/examples',
+    examples_href: 'https://github.com/l7mp/stunner/tree/main/docs/examples',
     btnText: 'Try out!',
     servers: [
         {
