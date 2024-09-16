@@ -15,7 +15,7 @@ export const contactData = [
         title: 'GitHub',
         subtitle: 'Follow our company\'s GitHub org to stay updated on our latest projects, collaborate with our team, and engage with our tech community. Access our projects, contribute to our code, and drive innovation in our industry.',
         href: 'https://github.com/l7mp',
-        cta: 'Join now'
+        cta: 'Follow Us'
     },
     {
         title: 'LinkedIn',
