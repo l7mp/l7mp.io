@@ -25,10 +25,10 @@ export const footerData = {
             name: 'LinkedIn',
             href: 'https://www.linkedin.com/company/l7mp-technologies/'
         },
-        {
-            name: 'Twitter',
-            href: 'https://twitter.com/L7mp1',
-        },
+        // {
+        //     name: 'Twitter',
+        //     href: 'https://twitter.com/L7mp1',
+        // },
         {
             name: 'Medium',
             href: 'https://medium.com/l7mp-technologies',
@@ -57,10 +57,10 @@ export const footerData = {
             icon: BsDiscord,
             href: 'https://discord.com/invite/DyPgEsbwzc',
         },
-        {
-            icon: BsTwitter,
-            href: 'https://twitter.com/L7mp1',
-        },
+        // {
+        //     icon: BsTwitter,
+        //     href: 'https://twitter.com/L7mp1',
+        // },
         {
             icon: BsMedium,
             href: 'https://medium.com/l7mp-technologies',
