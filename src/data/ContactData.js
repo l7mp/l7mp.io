@@ -1,25 +1,25 @@
 export const contactData = [
     {
         title: 'Email',
-        subtitle: 'Get in touch with us, use our services and become a partner. Contact us via email or social media. Benefit from our expertise and solutions to drive your business forward. We are committed to building long-lasting partnerships and providing support for success. Reach out to us today.',
+        subtitle: 'Contact us via email to inquire additional information about our services. Benefit from our expertise and solutions to drive your business forward. We are committed to building long-lasting partnerships and providing support for success.',
         href: 'mailto:info@l7mp.io',
         cta: 'Send an email'
     },
     {
         title: 'Discord',
-        subtitle: 'Join our Discord server to connect with a community of like-minded individuals, stay informed with real-time updates, and participate in discussions and networking opportunities. Enhance your professional growth by joining us now.',
+        subtitle: 'Join our Discord server to connect with a community of like-minded individuals, stay informed with real-time updates, get help if needed, and participate in discussions.',
         href: 'https://discord.gg/DyPgEsbwzc',
         cta: 'Join Discord'
     },
     {
         title: 'GitHub',
-        subtitle: 'Follow our company\'s GitHub org to stay updated on our latest projects, collaborate with our team, and engage with our tech community. Access our projects, contribute to our code, and drive innovation in our industry.',
+        subtitle: 'Check out our GitHub org and follow our projects to stay updated on our latest projects, collaborate with our team.',
         href: 'https://github.com/l7mp',
-        cta: 'Follow Us'
+        cta: 'Visit GitHub'
     },
     {
         title: 'LinkedIn',
-        subtitle: 'Following our LinkedIn profile keeps you up-to-date on industry news and trends, informed about job opportunities and company updates, and connected with our employees and other industry professionals. Show your interest and stay informed by following us today.',
+        subtitle: 'Follow our LinkedIn profile to get updated on our company news.',
         href: 'https://www.linkedin.com/company/l7mp-technologies/',
         cta: 'Follow Us'
     },
@@ -31,13 +31,13 @@ export const contactData = [
     // },
     {
         title: 'Medium',
-        subtitle: 'Following us on Medium is a great way to stay informed and gain valuable insights into our industry and our business. Our Medium posts provide in-depth and thought-provoking content that showcases our expertise and thought leadership. By following us on Medium, individuals can stay up-to-date with our latest ideas and perspectives, and learn about the innovative solutions we are bringing to the market. Additionally, following our Medium profile also allows individuals to share their own thoughts and ideas with our community and engage in meaningful discussions. In short, following us on Medium is a great way to stay informed, inspired, and connected.',
+        subtitle: 'From time to time, we release in-depth and thought-provoking blog posts that showcase our latest ideas and perspectives and learn about the innovative solutions we are bringing to the market.',
         href: 'https://medium.com/l7mp-technologies',
-        cta: 'Follow Us'
+        cta: 'Read our blogposts'
     },
     {
         title: 'Youtube',
-        subtitle: 'Following us on YouTube is a great way for individuals to stay informed and entertained. Our YouTube channel provides engaging and informative content in the form of videos, such as product demonstrations and company updates. By following us on YouTube, individuals can gain a deeper understanding of our company, products, and services. Additionally, our YouTube channel also offers a platform for interaction and engagement, allowing individuals to leave comments, ask questions, and share their thoughts and opinions. Overall, following our company on YouTube provides a dynamic and interactive experience that helps individuals stay informed and connected with our business.',
+        subtitle: 'Our YouTube channel provides engaging and informative content in the form of videos, such as product demonstrations and company updates.',
         href: 'https://www.youtube.com/@l7mptechnologies177/featured',
         cta: 'Follow Us'
     }
