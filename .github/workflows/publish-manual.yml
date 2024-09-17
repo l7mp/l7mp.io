@@ -1,0 +1,29 @@
+name: "Build page"
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  rebuild_page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          check-latest: false
+
+      - name: Set git config
+        run: |
+          git config --global user.email "l7mp.info@gmail.com"
+          git config --global user.name "BotL7mp"
+
+      - name: Deploy page
+        run: |
+          npm install
+          git remote set-url origin https://BotL7mp:${{ secrets.WEB_PAT_TOKEN }}@github.com/l7mp/l7mp.io.git
+          CI='' npm run deploy
