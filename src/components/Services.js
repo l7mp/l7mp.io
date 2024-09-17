@@ -7,9 +7,9 @@ const Services = () => {
     const { image, title, subtitle, services } = servicesData;
     return (
         <section className="bg-white mt-[100px]">
-            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+            <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-3 sm:py-16 lg:px-6">
                 <img className="w-full" src={image} alt="services"></img>
-                <div className="mt-4 md:mt-0">
+                <div className="mt-4 md:mt-0 col-span-2">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900">
                         {title}
                     </h2>
@@ -26,7 +26,7 @@ const Services = () => {
                                 <p className="mb-6 font-light text-gray-500 sm:text-xl">
                                     {item.subtitle}
                                 </p>
-                                <a href={item.href} className="font-medium text-blue-600 hover:underline">Learn more</a>
+                                <a href={item.href} className="font-medium text-blue-600 hover:underline">Contact us</a>
                             </div>
                         );
                     })}
