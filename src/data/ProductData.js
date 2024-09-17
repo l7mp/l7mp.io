@@ -22,32 +22,38 @@ export const productDescriptionData = {
         {
           name: 'Jitsi',
           logo: jitsi,
-          href: 'https://jitsi.org/',
+	  href: 'https://docs.l7mp.io/en/stable/examples/jitsi/',
+          //href: 'https://jitsi.org/',
         },
         {
           name: 'LiveKit',
           logo: livekit,
-          href: 'https://livekit.io/',
+	  href: 'https://docs.l7mp.io/en/stable/examples/livekit/',
+          //href: 'https://livekit.io/',
         },
 	{
           name: 'mediasoup',
           logo: mediasoup,
-          href: 'https://mediasoup.org/',
+	  href: 'https://docs.l7mp.io/en/stable/examples/mediasoup/',
+          //href: 'https://mediasoup.org/',
         },
 	{
           name: 'n.eko',
           logo: neko,
-          href: 'https://neko.m1k1o.net/#/?id=neko',
+	  href: 'https://docs.l7mp.io/en/stable/examples/neko/',
+          //href: 'https://neko.m1k1o.net/#/?id=neko',
         },
         {
           name: 'Kurento',
           logo: kurento,
-          href: 'https://doc-kurento.readthedocs.io/en/latest/',
+	  href: 'https://docs.l7mp.io/en/stable/examples/kurento-one2one-call/',
+          //href: 'https://doc-kurento.readthedocs.io/en/latest/',
         },
         {
           name: 'CloudRetro',
           logo: cloudretro,
-          href: 'https://cloudretro.io/',
+	  href: 'https://docs.l7mp.io/en/stable/examples/cloudretro/',
+          //href: 'https://cloudretro.io/',
         }
     ]
 };
