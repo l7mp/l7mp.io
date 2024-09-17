@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import icons
-import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from 'react-icons/bs';
+//import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from 'react-icons/bs';
 
 // import Flowbite components
 import {Footer} from 'flowbite-react'

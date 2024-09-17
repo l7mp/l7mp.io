@@ -1,4 +1,5 @@
-import { BsDiscord, BsGithub, BsLinkedin, BsTwitter, BsMedium, BsYoutube} from 'react-icons/bs';
+import {BsDiscord, BsGithub, BsLinkedin, BsMedium, BsYoutube} from 'react-icons/bs';
+//import BsTwitter from 'react-icons/bs';
 import Logo from '../assets/img/logo.svg'
 
 export const footerData = {

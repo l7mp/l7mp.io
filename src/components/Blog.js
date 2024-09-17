@@ -6,7 +6,7 @@ import ArticleSVG from './ArticleSVG';
 import TutorialSVG from './TutorialSVG';
 
 function chooseSVG(type) {
-    if (type == 'Tutorial') {
+    if (type === 'Tutorial') {
         return <TutorialSVG />
     }
     else {
