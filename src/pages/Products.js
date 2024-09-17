@@ -10,8 +10,8 @@ const Products = () => {
     return (
         <section className='mt-[100px]'>
             <Stunner />
-            <ProductDescription />
 	    <StunnerVideo />
+            <ProductDescription />
             {/* <StunnerOperator /> */}
         </section>
     );
