@@ -1,0 +1,23 @@
+name: "Build page"
+
+on:
+  workflow_dispatch:
+
+
+jobs:
+  rebuild_page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          check-latest: false
+
+      - name: Deploy page
+        run: |
+          npm install
+          CI='' npm run deploy
