@@ -13,6 +13,33 @@ export const blogDataHeader = {
 export const blogData = [
     {
         type: 'Article',
+        publishDate: '2024. 06. 21.',
+        title: 'Deploying a scalable STUN service in Kubernetes',
+        subtitle: 'Guide on howto deploy a scalable STUN service in Kubernetes.',
+        publisher: 'Gábor Rétvári',
+        publisherImg: RGaborImg,
+        href: 'https://medium.com/l7mp-technologies/deploying-a-scalable-stun-service-in-kubernetes-c7b9726fa41d'
+    },
+    {
+        type: 'Article',
+        publishDate: '2023. 08. 29.',
+        title: 'Real-Time applications in Kubernetes',
+        subtitle: 'A how-to guide on deploying an RTC applicaiton in Kubernetes in two ways.',
+        publisher: 'Richárd Váradi',
+        publisherImg: VRichardImg,
+        href: 'https://medium.com/l7mp-technologies/real-time-applications-in-kubernetes-5733232e1aa'
+    },
+    {
+        type: 'Article',
+        publishDate: '2023. 07. 20.',
+        title: 'Let\'s talk about TURN authentication',
+        subtitle: 'TURN authentication 101.',
+        publisher: 'Richárd Váradi',
+        publisherImg: VRichardImg,
+        href: 'https://medium.com/l7mp-technologies/lets-talk-about-turn-authentication-c2767514bc0c'
+    },
+    {
+        type: 'Article',
         publishDate: '2023. 03. 23.',
         title: 'Use of TURN in WebRTC Revisited: It may be more useful than you thought',
         subtitle: 'The TURN protocol is one of those annoyances that WebRTC critically depends on yet very few actually understand (another example is SDP).',
