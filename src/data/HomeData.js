@@ -15,5 +15,6 @@ export const stunnerData = {
     subtitle: 'STUNner, our main product, is a Kubernetes gateway designed for a single purpose: ingesting all your real-time media streams into a Kubernetes cluster in a controlled and standards-compliant way. Expose a single public port to the Internet, cover all NAT-traversal needs with a simple and versatile STUN/TURN server, and monitor resource usage in real-time: STUNner catapults your WebRTC media services into the cloud-native era in an easy step',
     btnText: 'Learn more',
     href: '/#/products',
+    alter_href: 'https://github.com/l7mp/stunner/blob/main/README.md',
     image: StunnerImage,
   };
