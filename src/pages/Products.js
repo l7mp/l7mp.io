@@ -9,7 +9,7 @@ import ProductDescription from '../components/ProductDescription'
 const Products = () => {
     return (
         <section className='mt-[100px]'>
-            <Stunner />
+            <Stunner link={"https://github.com/l7mp/stunner/blob/main/README.md"} />
 	    <StunnerVideo />
             <ProductDescription />
             {/* <StunnerOperator /> */}

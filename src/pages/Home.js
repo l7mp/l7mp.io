@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <section>
             <Hero />
-            <Stunner />
+            <Stunner link={"/#/products"} />
             {/* <Partners /> */}
         </section>
     );
