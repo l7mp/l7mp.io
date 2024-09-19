@@ -11,16 +11,16 @@ export const navigationData = [
         href: '/#/home',
     },
     {
-        name: 'About',
-        href: '/#/about',
+        name: 'Services',
+        href: '/#/services',
     },
     {
         name: 'Products',
         href: '/#/products',
     },
     {
-        name: 'Services',
-        href: '/#/services',
+        name: 'About',
+        href: '/#/about',
     },
     {
       name: 'Blog',
