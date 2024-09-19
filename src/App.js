@@ -13,16 +13,16 @@ import Services from './pages/Services';
 import Blog from './pages/Blog';
 import Contact from "./pages/Contact";
 
-const App = () => { 
+const App = () => {
   return (
       <Router>
         <Nav />
         <Routes>
           <Route exact path='/' element={<Home />}></Route>
           <Route path='/home' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
+	  <Route path='/services' element={<Services />}></Route>
           <Route path='/products' element={<Products />}></Route>
-          <Route path='/services' element={<Services />}></Route>
+	  <Route path='/about' element={<About />}></Route>
           <Route path='/blog' element={<Blog />}></Route>
           <Route path='/contact' element={<Contact />}></Route>
         </Routes>
