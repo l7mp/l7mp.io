@@ -11,22 +11,24 @@ import About from './pages/About';
 import Products from './pages/Products';
 import Services from './pages/Services';
 import Blog from './pages/Blog';
+import Demos from './pages/Demos';
 import Contact from "./pages/Contact";
 
 const App = () => {
   return (
       <Router>
-        <Nav />
-        <Routes>
-          <Route exact path='/' element={<Home />}></Route>
-          <Route path='/home' element={<Home />}></Route>
-	  <Route path='/services' element={<Services />}></Route>
-          <Route path='/products' element={<Products />}></Route>
-	  <Route path='/about' element={<About />}></Route>
-          <Route path='/blog' element={<Blog />}></Route>
-          <Route path='/contact' element={<Contact />}></Route>
-        </Routes>
-        <FooterComponent />
+          <Nav />
+          <Routes>
+              <Route exact path='/' element={<Home />}></Route>
+              <Route path='/home' element={<Home />}></Route>
+	      <Route path='/services' element={<Services />}></Route>
+              <Route path='/products' element={<Products />}></Route>
+	      <Route path='/about' element={<About />}></Route>
+              <Route path='/blog' element={<Blog />}></Route>
+	      <Route path='/demos' element={<Demos />}></Route>
+              <Route path='/contact' element={<Contact />}></Route>
+          </Routes>
+          <FooterComponent />
       </Router>
   );
 };

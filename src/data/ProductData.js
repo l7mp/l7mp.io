@@ -1,5 +1,6 @@
 // import images
 import jitsi from '../assets/img/examples/jitsi.svg';
+import janus from '../assets/img/examples/janus.png';
 import livekit from '../assets/img/examples/livekit.svg';
 import mediasoup from '../assets/img/examples/mediasoup.png';
 import kurento from '../assets/img/examples/kurento.png';
@@ -19,41 +20,40 @@ export const productDescriptionData = {
     examples_href: 'https://github.com/l7mp/stunner/tree/main/docs/examples',
     btnText: 'Read the docs',
     servers: [
-        {
-          name: 'Jitsi',
-          logo: jitsi,
-	  href: 'https://docs.l7mp.io/en/stable/examples/jitsi/',
-          //href: 'https://jitsi.org/',
+	{
+          name: 'Janus',
+          logo: janus,
+	  href: 'https://docs.l7mp.io/en/stable/examples/janus/',
         },
         {
           name: 'LiveKit',
           logo: livekit,
 	  href: 'https://docs.l7mp.io/en/stable/examples/livekit/',
-          //href: 'https://livekit.io/',
         },
 	{
           name: 'mediasoup',
           logo: mediasoup,
 	  href: 'https://docs.l7mp.io/en/stable/examples/mediasoup/',
-          //href: 'https://mediasoup.org/',
         },
 	{
           name: 'n.eko',
           logo: neko,
 	  href: 'https://docs.l7mp.io/en/stable/examples/neko/',
-          //href: 'https://neko.m1k1o.net/#/?id=neko',
         },
         {
           name: 'Kurento',
           logo: kurento,
 	  href: 'https://docs.l7mp.io/en/stable/examples/kurento-one2one-call/',
-          //href: 'https://doc-kurento.readthedocs.io/en/latest/',
+        },
+	{
+          name: 'Jitsi',
+          logo: jitsi,
+	  href: 'https://docs.l7mp.io/en/stable/examples/jitsi/',
         },
         {
           name: 'CloudRetro',
           logo: cloudretro,
 	  href: 'https://docs.l7mp.io/en/stable/examples/cloudretro/',
-          //href: 'https://cloudretro.io/',
         }
     ]
 };

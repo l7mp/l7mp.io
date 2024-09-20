@@ -30,4 +30,9 @@ export const navigationData = [
       name: 'Docs',
       href: 'https://docs.l7mp.io/'
     },
+    {
+      name: 'Demos',
+      href: '/#/demos',
+    },
+
 ];
