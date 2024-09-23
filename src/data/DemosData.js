@@ -13,7 +13,7 @@ export const demosData = {
     repo_link: 'https://github.com/l7mp/demo-clusters',
     demos: [
         {
-            name: 'Janus',
+            name: 'Janus Demos',
 	    image: janus,
             demo_link: 'https://janus.gcp-europe-central2.stunner.cc/',
 	    doc_link: 'https://docs.l7mp.io/en/stable/examples/janus/'
@@ -29,12 +29,6 @@ export const demosData = {
 	    image: neko,
             demo_link: 'https://neko.gcp-europe-central2.stunner.cc/',
 	    doc_link: 'https://docs.l7mp.io/en/stable/examples/neko/'
-        },
-	{
-            name: 'CloudRetro',
-	    image: cloudretro,
-            demo_link: 'https://cloudretro.gcp-europe-central2.stunner.cc/',
-	    doc_link: 'https://docs.l7mp.io/en/stable/examples/cloudretro/'
         },
 	{
             name: 'Elixir WebRTC Nexus',
@@ -55,16 +49,22 @@ export const demosData = {
 	    doc_link: 'https://docs.l7mp.io/en/stable/examples/kurento-magic-mirror/'
         },
 	{
-            name: 'Jitsi',
+            name: 'LiveKit Meet',
+	    image: livekit,
+            demo_link: 'https://livekit.gcp-europe-central2.stunner.cc/',
+	    doc_link: 'https://docs.l7mp.io/en/stable/examples/livekit/'
+        },
+	{
+            name: 'Jitsi Meet',
 	    image: jitsi,
             demo_link: 'https://jitsi.gcp-europe-central2.stunner.cc/',
 	    doc_link: 'https://docs.l7mp.io/en/stable/examples/jitsi/'
         },
 	{
-            name: 'LiveKit',
-	    image: livekit,
-            demo_link: 'https://livekit.gcp-europe-central2.stunner.cc/',
-	    doc_link: 'https://docs.l7mp.io/en/stable/examples/livekit/'
+            name: 'CloudRetro',
+	    image: cloudretro,
+            demo_link: 'https://cloudretro.gcp-europe-central2.stunner.cc/',
+	    doc_link: 'https://docs.l7mp.io/en/stable/examples/cloudretro/'
         },
     ]
 };
