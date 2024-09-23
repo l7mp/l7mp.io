@@ -1,11 +1,12 @@
-// import images
-import jitsi from '../assets/img/examples/jitsi.svg';
+import cloudretro from '../assets/img/examples/cloudretro.svg';
+import edumeet from '../assets/img/examples/edumeet.png';
+import elixir_webrtc from '../assets/img/examples/elixir_webrtc.svg';
 import janus from '../assets/img/examples/janus.png';
+import jitsi from '../assets/img/examples/jitsi.svg';
+import kurento from '../assets/img/examples/kurento.png';
 import livekit from '../assets/img/examples/livekit.svg';
 import mediasoup from '../assets/img/examples/mediasoup.png';
-import kurento from '../assets/img/examples/kurento.png';
 import neko from '../assets/img/examples/neko.png';
-import cloudretro from '../assets/img/examples/cloudretro.svg';
 
 export const stunnerOperatorData = {
     title: 'STUNner Gateway operator',
@@ -34,6 +35,16 @@ export const productDescriptionData = {
           name: 'mediasoup',
           logo: mediasoup,
 	  href: 'https://docs.l7mp.io/en/stable/examples/mediasoup/',
+        },
+	{
+          name: 'Edumeet',
+          logo: edumeet,
+	  href: 'https://github.com/l7mp/demo-clusters/tree/main/gcp-europe-central2/apps/edumeet',
+        },
+	{
+          name: 'Elixir WebRTC',
+          logo: elixir_webrtc,
+	  href: 'https://github.com/l7mp/demo-clusters/tree/main/gcp-europe-central2/apps/elixir-webrtc-nexus',
         },
 	{
           name: 'n.eko',

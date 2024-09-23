@@ -1,10 +1,11 @@
-import jitsi from '../assets/img/examples/jitsi.svg';
-import janus from '../assets/img/examples/janus.png';
-import livekit from '../assets/img/examples/livekit.svg';
-import edumeet from '../assets/img/examples/edumeet.png';
-import kurento from '../assets/img/examples/kurento.png';
-import neko from '../assets/img/examples/neko.png';
 import cloudretro from '../assets/img/examples/cloudretro.svg';
+import edumeet from '../assets/img/examples/edumeet.png';
+import elixir_webrtc from '../assets/img/examples/elixir_webrtc.svg';
+import janus from '../assets/img/examples/janus.png';
+import jitsi from '../assets/img/examples/jitsi.svg';
+import kurento from '../assets/img/examples/kurento.png';
+import livekit from '../assets/img/examples/livekit.svg';
+import neko from '../assets/img/examples/neko.png';
 
 export const demosData = {
     title: 'Live Demos',
@@ -34,6 +35,12 @@ export const demosData = {
 	    image: cloudretro,
             demo_link: 'https://cloudretro.gcp-europe-central2.stunner.cc/',
 	    doc_link: 'https://docs.l7mp.io/en/stable/examples/cloudretro/'
+        },
+	{
+            name: 'Elixir WebRTC Nexus',
+	    image: elixir_webrtc,
+            demo_link: 'https://nexus.gcp-europe-central2.stunner.cc/',
+	    doc_link: ''
         },
 	{
             name: 'Kurento One-to-One Call',
