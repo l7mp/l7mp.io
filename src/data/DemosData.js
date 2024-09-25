@@ -16,7 +16,7 @@ export const demosData = {
             name: 'Janus Demos',
 	    image: janus,
             demo_link: 'https://janus.gcp-europe-central2.stunner.cc/',
-	    doc_link: 'https://docs.l7mp.io/en/stable/examples/janus/'
+	    doc_link: 'https://docs.l7mp.io/en/latest/examples/janus/'
         },
 	{
             name: 'Edumeet',
@@ -34,7 +34,7 @@ export const demosData = {
             name: 'Elixir WebRTC Nexus',
 	    image: elixir_webrtc,
             demo_link: 'https://nexus.gcp-europe-central2.stunner.cc/',
-	    doc_link: ''
+	    doc_link: 'https://docs.l7mp.io/en/latest/examples/elixir-webrtc/'
         },
 	{
             name: 'Kurento One-to-One Call',
