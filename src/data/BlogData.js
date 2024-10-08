@@ -7,10 +7,19 @@ import DKornelImg from '../../src/assets/img/members/dkornel.jpg';
 
 export const blogDataHeader = {
     title: 'Our blog',
-    subtitle: 'We\'re excited to share our insights, updates, and thought leadership on all things technology with you.'
+    subtitle: ''
 };
 
 export const blogData = [
+    {
+        type: 'Tutorial',
+        publishDate: '2024. 09. 24.',
+        title: 'Video-conferencing with Janus',
+        subtitle: 'This document guides you through the installation of Janus into Kubernetes, when it is used together with the STUNner WebRTC media gateway.',
+        publisher: 'Kornél Dávid',
+        publisherImg: DKornelImg,
+        href: 'https://docs.l7mp.io/en/latest/examples/janus/'
+    },
     {
         type: 'Article',
         publishDate: '2024. 06. 21.',
