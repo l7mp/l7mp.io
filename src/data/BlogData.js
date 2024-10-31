@@ -12,6 +12,15 @@ export const blogDataHeader = {
 
 export const blogData = [
     {
+        type: 'Article',
+        publishDate: '2024. 10. 31.',
+        title: 'STUNner goes GA: The journey so far and the future ahead',
+        subtitle: 'We are proud to present STUNner v1.0.0, the first stable and generally available release of the Kubernetes media gateway from l7mp.io.',
+        publisher: 'Gábor Rétvári',
+        publisherImg: RGaborImg,
+        href: 'https://medium.com/l7mp-technologies/stunner-goes-ga-the-journey-so-far-and-the-future-ahead-b3c4c800926b'
+    },
+    {
         type: 'Tutorial',
         publishDate: '2024. 09. 24.',
         title: 'Video-conferencing with Janus',
