@@ -13,6 +13,15 @@ export const blogDataHeader = {
 export const blogData = [
     {
         type: 'Article',
+        publishDate: '2024. 11. 09.',
+        title: 'Open-source TURN Server Showdown: coTurn vs. STUNner',
+        subtitle: 'We dive into the world of WebRTC NAT traversal by comparing two popular open-source TURN server solutions: coTurn and STUNner.',
+        publisher: 'Péter Megyesi',
+        publisherImg: MPeterImg,
+        href: 'https://medium.com/l7mp-technologies/open-source-turn-server-showdown-coturn-vs-stunner-da3a02a2fc9d'
+    },
+    {
+        type: 'Article',
         publishDate: '2024. 10. 31.',
         title: 'STUNner goes GA: The journey so far and the future ahead',
         subtitle: 'We are proud to present STUNner v1.0.0, the first stable and generally available release of the Kubernetes media gateway from l7mp.io.',
