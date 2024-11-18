@@ -28,4 +28,4 @@ jobs:
         run: |
           npm clean-install
           git remote set-url origin https://BotL7mp:${{ secrets.WEB_PAT_TOKEN }}@github.com/l7mp/l7mp.io.git
-          CI='' npm run deploy
+          CI='' npm --loglevel verbose run deploy
