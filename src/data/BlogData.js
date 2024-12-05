@@ -13,6 +13,15 @@ export const blogDataHeader = {
 export const blogData = [
     {
         type: 'Article',
+        publishDate: '2024. 12. 05.',
+        title: 'Running STUNner as a public TURN server',
+        subtitle: 'Tutorial on  how to run STUNner as a standalone public TURN server.',
+        publisher: 'Péter Megyesi',
+        publisherImg: MPeterImg,
+	href: 'https://medium.com/l7mp-technologies/running-stunner-as-a-public-turn-server-1a2c61f78e67'
+    },
+    {
+        type: 'Article',
         publishDate: '2024. 11. 09.',
         title: 'Open-source TURN Server Showdown: coTurn vs. STUNner',
         subtitle: 'We dive into the world of WebRTC NAT traversal by comparing two popular open-source TURN server solutions: coTurn and STUNner.',
