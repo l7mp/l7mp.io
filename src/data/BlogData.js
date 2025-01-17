@@ -11,15 +11,15 @@ export const blogDataHeader = {
 };
 
 export const blogData = [
-        {
-        type: 'Article',
+    {
+	type: 'Article',
         publishDate: '2025. 01. 13.',
         title: 'Deploying WebRTC Applications in AWS EKS: A Step-by-Step Guide with LiveKit and STUNner',
         subtitle: 'Tutorial on  how to use STUNner in AWS EKS.',
         publisher: 'Péter Megyesi',
         publisherImg: MPeterImg,
 	href: 'https://medium.com/l7mp-technologies/deploying-webrtc-applications-in-aws-eks-a-step-by-step-guide-with-livekit-and-stunner-c94309af4ed8'
-	},
+    },
     {
         type: 'Article',
         publishDate: '2024. 12. 05.',
