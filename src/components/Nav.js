@@ -20,7 +20,6 @@ const Nav = () => {
                         alt="L7mp Logo"
                     />
                     <span className="hidden lg:block self-center whitespace-nowrap text-xl font-semibold">
-                        L7mp Technologies
                     </span>
                 </Navbar.Brand>
                 <div className="flex md:order-2">
