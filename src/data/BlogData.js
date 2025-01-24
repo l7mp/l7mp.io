@@ -13,6 +13,15 @@ export const blogDataHeader = {
 export const blogData = [
     {
 	type: 'Article',
+        publishDate: '2025. 01. 23.',
+        title: 'Building a Globally Distributed WebRTC Service with Elixir WebRTC, STUNner, and Cilium Cluster Mesh',
+        subtitle: 'We recently teamed up with the creators of the Elixir WebRTC framework to showcase how can it be used in a multi-cluster Kuberentes environment to create a globally scalable WebRTC service',
+        publisher: 'Péter Megyesi',
+        publisherImg: MPeterImg,
+	href: 'https://medium.com/swmansion/building-a-globally-distributed-webrtc-service-with-elixir-webrtc-stunner-and-cilium-cluster-mesh-54553bc066ad'
+    },
+    {
+	type: 'Article',
         publishDate: '2025. 01. 13.',
         title: 'Deploying WebRTC Applications in AWS EKS: A Step-by-Step Guide with LiveKit and STUNner',
         subtitle: 'Tutorial on  how to use STUNner in AWS EKS.',
