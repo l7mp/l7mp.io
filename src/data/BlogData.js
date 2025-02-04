@@ -13,6 +13,15 @@ export const blogDataHeader = {
 export const blogData = [
     {
 	type: 'Article',
+        publishDate: '2025. 02. 03.',
+        title: 'Running Real-Time AI Voice Assistants in Kubernetes',
+        subtitle: 'Running AI Voice Assistants in Kubernetes, using LiveKit and STUNner.',
+        publisher: 'Péter Megyesi',
+        publisherImg: MPeterImg,
+	href: 'https://medium.com/l7mp-technologies/running-reel-time-ai-voice-assistants-in-kubernetes-136662bd031f'
+    },
+    {
+	type: 'Article',
         publishDate: '2025. 01. 23.',
         title: 'Building a Globally Distributed WebRTC Service with Elixir WebRTC, STUNner, and Cilium Cluster Mesh',
         subtitle: 'We recently teamed up with the creators of the Elixir WebRTC framework to showcase how can it be used in a multi-cluster Kuberentes environment to create a globally scalable WebRTC service',
