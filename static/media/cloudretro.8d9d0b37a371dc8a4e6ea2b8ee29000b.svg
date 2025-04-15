@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="121mm"
+   height="20mm"
+   viewBox="0 0 121 20"
+   version="1.1"
+   id="svg5"
+   inkscapeExport-filename="cloudretro.svg"
+   inkscapeExport-xdpi="96"
+   inkscapeExport-ydpi="96"
+   inkscapeVersion="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodiDocname="drawing-1.svg"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsSvg="http://www.w3.org/2000/svg">
+  <sodipodiNamedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscapeShowpageshadow="0"
+     inkscapePageopacity="0"
+     inkscapePagecheckerboard="0"
+     inkscapeDeskcolor="#505050"
+     inkscapeDocument-units="mm"
+     showgrid="false"
+     inkscapeZoom="1.219786"
+     inkscapeCx="-15.986411"
+     inkscapeCy="106.16616"
+     inkscapeWindow-width="1920"
+     inkscapeWindow-height="1027"
+     inkscapeWindow-x="0"
+     inkscapeWindow-y="25"
+     inkscapeWindow-maximized="1"
+     inkscapeCurrent-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscapeLabel="Layer 1"
+     inkscapeGroupmode="layer"
+     id="layer1"
+     transform="translate(-71.106789,-167.23856)">
+    <text
+       xmlSpace="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.7528px;font-family:'.Apple SD Gothic NeoI';-inkscape-font-specification:'.Apple SD Gothic NeoI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#fafafa;stroke-width:0"
+       x="70.817451"
+       y="187.39804"
+       id="text236"><tspan
+         sodipodiRole="line"
+         id="tspan234"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.7528px;font-family:'.Apple SD Gothic NeoI';-inkscape-font-specification:'.Apple SD Gothic NeoI, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#000000;fill-opacity:1;stroke-width:0"
+         x="70.817451"
+         y="187.39804">CloudRetro</tspan></text>
+  </g>
+</svg>
